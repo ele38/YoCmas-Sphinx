@@ -24,11 +24,15 @@ author = 'Comunidad del taller avanzado'
 
 # -- General configuration ---------------------------------------------------
 
+# Theme config
+import sphinx_rtd_theme
+
+
 # Add any Sphinx extension module names here, as strings. They can be
 # extensions coming with Sphinx (named 'sphinx.ext.*') or your custom
 # ones.
-import sphinx_rtd_theme
-extensions = ['recommonmark'
+extensions = [
+        'recommonmark'
 ]
 
 # Add any paths that contain templates here, relative to this directory.
@@ -58,3 +62,9 @@ html_theme = 'sphinx_rtd_theme'
 # relative to this directory. They are copied after the builtin static files,
 # so a file named "default.css" will overwrite the builtin "default.css".
 html_static_path = ['_static']
+
+# Sufijos
+source_suffix = {
+        '.rst': 'restructuredtext',
+        '.md': 'markdown'
+        }

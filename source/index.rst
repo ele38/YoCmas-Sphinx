@@ -7,17 +7,15 @@
 =======================================
 
 .. toctree::
-   :maxdepth: 2
-   busqueda
-   :caption: Contents:
-   "Algoritmos de ordenamniento/_index.md"
-   "estructuras de datos/_index.md"
+        busqueda/index.md
+        edd/_index.md
+        ordenamiento/_index.md
 
 
 
 Indices and tables
 ==================
 
-* :ref:`genindex`
+* :ref:`busqueda`
 * :ref:`modindex`
 * :ref:`search`

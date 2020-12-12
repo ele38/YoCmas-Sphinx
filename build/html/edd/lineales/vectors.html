@@ -1,0 +1,365 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="es" >
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Inicializar un vector {#inicializar-un-vector} &mdash; documentación de Yo Cmás - </title>
+  
+
+  
+  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+
+  
+  
+  
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+        <script src="../../_static/jquery.js"></script>
+        <script src="../../_static/underscore.js"></script>
+        <script src="../../_static/doctools.js"></script>
+        <script src="../../_static/language_data.js"></script>
+        <script src="../../_static/translations.js"></script>
+    
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Índice" href="../../genindex.html" />
+    <link rel="search" title="Búsqueda" href="../../search.html" />
+    <link rel="next" title="Acerca de {#acerca-de}" href="../../ordenamiento/_index.html" />
+    <link rel="prev" title="push (empujar) {#push–empujar}" href="stacks.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../index.html" class="icon icon-home" alt="Documentation Home"> Yo Cmás
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../busqueda/binaria/Implementaciones-propias/_index.html">Implementación con while {#implementación-con-while}</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../busqueda/binaria/Implementaciones-propias/_index.html#implementacion-recursiva-implementacion-recursiva">Implementación recursiva {#implementación-recursiva}</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../busqueda/binaria/_index.html">Acerca de {#acerca-de}</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../busqueda/binaria/_index.html#uso-mediante-la-libreria-stl-uso-mediante-la-libreria-stl">Uso mediante la librería STL {#uso-mediante-la-librería-stl}</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../busqueda/binaria/_index.html#implementaciones-propias-implementaciones-propias">Implementaciones propias {#implementaciones-propias}</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../busqueda/binaria/info.html">Ejemplos {#ejemplos}</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../busqueda/binaria/stl/_index.html">Importar {#importar}</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../busqueda/binaria/stl/_index.html#binary-search-binary-search">binary_search() {#binary-search}</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../busqueda/binaria/stl/_index.html#lower-bound-limite-inferior-lower-bound-limite-inferior">lower_bound() (límite inferior) {#lower-bound–límite-inferior}</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../busqueda/binaria/stl/_index.html#upper-bound-limite-superior-upper-bound-limite-superior">upper_bound() (límite superior) {#upper-bound–límite-superior}</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../busqueda/index.html">Búsqueda binaria {#búsqueda-binaria}</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../_index.html">Estructuras lineales {#estructuras-lineales}</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../_index.html#estructuras-en-forma-de-arbol-estructuras-en-forma-de-arbol">Estructuras en forma de árbol {#estructuras-en-forma-de-árbol}</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../arboles/_index.html">Acerca de {#acerca-de}</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../arboles/_index.html#set-conjunto-set-conjunto">Set (conjunto) {#set–conjunto}</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../arboles/_index.html#map-mapa-tabla-de-hashing-map-mapa-tabla-de-hashing">Map (mapa, tabla de hashing) {#map–mapa-tabla-de-hashing}</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../arboles/map.html">Ejemplo cotidiano {#ejemplo-cotidiano}</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../arboles/map.html#inicializar-inicializar">Inicializar {#inicializar}</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../arboles/map.html#insert-insertar-insert-insertar">Insert (insertar) {#insert–insertar}</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../arboles/map.html#operar-con-los-valores-operar-con-los-valores">Operar con los valores {#operar-con-los-valores}</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../arboles/map.html#find-encontrar-find-encontrar">Find (encontrar) {#find–encontrar}</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../arboles/map.html#erase-borrar-erase-borrar">Erase (borrar) {#erase–borrar}</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../arboles/map.html#recorrer-los-valores-de-un-mapa-recorrer-los-valores-de-un-mapa">Recorrer los valores de un mapa {#recorrer-los-valores-de-un-mapa}</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../arboles/map.html#dudas-que-no-dejan-dormir-dudas-que-no-dejan-dormir">Dudas que no dejan dormir {#dudas-que-no-dejan-dormir}</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../arboles/set.html">Inicialización {#inicialización}</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../arboles/set.html#insert-insertar-insert-insertar">insert (Insertar) {#insert–insertar}</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../arboles/set.html#find-encontrar-find-encontrar">find (Encontrar) {#find–encontrar}</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../arboles/set.html#erase-borrar-erase-borrar">erase (borrar) {#erase–borrar}</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../arboles/set.html#iterar-a-traves-de-un-conjunto-iterar-a-traves-de-un-conjunto">Iterar a través de un conjunto {#iterar-a-través-de-un-conjunto}</a></li>
+<li class="toctree-l1"><a class="reference internal" href="_index.html">Acerca de {#acerca-de}</a></li>
+<li class="toctree-l1"><a class="reference internal" href="_index.html#arrays-arreglos-arrays-arreglos">Arrays (arreglos) {#arrays–arreglos}</a></li>
+<li class="toctree-l1"><a class="reference internal" href="_index.html#arrays-multidimensionales-arrays-multidimensionales">Arrays multidimensionales {#arrays-multidimensionales}</a></li>
+<li class="toctree-l1"><a class="reference internal" href="_index.html#vectors-vectores-vectors-vectores">Vectors (vectores) {#vectors–vectores}</a></li>
+<li class="toctree-l1"><a class="reference internal" href="_index.html#stacks-pilas-stacks-pilas">Stacks (pilas) {#stacks–pilas}</a></li>
+<li class="toctree-l1"><a class="reference internal" href="_index.html#queues-colas-queues-colas">Queues (colas) {#queues–colas}</a></li>
+<li class="toctree-l1"><a class="reference internal" href="arrays.html">Inicialización {#inicialización}</a></li>
+<li class="toctree-l1"><a class="reference internal" href="arrays.html#leer-el-valor-de-un-arreglo-leer-el-valor-de-un-arreglo">Leer el valor de un arreglo {#leer-el-valor-de-un-arreglo}</a></li>
+<li class="toctree-l1"><a class="reference internal" href="arrays.html#asignar-valores-a-un-arreglo-asignar-valores-a-un-arreglo">Asignar valores a un arreglo {#asignar-valores-a-un-arreglo}</a></li>
+<li class="toctree-l1"><a class="reference internal" href="multi-dimension-arrays.html">Inicializar un arreglo multidimensional {#inicializar-un-arreglo-multidimensional}</a></li>
+<li class="toctree-l1"><a class="reference internal" href="multi-dimension-arrays.html#asignar-valores-en-un-arreglo-multidimensional-asignar-valores-en-un-arreglo-multidimensional">Asignar valores en un arreglo multidimensional {#asignar-valores-en-un-arreglo-multidimensional}</a></li>
+<li class="toctree-l1"><a class="reference internal" href="queues.html">push (empujar) {#push–empujar}</a></li>
+<li class="toctree-l1"><a class="reference internal" href="queues.html#front-frente-front-frente">front (frente) {#front–frente}</a></li>
+<li class="toctree-l1"><a class="reference internal" href="queues.html#pop-quitar-pop-quitar">pop (quitar) {#pop–quitar}</a></li>
+<li class="toctree-l1"><a class="reference internal" href="queues.html#empty-vacio-empty-vacio">empty (vacío) {#empty–vacío}</a></li>
+<li class="toctree-l1"><a class="reference internal" href="queues.html#size-tamano-size-tamano">size (tamaño) {#size–tamaño}</a></li>
+<li class="toctree-l1"><a class="reference internal" href="stacks.html">push (empujar) {#push–empujar}</a></li>
+<li class="toctree-l1"><a class="reference internal" href="stacks.html#top-cima-top-cima">top (cima) {#top–cima}</a></li>
+<li class="toctree-l1"><a class="reference internal" href="stacks.html#pop-quitar-pop-quitar">pop (quitar) {#pop–quitar}</a></li>
+<li class="toctree-l1"><a class="reference internal" href="stacks.html#empty-vacio-empty-vacio">empty (vacío) {#empty–vacío}</a></li>
+<li class="toctree-l1"><a class="reference internal" href="stacks.html#size-tamano-size-tamano">size (tamaño) {#size–tamaño}</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Inicializar un vector {#inicializar-un-vector}</a></li>
+<li class="toctree-l1"><a class="reference internal" href="#asignar-un-valor-asignar-un-valor">Asignar un valor {#asignar-un-valor}</a></li>
+<li class="toctree-l1"><a class="reference internal" href="#push-back-empujar-atras-push-back-empujar-atras">push back (empujar atrás) {#push-back–empujar-atrás}</a></li>
+<li class="toctree-l1"><a class="reference internal" href="#pop-back-quitar-atras-pop-back-quitar-atras">pop back (quitar atrás) {#pop-back–quitar-atrás}</a></li>
+<li class="toctree-l1"><a class="reference internal" href="#insert-insertar-insert-insertar">insert (insertar) {#insert–insertar}</a></li>
+<li class="toctree-l1"><a class="reference internal" href="#erase-borrar-erase-borrar">erase (borrar) {#erase–borrar}</a></li>
+<li class="toctree-l1"><a class="reference internal" href="#iteradores-de-un-arreglo-iteradores-de-un-arreglo">Iteradores de un arreglo {#iteradores-de-un-arreglo}</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../ordenamiento/_index.html">Acerca de {#acerca-de}</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../ordenamiento/_index.html#algoritmos-de-fuerza-bruta-algoritmos-de-fuerza-bruta">Algoritmos de fuerza bruta {#algoritmos-de-fuerza-bruta}</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../ordenamiento/_index.html#algoritmos-de-decrecer-y-conquistar-algoritmos-de-decrecer-y-conquistar">Algoritmos de «decrecer y conquistar» {#algoritmos-de-decrecer-y-conquistar}</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../ordenamiento/decrecer-conquistar/_index.html">Acerca de {#acerca-de}</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../ordenamiento/decrecer-conquistar/_index.html#selection-sort-selection-sort">Selection sort {#selection-sort}</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../ordenamiento/decrecer-conquistar/selection.html">Rellenar ejemplo {#rellenar-ejemplo}</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../ordenamiento/decrecer-conquistar/selection.html#rellenar-codigo-de-ejemplo-rellenar-codigo-de-ejemplo">Rellenar codigo de ejemplo {#rellenar-codigo-de-ejemplo}</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../ordenamiento/fuerza-bruta/_index.html">Acerca de {#acerca-de}</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../ordenamiento/fuerza-bruta/_index.html#bubble-sort-bubble-sort">Bubble sort {#bubble-sort}</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../ordenamiento/fuerza-bruta/_index.html#insertion-sort-insertion-sort">Insertion sort {#insertion-sort}</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../ordenamiento/fuerza-bruta/bubble.html">Ejemplo {#ejemplo}</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../ordenamiento/fuerza-bruta/bubble.html#codigo-de-ejemplo-codigo-de-ejemplo">Código de ejemplo: {#código-de-ejemplo}</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../ordenamiento/fuerza-bruta/insertion.html">Rellenar ejemplo {#rellenar-ejemplo}</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../ordenamiento/fuerza-bruta/insertion.html#rellenar-codigo-de-ejemplo-rellenar-codigo-de-ejemplo">Rellenar codigo de ejemplo {#rellenar-codigo-de-ejemplo}</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">Yo Cmás</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+      <li>Inicializar un vector {#inicializar-un-vector}</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../../_sources/edd/lineales/vectors.md.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <p>+++
+title = «Vectors (vectores)»
+author = [«Comunidad YoC+»]
+draft = false
+weight = 3004
++++</p>
+<div class="ox-hugo-toc toc">
+<div></div><div class="heading">Table of Contents</div><ul class="simple">
+<li><p><a class="reference external" href="#inicializar-un-vector">Inicializar un vector</a></p></li>
+<li><p><a class="reference external" href="#asignar-un-valor">Asignar un valor</a></p></li>
+<li><p><a class="reference external" href="#push-back--empujar-atr%C3%A1s">push back (empujar atrás)</a></p></li>
+<li><p><a class="reference external" href="#pop-back--quitar-atr%C3%A1s">pop back (quitar atrás)</a></p></li>
+<li><p><a class="reference external" href="#insert--insertar">insert (insertar)</a></p></li>
+<li><p><a class="reference external" href="#erase--borrar">erase (borrar)</a></p></li>
+<li><p><a class="reference external" href="#iteradores-de-un-arreglo">Iteradores de un arreglo</a></p></li>
+</ul>
+</div>
+<!--endtoc--><p>Los vectores son como arreglos, excepto de que el tamaño es dinámico, es decir, se puede cambiar.</p>
+<div class="section" id="inicializar-un-vector-inicializar-un-vector">
+<h1>Inicializar un vector {#inicializar-un-vector}<a class="headerlink" href="#inicializar-un-vector-inicializar-un-vector" title="Enlazar permanentemente con este título">¶</a></h1>
+<p>Incluimos la librería:</p>
+<p>{{&lt; highlight cpp «linenos=table, linenostart=1» &gt;}}
+#include <vector>
+{{&lt; /highlight &gt;}}</p>
+<p>Inicializamos nuestro vector «vec»:</p>
+<p>{{&lt; highlight cpp «linenos=table, linenostart=2» &gt;}}
+int n = 3;
+vector &lt; int &gt; vec(n, 0); // Inicializa un vector de tamaño 3 con todos sus valores = 0. Tanto el tamaño como valor son opcionales.
+{{&lt; /highlight &gt;}}</p>
+</div>
+<div class="section" id="asignar-un-valor-asignar-un-valor">
+<h1>Asignar un valor {#asignar-un-valor}<a class="headerlink" href="#asignar-un-valor-asignar-un-valor" title="Enlazar permanentemente con este título">¶</a></h1>
+<p>{{&lt; highlight cpp «linenos=table, linenostart=4» &gt;}}
+vec[2] = 1; // Asigna el valor «1» al índice 2 (es decir, al 3er valor del vector)
+{{&lt; /highlight &gt;}}</p>
+</div>
+<div class="section" id="push-back-empujar-atras-push-back-empujar-atras">
+<h1>push back (empujar atrás) {#push-back–empujar-atrás}<a class="headerlink" href="#push-back-empujar-atras-push-back-empujar-atras" title="Enlazar permanentemente con este título">¶</a></h1>
+<p>Si no sabemos el tamaño de nuestro vector, podemos simplemente usar push_back(valor); para enviar es valor al final del vector.</p>
+<p>{{&lt; highlight cpp «linenos=table, linenostart=5» &gt;}}
+vec.push_back(1); // Inserta un 1 al final del vector
+{{&lt; /highlight &gt;}}</p>
+<p>Por ejemplo, se podría usar en un for, sin necesidad de inicializar el vector con una cantidad de valores.</p>
+<p>{{&lt; highlight cpp «linenos=table, linenostart=6» &gt;}}
+vector <int> vec2;
+int n;
+cin &gt;&gt; n;
+for (int i = 0; i &lt; n; ++i){
+int valor;
+cin &gt;&gt; valor;
+vec2.push_back();
+}
+{{&lt; /highlight &gt;}}</p>
+</div>
+<div class="section" id="pop-back-quitar-atras-pop-back-quitar-atras">
+<h1>pop back (quitar atrás) {#pop-back–quitar-atrás}<a class="headerlink" href="#pop-back-quitar-atras-pop-back-quitar-atras" title="Enlazar permanentemente con este título">¶</a></h1>
+<p>Elimina el último valor del vector.</p>
+<p>{{&lt; highlight cpp «linenos=table, linenostart=14» &gt;}}
+vec.pop_back(); // En este caso, elimina el 1
+{{&lt; /highlight &gt;}}</p>
+</div>
+<div class="section" id="insert-insertar-insert-insertar">
+<h1>insert (insertar) {#insert–insertar}<a class="headerlink" href="#insert-insertar-insert-insertar" title="Enlazar permanentemente con este título">¶</a></h1>
+<p>Podemos insertar un valor entre dos indices de un vector. El problema de esto es que mueve todos los valores que estén más adelante, lo que es lento.</p>
+<p>{{&lt; highlight cpp «linenos=table, linenostart=15» &gt;}}
+vec.insert(vec.begin() + 2, 4); // Inserta el valor 4 al índice 2
+{{&lt; /highlight &gt;}}</p>
+</div>
+<div class="section" id="erase-borrar-erase-borrar">
+<h1>erase (borrar) {#erase–borrar}<a class="headerlink" href="#erase-borrar-erase-borrar" title="Enlazar permanentemente con este título">¶</a></h1>
+<p>Borra un dato del vector. Al igual que el insert, tiene que mover todos los datos siguientes (esta vez a la derecha).</p>
+<p>{{&lt; highlight cpp «linenos=table, linenostart=16» &gt;}}
+vec.erase(vec.begin() + 2); // Elimina el valor con índice 2, en nuestro caso, el 4 que insertamos antes.
+{{&lt; /highlight &gt;}}</p>
+</div>
+<div class="section" id="iteradores-de-un-arreglo-iteradores-de-un-arreglo">
+<h1>Iteradores de un arreglo {#iteradores-de-un-arreglo}<a class="headerlink" href="#iteradores-de-un-arreglo-iteradores-de-un-arreglo" title="Enlazar permanentemente con este título">¶</a></h1>
+<p>Hay ciertos iteradores que podemos usar en un arreglo que nos ayudarán en algunos casos, como por ejemplo si quieremos recorrer un arreglo. Estos son:</p>
+<ul class="simple">
+<li><p>begin() – Iterador que accede al primer valor del arreglo.</p></li>
+<li><p>end() – Accede al final del arreglo.</p></li>
+<li><p>rbegin() – Accede al ultimo elemento del arreglo</p></li>
+<li><p>rend – Accede al inicio del arreglo</p></li>
+</ul>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../../ordenamiento/_index.html" class="btn btn-neutral float-right" title="Acerca de {#acerca-de}" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="stacks.html" class="btn btn-neutral float-left" title="push (empujar) {#push–empujar}" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        
+        &copy; Copyright 2020, Comunidad del taller avanzado
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>
