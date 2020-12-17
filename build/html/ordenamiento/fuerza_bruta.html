@@ -7,7 +7,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Algoritmos de fuerza bruta &mdash; documentación de Yo Cmás - </title>
+  <title>Algoritmos de Fuerza Bruta &mdash; documentación de Yo Cmás - </title>
   
 
   
@@ -37,6 +37,7 @@
     
     <link rel="index" title="Índice" href="../genindex.html" />
     <link rel="search" title="Búsqueda" href="../search.html" />
+    <link rel="next" title="Algoritmos de Decrecer y Conquistar" href="dec_conq.html" />
     <link rel="prev" title="Algoritmos de Ordenamiento" href="ordenamiento.html" /> 
 </head>
 
@@ -85,7 +86,7 @@
               <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../edd/edd.html">Estructuras de Datos</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="ordenamiento.html">Algoritmos de Ordenamiento</a><ul class="current">
-<li class="toctree-l2 current"><a class="current reference internal" href="#">Algoritmos de fuerza bruta</a><ul>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Algoritmos de Fuerza Bruta</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#acerca-de">Acerca de</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#bubble-sort">Bubble sort</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="#ejemplo">Ejemplo</a></li>
@@ -99,8 +100,10 @@
 </li>
 </ul>
 </li>
+<li class="toctree-l2"><a class="reference internal" href="dec_conq.html">Algoritmos de Decrecer y Conquistar</a></li>
 </ul>
 </li>
+<li class="toctree-l1"><a class="reference internal" href="../busqueda/busqueda.html">Algoritmos de búsqueda</a></li>
 </ul>
 
             
@@ -149,7 +152,7 @@
         
           <li><a href="ordenamiento.html">Algoritmos de Ordenamiento</a> &raquo;</li>
         
-      <li>Algoritmos de fuerza bruta</li>
+      <li>Algoritmos de Fuerza Bruta</li>
     
     
       <li class="wy-breadcrumbs-aside">
@@ -169,7 +172,7 @@
            <div itemprop="articleBody">
             
   <div class="section" id="algoritmos-de-fuerza-bruta">
-<h1>Algoritmos de fuerza bruta<a class="headerlink" href="#algoritmos-de-fuerza-bruta" title="Enlazar permanentemente con este título">¶</a></h1>
+<h1>Algoritmos de Fuerza Bruta<a class="headerlink" href="#algoritmos-de-fuerza-bruta" title="Enlazar permanentemente con este título">¶</a></h1>
 <div class="section" id="acerca-de">
 <h2>Acerca de<a class="headerlink" href="#acerca-de" title="Enlazar permanentemente con este título">¶</a></h2>
 <p>Los algoritmos de fuerza bruta son algoritmo en general simples, que realizan una idea de “”Todos con todos””. Esto puede llegar a ser muy costoso en complejidad.</p>
@@ -177,14 +180,10 @@
 <div class="section" id="bubble-sort">
 <h2>Bubble sort<a class="headerlink" href="#bubble-sort" title="Enlazar permanentemente con este título">¶</a></h2>
 <ul class="simple">
-<li><p>Se van comparando los elementos, haciendo que los más grandes suban
-en el arreglo, como una burbuja.</p></li>
-<li><p>Da lo mismo cómo estén ordenadas las cosas, porque puedes modificar
-la función de comparación.</p></li>
-<li><p>Funciona invirtiendo el orden de cada par de elementos, si es que el
-primero es mayor que el segundo.</p></li>
-<li><p>Por ejemplo, se podría usar para contar el número de inversiones que
-hay que hacer.</p></li>
+<li><p>Se van comparando los elementos, haciendo que los más grandes suban en el arreglo, como una burbuja.</p></li>
+<li><p>Da lo mismo cómo estén ordenadas las cosas, porque puedes modificar la función de comparación.</p></li>
+<li><p>Funciona invirtiendo el orden de cada par de elementos, si es que el primero es mayor que el segundo.</p></li>
+<li><p>Por ejemplo, se podría usar para contar el número de inversiones que hay que hacer.</p></li>
 </ul>
 <div class="section" id="ejemplo">
 <h3>Ejemplo<a class="headerlink" href="#ejemplo" title="Enlazar permanentemente con este título">¶</a></h3>
@@ -198,7 +197,7 @@ hay que hacer.</p></li>
 <col style="width: 20%" />
 </colgroup>
 <tbody>
-<tr class="row-odd"><td><p>Iter</p></td>
+<tr class="row-odd"><td><p>Step</p></td>
 <td><p>Pos 0</p></td>
 <td><p>Pos 1</p></td>
 <td><p>Pos 2</p></td>
@@ -276,16 +275,32 @@ hay que hacer.</p></li>
 </div>
 <div class="section" id="codigo-de-ejemplo">
 <h3>Código de ejemplo<a class="headerlink" href="#codigo-de-ejemplo" title="Enlazar permanentemente con este título">¶</a></h3>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">void</span> <span class="n">swap</span><span class="p">(</span><span class="n">vector</span><span class="o">&lt;</span><span class="nb">int</span><span class="o">&gt;</span> <span class="o">&amp;</span><span class="n">arr</span><span class="p">,</span> <span class="nb">int</span> <span class="n">i</span><span class="p">,</span> <span class="nb">int</span> <span class="n">j</span><span class="p">){</span>
-    <span class="nb">int</span> <span class="n">aux</span> <span class="o">=</span> <span class="n">arr</span><span class="p">[</span><span class="n">i</span><span class="p">];</span>
+<div class="highlight-cpp notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="kt">void</span> <span class="nf">swap</span><span class="p">(</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span> <span class="o">&amp;</span><span class="n">arr</span><span class="p">,</span> <span class="kt">int</span> <span class="n">i</span><span class="p">,</span> <span class="kt">int</span> <span class="n">j</span><span class="p">){</span>
+    <span class="kt">int</span> <span class="n">aux</span> <span class="o">=</span> <span class="n">arr</span><span class="p">[</span><span class="n">i</span><span class="p">];</span>
     <span class="n">arr</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">arr</span><span class="p">[</span><span class="n">j</span><span class="p">];</span>
     <span class="n">arr</span><span class="p">[</span><span class="n">j</span><span class="p">]</span> <span class="o">=</span> <span class="n">aux</span><span class="p">;</span>
 <span class="p">}</span>
 
-<span class="n">void</span> <span class="n">bubblesort</span> <span class="p">(</span><span class="n">vector</span><span class="o">&lt;</span><span class="nb">int</span><span class="o">&gt;</span> <span class="o">&amp;</span><span class="n">vec</span><span class="p">)</span> <span class="p">{</span>
-    <span class="nb">int</span> <span class="n">size</span> <span class="o">=</span> <span class="n">vec</span><span class="o">.</span><span class="n">size</span><span class="p">();</span>
-    <span class="k">for</span> <span class="p">(</span><span class="nb">int</span> <span class="n">i</span> <span class="o">=</span> <span class="n">size</span> <span class="o">-</span> <span class="mi">1</span><span class="p">;</span> <span class="n">i</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">;</span> <span class="o">--</span><span class="n">i</span><span class="p">)</span> <span class="p">{</span>
-        <span class="k">for</span> <span class="p">(</span><span class="nb">int</span> <span class="n">j</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">j</span> <span class="o">&lt;</span> <span class="n">i</span><span class="p">;</span> <span class="o">++</span><span class="n">j</span><span class="p">)</span> <span class="p">{</span>
+<span class="kt">void</span> <span class="nf">bubblesort</span> <span class="p">(</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span> <span class="o">&amp;</span><span class="n">vec</span><span class="p">)</span> <span class="p">{</span>
+    <span class="kt">int</span> <span class="n">size</span> <span class="o">=</span> <span class="n">vec</span><span class="p">.</span><span class="n">size</span><span class="p">();</span>
+    <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="n">size</span> <span class="o">-</span> <span class="mi">1</span><span class="p">;</span> <span class="n">i</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">;</span> <span class="o">--</span><span class="n">i</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">j</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">j</span> <span class="o">&lt;</span> <span class="n">i</span><span class="p">;</span> <span class="o">++</span><span class="n">j</span><span class="p">)</span> <span class="p">{</span>
             <span class="k">if</span> <span class="p">(</span><span class="n">vec</span><span class="p">[</span><span class="n">j</span><span class="p">]</span> <span class="o">&gt;</span> <span class="n">vec</span><span class="p">[</span><span class="n">j</span><span class="o">+</span><span class="mi">1</span><span class="p">])</span> <span class="p">{</span>
                 <span class="n">swap</span><span class="p">(</span><span class="n">arr</span><span class="p">,</span> <span class="n">j</span><span class="p">,</span> <span class="n">j</span> <span class="o">+</span> <span class="mi">1</span><span class="p">);</span>
             <span class="p">}</span>
@@ -294,7 +309,7 @@ hay que hacer.</p></li>
     <span class="k">return</span><span class="p">;</span>
 <span class="p">}</span>
 </pre></div>
-</div>
+</td></tr></table></div>
 </div>
 </div>
 <div class="section" id="insertion-sort">
@@ -314,7 +329,7 @@ hay que hacer.</p></li>
 <col style="width: 20%" />
 </colgroup>
 <tbody>
-<tr class="row-odd"><td><p>Iter</p></td>
+<tr class="row-odd"><td><p>Step</p></td>
 <td><p>Pos 0</p></td>
 <td><p>Pos 1</p></td>
 <td><p>Pos 2</p></td>
@@ -327,28 +342,58 @@ hay que hacer.</p></li>
 <td><p>1</p></td>
 </tr>
 <tr class="row-odd"><td><p>1</p></td>
-<td><p>5</p></td>
-<td><p>3</p></td>
-<td><p>4</p></td>
-<td><p><em>1</em></p></td>
-</tr>
-<tr class="row-even"><td><p>2</p></td>
-<td><p>1</p></td>
-<td><p>5</p></td>
+<td><p><em>5</em></p></td>
 <td><p><em>3</em></p></td>
 <td><p>4</p></td>
+<td><p>1</p></td>
+</tr>
+<tr class="row-even"><td><p>2</p></td>
+<td><p><strong>3</strong></p></td>
+<td><p>5</p></td>
+<td><p>4</p></td>
+<td><p>1</p></td>
 </tr>
 <tr class="row-odd"><td><p>3</p></td>
-<td><p>1</p></td>
 <td><p>3</p></td>
-<td><p>5</p></td>
+<td><p><em>5</em></p></td>
 <td><p><em>4</em></p></td>
+<td><p>1</p></td>
 </tr>
 <tr class="row-even"><td><p>4</p></td>
+<td><p><em>3</em></p></td>
+<td><p><em>4</em></p></td>
+<td><p>5</p></td>
 <td><p>1</p></td>
+</tr>
+<tr class="row-odd"><td><p>5</p></td>
+<td><p><strong>3</strong></p></td>
+<td><p><strong>4</strong></p></td>
+<td><p>5</p></td>
+<td><p>1</p></td>
+</tr>
+<tr class="row-even"><td><p>6</p></td>
 <td><p>3</p></td>
 <td><p>4</p></td>
+<td><p><em>5</em></p></td>
+<td><p><em>1</em></p></td>
+</tr>
+<tr class="row-odd"><td><p>7</p></td>
+<td><p>3</p></td>
+<td><p><em>4</em></p></td>
+<td><p><em>1</em></p></td>
 <td><p>5</p></td>
+</tr>
+<tr class="row-even"><td><p>8</p></td>
+<td><p><em>3</em></p></td>
+<td><p><em>1</em></p></td>
+<td><p><strong>4</strong></p></td>
+<td><p><strong>5</strong></p></td>
+</tr>
+<tr class="row-odd"><td><p>9</p></td>
+<td><p><strong>1</strong></p></td>
+<td><p><strong>3</strong></p></td>
+<td><p><strong>4</strong></p></td>
+<td><p><strong>5</strong></p></td>
 </tr>
 </tbody>
 </table>
@@ -356,20 +401,40 @@ hay que hacer.</p></li>
 </div>
 <div class="section" id="id2">
 <h3>Código de ejemplo<a class="headerlink" href="#id2" title="Enlazar permanentemente con este título">¶</a></h3>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">void</span> <span class="n">swap</span><span class="p">(</span><span class="n">vector</span><span class="o">&lt;</span><span class="nb">int</span><span class="o">&gt;</span> <span class="o">&amp;</span><span class="n">arr</span><span class="p">,</span> <span class="nb">int</span> <span class="n">i</span><span class="p">,</span> <span class="nb">int</span> <span class="n">j</span><span class="p">){</span>
-    <span class="nb">int</span> <span class="n">aux</span> <span class="o">=</span> <span class="n">arr</span><span class="p">[</span><span class="n">i</span><span class="p">];</span>
+<div class="highlight-cpp notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="kt">void</span> <span class="nf">swap</span><span class="p">(</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span> <span class="o">&amp;</span><span class="n">arr</span><span class="p">,</span> <span class="kt">int</span> <span class="n">i</span><span class="p">,</span> <span class="kt">int</span> <span class="n">j</span><span class="p">){</span>
+    <span class="kt">int</span> <span class="n">aux</span> <span class="o">=</span> <span class="n">arr</span><span class="p">[</span><span class="n">i</span><span class="p">];</span>
     <span class="n">arr</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">arr</span><span class="p">[</span><span class="n">j</span><span class="p">];</span>
     <span class="n">arr</span><span class="p">[</span><span class="n">j</span><span class="p">]</span> <span class="o">=</span> <span class="n">aux</span><span class="p">;</span>
 <span class="p">}</span>
 
-<span class="n">void</span> <span class="n">insertion_sort</span><span class="p">(</span><span class="n">vector</span><span class="o">&lt;</span><span class="nb">int</span><span class="o">&gt;</span> <span class="o">&amp;</span><span class="n">arr</span><span class="p">){</span>
-    <span class="k">for</span><span class="p">(</span><span class="nb">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">arr</span><span class="o">.</span><span class="n">size</span><span class="p">();</span> <span class="o">++</span><span class="n">i</span><span class="p">){</span>
-        <span class="k">for</span><span class="p">(</span><span class="nb">int</span> <span class="n">j</span> <span class="o">=</span> <span class="n">i</span><span class="p">;</span> <span class="n">j</span> <span class="o">&gt;=</span> <span class="mi">0</span><span class="p">;</span> <span class="o">--</span><span class="n">j</span><span class="p">){</span>
-            <span class="o">//</span><span class="n">caso</span> <span class="n">swap</span>
+<span class="kt">void</span> <span class="nf">insertion_sort</span><span class="p">(</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span> <span class="o">&amp;</span><span class="n">arr</span><span class="p">){</span>
+    <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">arr</span><span class="p">.</span><span class="n">size</span><span class="p">();</span> <span class="o">++</span><span class="n">i</span><span class="p">){</span>
+        <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">j</span> <span class="o">=</span> <span class="n">i</span><span class="p">;</span> <span class="n">j</span> <span class="o">&gt;=</span> <span class="mi">0</span><span class="p">;</span> <span class="o">--</span><span class="n">j</span><span class="p">){</span>
+            <span class="c1">//caso swap</span>
             <span class="k">if</span><span class="p">(</span><span class="n">arr</span><span class="p">[</span><span class="n">j</span><span class="p">]</span> <span class="o">&lt;</span> <span class="n">arr</span><span class="p">[</span><span class="n">j</span><span class="o">-</span><span class="mi">1</span><span class="p">]){</span>
               <span class="n">swap</span><span class="p">(</span><span class="n">arr</span><span class="p">,</span> <span class="n">j</span><span class="p">,</span> <span class="n">j</span><span class="o">-</span><span class="mi">1</span><span class="p">);</span>
             <span class="p">}</span>
-            <span class="o">//</span><span class="n">caso</span> <span class="n">no</span> <span class="n">swap</span> <span class="o">=</span> <span class="n">todo</span> <span class="n">ok</span> <span class="n">todo</span> <span class="n">correcto</span> <span class="p">:]</span>
+            <span class="c1">//caso no swap = todo ok todo correcto :]</span>
             <span class="k">else</span> <span class="k">if</span><span class="p">(</span><span class="n">arr</span><span class="p">[</span><span class="n">j</span><span class="p">]</span> <span class="o">&gt;=</span> <span class="n">arr</span><span class="p">[</span><span class="n">j</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">||</span> <span class="n">j</span> <span class="o">==</span> <span class="mi">0</span><span class="p">){</span>
                 <span class="k">break</span><span class="p">;</span>
             <span class="p">}</span>
@@ -378,7 +443,7 @@ hay que hacer.</p></li>
     <span class="k">return</span><span class="p">;</span>
 <span class="p">}</span>
 </pre></div>
-</div>
+</td></tr></table></div>
 <p><strong>Nota: este código fue robado de Julieta Coloma</strong></p>
 </div>
 </div>
@@ -391,6 +456,8 @@ hay que hacer.</p></li>
           <footer>
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="dec_conq.html" class="btn btn-neutral float-right" title="Algoritmos de Decrecer y Conquistar" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
         <a href="ordenamiento.html" class="btn btn-neutral float-left" title="Algoritmos de Ordenamiento" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>

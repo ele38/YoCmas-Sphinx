@@ -15,4 +15,4 @@ Cualquier aporte es bienvenido.
 .. toctree::
     edd/edd
     ordenamiento/ordenamiento
-    busqueda/index.md
+    busqueda/busqueda

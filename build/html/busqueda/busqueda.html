@@ -7,7 +7,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Algoritmos de Ordenamiento &mdash; documentación de Yo Cmás - </title>
+  <title>Algoritmos de búsqueda &mdash; documentación de Yo Cmás - </title>
   
 
   
@@ -37,8 +37,8 @@
     
     <link rel="index" title="Índice" href="../genindex.html" />
     <link rel="search" title="Búsqueda" href="../search.html" />
-    <link rel="next" title="Algoritmos de Fuerza Bruta" href="fuerza_bruta.html" />
-    <link rel="prev" title="Estructuras de Datos No Lineales" href="../edd/no_lineales.html" /> 
+    <link rel="next" title="Búsqueda binaria" href="binaria.html" />
+    <link rel="prev" title="Algoritmos de Decrecer y Conquistar" href="../ordenamiento/dec_conq.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -85,12 +85,11 @@
             
               <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../edd/edd.html">Estructuras de Datos</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">Algoritmos de Ordenamiento</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="fuerza_bruta.html">Algoritmos de Fuerza Bruta</a></li>
-<li class="toctree-l2"><a class="reference internal" href="dec_conq.html">Algoritmos de Decrecer y Conquistar</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ordenamiento/ordenamiento.html">Algoritmos de Ordenamiento</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Algoritmos de búsqueda</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="binaria.html">Búsqueda binaria</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../busqueda/busqueda.html">Algoritmos de búsqueda</a></li>
 </ul>
 
             
@@ -137,13 +136,13 @@
     
       <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
         
-      <li>Algoritmos de Ordenamiento</li>
+      <li>Algoritmos de búsqueda</li>
     
     
       <li class="wy-breadcrumbs-aside">
         
             
-            <a href="../_sources/ordenamiento/ordenamiento.rst.txt" rel="nofollow"> View page source</a>
+            <a href="../_sources/busqueda/busqueda.rst.txt" rel="nofollow"> View page source</a>
           
         
       </li>
@@ -156,30 +155,18 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="algoritmos-de-ordenamiento">
-<h1>Algoritmos de Ordenamiento<a class="headerlink" href="#algoritmos-de-ordenamiento" title="Enlazar permanentemente con este título">¶</a></h1>
-<p>Uno de los problemas más clásicos de la informática es el problema de ordenamiento, este corresponde a tomo un grupo de datos y los ordenan a base de algún criterio. Hay muchos algoritmos actualmente, vamos a revisar en detalle tres algoritmos. Dos que corresponden a algoritmos que siguen la técnica de fuerza bruta y uno que consiste a decrecer y conquistar. Estos si bien no son los algoritmos más eficientes, son muy útiles para entende la base del ordenamiento.</p>
+  <div class="section" id="algoritmos-de-busqueda">
+<h1>Algoritmos de búsqueda<a class="headerlink" href="#algoritmos-de-busqueda" title="Enlazar permanentemente con este título">¶</a></h1>
+<p>Otro problema muy recurrente dentro de la programación es el buscar uno o más elementos dentro de un grupo de datos. Para ello se han desarrollado varios algoritmos de tal forma de optimizar esta busqueda.</p>
+<p>Los dos principales y más nombrados son la búsqueda lineal y binaria. Estas dos búsquedas se detallarán para comprender su uso y benificio.</p>
 <div class="toctree-wrapper compound">
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="fuerza_bruta.html">Algoritmos de Fuerza Bruta</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="fuerza_bruta.html#acerca-de">Acerca de</a></li>
-<li class="toctree-l2"><a class="reference internal" href="fuerza_bruta.html#bubble-sort">Bubble sort</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="fuerza_bruta.html#ejemplo">Ejemplo</a></li>
-<li class="toctree-l3"><a class="reference internal" href="fuerza_bruta.html#codigo-de-ejemplo">Código de ejemplo</a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="fuerza_bruta.html#insertion-sort">Insertion sort</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="fuerza_bruta.html#id1">Ejemplo</a></li>
-<li class="toctree-l3"><a class="reference internal" href="fuerza_bruta.html#id2">Código de ejemplo</a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="dec_conq.html">Algoritmos de Decrecer y Conquistar</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="dec_conq.html#acerca-de">Acerca de</a></li>
-<li class="toctree-l2"><a class="reference internal" href="dec_conq.html#selection-sort">Selection sort</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="dec_conq.html#ejemplo">Ejemplo</a></li>
-<li class="toctree-l3"><a class="reference internal" href="dec_conq.html#codigo-de-ejemplo">Código de ejemplo</a></li>
+<li class="toctree-l1"><a class="reference internal" href="binaria.html">Búsqueda binaria</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="binaria.html#acerca-de">Acerca de</a></li>
+<li class="toctree-l2"><a class="reference internal" href="binaria.html#uso-mediante-la-libreria-stl">Uso mediante la librería STL</a></li>
+<li class="toctree-l2"><a class="reference internal" href="binaria.html#implementaciones-propias">Implementaciones propias</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="binaria.html#implementacion-con-while">Implementación con while</a></li>
+<li class="toctree-l3"><a class="reference internal" href="binaria.html#implementacion-recursiva">Implementación recursiva</a></li>
 </ul>
 </li>
 </ul>
@@ -196,10 +183,10 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="fuerza_bruta.html" class="btn btn-neutral float-right" title="Algoritmos de Fuerza Bruta" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="binaria.html" class="btn btn-neutral float-right" title="Búsqueda binaria" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="../edd/no_lineales.html" class="btn btn-neutral float-left" title="Estructuras de Datos No Lineales" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="../ordenamiento/dec_conq.html" class="btn btn-neutral float-left" title="Algoritmos de Decrecer y Conquistar" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   

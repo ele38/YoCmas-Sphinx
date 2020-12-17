@@ -1,4 +1,4 @@
-Algoritmos de fuerza bruta
+Algoritmos de Fuerza Bruta
 ==========================
 
 Acerca de
@@ -9,20 +9,16 @@ Los algoritmos de fuerza bruta son algoritmo en general simples, que realizan un
 Bubble sort
 -----------
 
--  Se van comparando los elementos, haciendo que los más grandes suban
-   en el arreglo, como una burbuja.
--  Da lo mismo cómo estén ordenadas las cosas, porque puedes modificar
-   la función de comparación.
--  Funciona invirtiendo el orden de cada par de elementos, si es que el
-   primero es mayor que el segundo.
--  Por ejemplo, se podría usar para contar el número de inversiones que
-   hay que hacer.
+-  Se van comparando los elementos, haciendo que los más grandes suban en el arreglo, como una burbuja.
+-  Da lo mismo cómo estén ordenadas las cosas, porque puedes modificar la función de comparación.
+-  Funciona invirtiendo el orden de cada par de elementos, si es que el primero es mayor que el segundo.
+-  Por ejemplo, se podría usar para contar el número de inversiones que hay que hacer.
 
 Ejemplo
 *******
 
     ===== ===== ===== ===== =====
-    Iter  Pos 0 Pos 1 Pos 2 Pos 3
+    Step  Pos 0 Pos 1 Pos 2 Pos 3
     0     5     3     4     1
     1     *5*   *3*   4     1
     2     3     *5*   *4*   1
@@ -39,7 +35,8 @@ Ejemplo
 Código de ejemplo
 *****************
 
-::
+.. code:: cpp
+    :number-lines: 
 
     void swap(vector<int> &arr, int i, int j){
         int aux = arr[i];
@@ -68,18 +65,24 @@ Ejemplo
 ****************
 
     ===== ===== ===== ===== =====
-    Iter  Pos 0 Pos 1 Pos 2 Pos 3
+    Step  Pos 0 Pos 1 Pos 2 Pos 3
     0     5     3     4     1
-    1     5     3     4     *1*
-    2     1     5     *3*   4
-    3     1     3     5     *4*
-    4     1     3     4     5
+    1     *5*   *3*   4     1
+    2     **3** 5     4     1
+    3     3     *5*   *4*   1
+    4     *3*   *4*   5     1
+    5     **3** **4** 5     1
+    6     3     4     *5*   *1*
+    7     3     *4*   *1*   5
+    8     *3*   *1*   **4** **5**
+    9     **1** **3** **4** **5**
     ===== ===== ===== ===== =====
 
 Código de ejemplo
 **************************
 
-::
+.. code:: cpp
+    :number-lines: 
 
     void swap(vector<int> &arr, int i, int j){
         int aux = arr[i];

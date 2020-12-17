@@ -1,0 +1,427 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="es" >
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Búsqueda binaria &mdash; documentación de Yo Cmás - </title>
+  
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+
+  
+  
+  
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/language_data.js"></script>
+        <script src="../_static/translations.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Índice" href="../genindex.html" />
+    <link rel="search" title="Búsqueda" href="../search.html" />
+    <link rel="prev" title="Algoritmos de búsqueda" href="busqueda.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home" alt="Documentation Home"> Yo Cmás
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../edd/edd.html">Estructuras de Datos</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ordenamiento/ordenamiento.html">Algoritmos de Ordenamiento</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="busqueda.html">Algoritmos de búsqueda</a><ul class="current">
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Búsqueda binaria</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#acerca-de">Acerca de</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#uso-mediante-la-libreria-stl">Uso mediante la librería STL</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#implementaciones-propias">Implementaciones propias</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#implementacion-con-while">Implementación con while</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#implementacion-recursiva">Implementación recursiva</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Yo Cmás</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+          <li><a href="busqueda.html">Algoritmos de búsqueda</a> &raquo;</li>
+        
+      <li>Búsqueda binaria</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/busqueda/binaria.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="busqueda-binaria">
+<h1>Búsqueda binaria<a class="headerlink" href="#busqueda-binaria" title="Enlazar permanentemente con este título">¶</a></h1>
+<div class="section" id="acerca-de">
+<h2>Acerca de<a class="headerlink" href="#acerca-de" title="Enlazar permanentemente con este título">¶</a></h2>
+<p>La búsqueda binaria es un algoritmo de <em>divide and conquer</em> (dividir y
+conquistar), que nos permite encontrar un elemento dentro de una
+estructura <strong>ordenada</strong> rápidamente. Al ejecutarse, toma el centro de un
+arreglo y comprueba si el valor que se busca es igual al del centro. De
+no serlo, verifica si el valor es menor o mayor al del centro.</p>
+<p>Si el valor es mayor al del centro, se ignoran todos los valores
+anteriores al centro, dividiendo la cantidad de números a la mitad.</p>
+<p>Si el valor es menor al del centro, se ignoran todos los valores de
+después del centro, dividiendo la cantidad de números a la mitad.</p>
+<p>La complejidad de este algoritmo es <strong>O(log(N))</strong>, comparada con un
+algoritmo lineal, que en el peor de los casos tiene complejidad
+<strong>O(N)</strong>.</p>
+<ol class="arabic">
+<li><p>Ejemplos</p>
+<ol class="arabic">
+<li><p>en la vida real</p>
+<p>Ir al medio de un diccionario, y buscar alfabéticamente, tomando
+una palabra central (más o menos), viendo si la palabra que
+queremos está antes o después y repetir el proceso de buscar una
+palabra central.</p>
+</li>
+<li><p>Ejemplo computacional</p>
+<p>En esta imágen, se usa la búsqueda binaria para encontrar el 19.
+<img alt="image1" src="https://uniwebsidad.com/static/libros/imagenes/algoritmos-python/f0801.png" /></p>
+</li>
+</ol>
+</li>
+</ol>
+</div>
+<div class="section" id="uso-mediante-la-libreria-stl">
+<h2>Uso mediante la librería STL<a class="headerlink" href="#uso-mediante-la-libreria-stl" title="Enlazar permanentemente con este título">¶</a></h2>
+<ul>
+<li><p>Importar</p>
+<blockquote>
+<div><p>Podemos directamente importar toda la stl o podemos importar la
+librería &lt;algorithm&gt; de la siguiente forma:</p>
+</div></blockquote>
+</li>
+</ul>
+<div class="highlight-cpp notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="cp">#include</span> <span class="cpf">&lt;algorithm&gt;</span><span class="cp"></span>
+</pre></div>
+</td></tr></table></div>
+<ul>
+<li><p>binary_search()</p>
+<blockquote>
+<div><p>La librería STL ya incluye binary search, si queremos saber si el valor 3 está en un vector, podemos ejecutar:</p>
+</div></blockquote>
+</li>
+</ul>
+<div class="highlight-cpp notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5
+6
+7</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span> <span class="n">v</span><span class="p">{</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">7</span><span class="p">};</span>
+<span class="k">if</span> <span class="p">(</span><span class="n">binary_search</span> <span class="p">(</span><span class="n">v</span><span class="p">.</span><span class="n">begin</span><span class="p">(),</span> <span class="n">v</span><span class="p">.</span><span class="n">end</span><span class="p">(),</span> <span class="mi">3</span><span class="p">))</span> <span class="p">{</span>
+  <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;Se encuentra el valor 3 en nuestro vector</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="k">else</span> <span class="p">{</span>
+  <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;No hay ningún 3 en nuestro vector</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</td></tr></table></div>
+<p>Retorna un <em>bool</em>.</p>
+<ul>
+<li><p>lower_bound() (límite inferior)</p>
+<blockquote>
+<div><p>La función lower_bound() de la librería STL retorna un puntero a un valor <strong>superior</strong> o, si es posible, <strong>igual</strong> al entregado dentro de una estructura ordenada.</p>
+<p>Si todos los elementos en el arreglo son inferiores al valor pedido, se entrega el último elemento del arreglo. Si los elementos del arreglo son superiores al valor pedido, se entrega el primer elemento del arreglo.</p>
+<p>Por ejemplo:</p>
+</div></blockquote>
+</li>
+</ul>
+<div class="highlight-cpp notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span> <span class="n">v</span><span class="p">{</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">30</span><span class="p">,</span> <span class="mi">30</span><span class="p">,</span> <span class="mi">30</span><span class="p">,</span> <span class="mi">40</span><span class="p">,</span> <span class="mi">50</span> <span class="p">};</span>
+<span class="o">*</span><span class="n">lower_bound</span><span class="p">(</span><span class="n">v</span><span class="p">.</span><span class="n">begin</span><span class="p">(),</span> <span class="n">v</span><span class="p">.</span><span class="n">end</span><span class="p">(),</span> <span class="mi">30</span><span class="p">);</span>
+</pre></div>
+</td></tr></table></div>
+<p>Valor de retorno: un iterador que apunta hacia <strong>30</strong> (el primero en el arreglo, en la posición [2])</p>
+<ul>
+<li><p>upper_bound() (límite superior)</p>
+<blockquote>
+<div><p>La función upper<sub>bound</sub>() de la librería STL nos entrega un puntero a un valor <strong>superior</strong> al pedido en un arreglo ordenado.</p>
+<p>En el caso de que no haya un valor superior al pedido, nos entrega el último valor del arreglo.</p>
+<p>Por ejemplo:</p>
+</div></blockquote>
+</li>
+</ul>
+<div class="highlight-cpp notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="o">*</span><span class="n">upper_bound</span><span class="p">(</span><span class="n">v</span><span class="p">.</span><span class="n">begin</span><span class="p">(),</span> <span class="n">v</span><span class="p">.</span><span class="n">end</span><span class="p">(),</span> <span class="mi">30</span><span class="p">);</span>
+</pre></div>
+</td></tr></table></div>
+<p>Valor de retorno: iterador al <strong>40</strong> (posición [4])</p>
+</div>
+<div class="section" id="implementaciones-propias">
+<h2>Implementaciones propias<a class="headerlink" href="#implementaciones-propias" title="Enlazar permanentemente con este título">¶</a></h2>
+<div class="section" id="implementacion-con-while">
+<h3>Implementación con while<a class="headerlink" href="#implementacion-con-while" title="Enlazar permanentemente con este título">¶</a></h3>
+<blockquote>
+<div><p>Esta implementación nos retorna el índice del número a buscar dentro de un arreglo.</p>
+</div></blockquote>
+<div class="highlight-cpp notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="kt">int</span> <span class="nf">binarySearch</span><span class="p">(</span><span class="kt">int</span> <span class="n">arr</span><span class="p">[],</span> <span class="kt">int</span> <span class="n">l</span><span class="p">,</span> <span class="kt">int</span> <span class="n">r</span><span class="p">,</span> <span class="kt">int</span> <span class="n">x</span><span class="p">)</span>
+<span class="p">{</span>
+
+    <span class="k">while</span> <span class="p">(</span><span class="n">l</span> <span class="o">&lt;=</span> <span class="n">r</span><span class="p">)</span> <span class="p">{</span>
+        <span class="c1">//esto es lo mismo que hacer (r + l) / 2</span>
+        <span class="kt">int</span> <span class="n">m</span> <span class="o">=</span> <span class="n">l</span> <span class="o">+</span> <span class="p">(</span><span class="n">r</span> <span class="o">-</span> <span class="n">l</span><span class="p">)</span> <span class="o">/</span> <span class="mi">2</span><span class="p">;</span>
+
+        <span class="c1">// Revisa si x esta al medio</span>
+        <span class="k">if</span> <span class="p">(</span><span class="n">arr</span><span class="p">[</span><span class="n">m</span><span class="p">]</span> <span class="o">==</span> <span class="n">x</span><span class="p">){</span>
+            <span class="k">return</span> <span class="n">m</span><span class="p">;</span>
+        <span class="p">}</span>
+
+        <span class="c1">// Si x es mayor, ignorar la izquierda</span>
+        <span class="k">if</span> <span class="p">(</span><span class="n">arr</span><span class="p">[</span><span class="n">m</span><span class="p">]</span> <span class="o">&lt;</span> <span class="n">x</span><span class="p">){</span>
+            <span class="n">l</span> <span class="o">=</span> <span class="n">m</span> <span class="o">+</span> <span class="mi">1</span><span class="p">;</span>
+        <span class="p">}</span>
+        <span class="c1">// Si x es menor, ignorar la derecha</span>
+        <span class="k">else</span><span class="p">{</span>
+            <span class="n">r</span> <span class="o">=</span> <span class="n">m</span> <span class="o">-</span> <span class="mi">1</span><span class="p">;</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+    <span class="k">return</span> <span class="o">-</span><span class="mi">1</span><span class="p">;</span>
+
+<span class="p">}</span>
+</pre></div>
+</td></tr></table></div>
+</div>
+<div class="section" id="implementacion-recursiva">
+<h3>Implementación recursiva<a class="headerlink" href="#implementacion-recursiva" title="Enlazar permanentemente con este título">¶</a></h3>
+<blockquote>
+<div><p>Esta implementación nos retorna el índice del número a buscar dentro de un arreglo.</p>
+</div></blockquote>
+<div class="highlight-cpp notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="kt">int</span> <span class="nf">binarySearch</span><span class="p">(</span><span class="kt">int</span> <span class="n">arr</span><span class="p">[],</span> <span class="kt">int</span> <span class="n">l</span><span class="p">,</span> <span class="kt">int</span> <span class="n">r</span><span class="p">,</span> <span class="kt">int</span> <span class="n">x</span><span class="p">){</span>
+    <span class="k">if</span> <span class="p">(</span><span class="n">r</span> <span class="o">&gt;=</span> <span class="n">l</span><span class="p">){</span>
+        <span class="c1">//esto es lo mismo que hacer (r + l) / 2</span>
+        <span class="kt">int</span> <span class="n">mid</span> <span class="o">=</span> <span class="n">l</span> <span class="o">+</span> <span class="p">(</span><span class="n">r</span> <span class="o">-</span> <span class="n">l</span><span class="p">)</span> <span class="o">/</span> <span class="mi">2</span><span class="p">;</span>
+
+        <span class="c1">// Revisa si x esta al medio</span>
+
+        <span class="k">if</span> <span class="p">(</span><span class="n">arr</span><span class="p">[</span><span class="n">mid</span><span class="p">]</span> <span class="o">==</span> <span class="n">x</span><span class="p">){</span>
+            <span class="k">return</span> <span class="n">mid</span><span class="p">;</span>
+        <span class="p">}</span>
+
+        <span class="c1">// Si x es mayor, ignorar la izquierda</span>
+        <span class="k">if</span> <span class="p">(</span><span class="n">arr</span><span class="p">[</span><span class="n">mid</span><span class="p">]</span> <span class="o">&gt;</span> <span class="n">x</span><span class="p">){</span>
+            <span class="k">return</span> <span class="n">binarySearch</span><span class="p">(</span><span class="n">arr</span><span class="p">,</span> <span class="n">l</span><span class="p">,</span> <span class="n">mid</span> <span class="o">-</span> <span class="mi">1</span><span class="p">,</span> <span class="n">x</span><span class="p">);</span>
+        <span class="p">}</span>
+        <span class="c1">// Si x es mayor, ignorar la derecha</span>
+        <span class="k">return</span> <span class="n">binarySearch</span><span class="p">(</span><span class="n">arr</span><span class="p">,</span> <span class="n">mid</span> <span class="o">+</span> <span class="mi">1</span><span class="p">,</span> <span class="n">r</span><span class="p">,</span> <span class="n">x</span><span class="p">);</span>
+    <span class="p">}</span>
+    <span class="k">return</span> <span class="o">-</span><span class="mi">1</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</td></tr></table></div>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+      
+        <a href="busqueda.html" class="btn btn-neutral float-left" title="Algoritmos de búsqueda" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        
+        &copy; Copyright 2020, Comunidad del taller avanzado
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

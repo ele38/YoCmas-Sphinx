@@ -21,14 +21,16 @@ Inicialización
 
 Incluimos la librería:
 
-::
+.. code:: cpp
+    :number-lines: 
 
 	#include <set>
 
 
 Inicializamos nuestro conjunto:
 
-::
+.. code:: cpp
+    :number-lines: 
 
 	set < int > conjunto; // int puede ser reemplazado con cualquier otro tipo de dato
 
@@ -37,7 +39,8 @@ insert (Insertar)
 
 Inserta un dato. Retorna un par de elementos, el primero siendo el iterador del valor insertado y el segundo siendo un bool que marca si es que ya existía o no. En el ejemplo de abajo, usamos .second para comprobar si se insertó correctamente o no.
 
-::
+.. code:: cpp
+    :number-lines: 
 
 	// Retorna TRUE ya que no estaba anteriormente
 	if (conjunto.insert(10).second)
@@ -54,7 +57,8 @@ find (Encontrar)
 
 Busca un elemento en el set y si lo encuentra retorna un iterador al valor. De lo contrario, retorna conjunto.end();
 
-::
+.. code:: cpp
+    :number-lines: 
 
 	if (conjunto.find(10) != conjunto.end())
 	    cout << "ganai\n";
@@ -64,9 +68,11 @@ erase (borrar)
 
 Puedes borrar un valor si le entregas el iterador al valor.
 
-::
+.. code:: cpp
+    :number-lines: 
 
-	set < int >::iterator it = conjunto.find(11);
+	set < int >.. code:: cpp
+    :number-lines: iterator it = conjunto.find(11);
 	if (it != conjunto.end())
 	    conjunto.erase(it);
 
@@ -75,7 +81,8 @@ Iterar a través de un conjunto
 
 Puedes iterar a través de un conjunto con los valores ya ordenados con un iterador:
 
-::
+.. code:: cpp
+    :number-lines: 
 
 	// Imprime 10 11 20 30 40
 	for (it = conjunto.begin(); it != conjunto.end(); ++it)
@@ -114,14 +121,16 @@ Inicializar {#inicializar}
 
 Incluimos la librería de map:
 
-::
+.. code:: cpp
+    :number-lines: 
 
 	#include <map>
 
 
 Inicializamos el mapa curso:
 
-::
+.. code:: cpp
+    :number-lines: 
 
 	map<string, int> curso;
 
@@ -130,14 +139,16 @@ Insert (insertar)
 
 * Forma 1:
 
-::
+.. code:: cpp
+    :number-lines: 
 
 	curso["perez"] = 1;
 
 
 * Forma 2:
 
-::
+.. code:: cpp
+    :number-lines: 
 
 	curso.insert(pair<string, int>("gonzalez, 3"));
 
@@ -147,7 +158,8 @@ Operar con los valores
 Se puede operar con el valor tomando la llave.
 Ejemplo 1:
 
-::
+.. code:: cpp
+    :number-lines: 
 
 	// Incrementar el valor de la llave perez, por ejemplo.
 	++curso.["perez"];
@@ -155,7 +167,8 @@ Ejemplo 1:
 
 Ejemplo 2:
 
-::
+.. code:: cpp
+    :number-lines: 
 
 	cout << curso.["perez"] << endl; // El output será 2.
 
@@ -168,9 +181,11 @@ Find (encontrar)
 Retorna un iterador, si no lo encuentra, apunta a map.end().
 Asignamos el iterador ``it`` a gonzalez, y luego lo usamos:
 
-::
+.. code:: cpp
+    :number-lines: 
 
-	map<string, int>::iterator it;
+	map<string, int>.. code:: cpp
+    :number-lines: iterator it;
 	it = curso.find("gonzalez");
 
 	if (it != curso.end()){
@@ -181,7 +196,8 @@ Asignamos el iterador ``it`` a gonzalez, y luego lo usamos:
 
 Podemos incluso operar usando los iteradores:
 
-::
+.. code:: cpp
+    :number-lines: 
 
 	it->++second;
 
@@ -190,7 +206,8 @@ Erase (borrar)
 
 * Forma 1:
 
-::
+.. code:: cpp
+    :number-lines: 
 
 	it = curso.find("perez");
 	curso.erase(it);
@@ -198,7 +215,8 @@ Erase (borrar)
 
 * Forma 2:
 
-::
+.. code:: cpp
+    :number-lines: 
 
 	curso.erase("gonzalez");
 
@@ -207,7 +225,8 @@ Recorrer los valores de un mapa
 
 Es exactamente igual que en un conjunto:
 
-::
+.. code:: cpp
+    :number-lines: 
 
 	for (it = curso.begin(); it != curso.end(); ++it){
 	    cout << "Llave: " << it->first << " Valor: " << it->second << '\n';
