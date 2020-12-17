@@ -14,5 +14,5 @@ Cualquier aporte es bienvenido.
 
 .. toctree::
     edd/edd
-    ordenamiento/_index.md
+    ordenamiento/ordenamiento
     busqueda/index.md

@@ -1,0 +1,441 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="es" >
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Algoritmos de fuerza bruta &mdash; documentación de Yo Cmás - </title>
+  
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+
+  
+  
+  
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/language_data.js"></script>
+        <script src="../_static/translations.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Índice" href="../genindex.html" />
+    <link rel="search" title="Búsqueda" href="../search.html" />
+    <link rel="prev" title="Algoritmos de Ordenamiento" href="ordenamiento.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home" alt="Documentation Home"> Yo Cmás
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../edd/edd.html">Estructuras de Datos</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="ordenamiento.html">Algoritmos de Ordenamiento</a><ul class="current">
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Algoritmos de fuerza bruta</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#acerca-de">Acerca de</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#bubble-sort">Bubble sort</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#ejemplo">Ejemplo</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#codigo-de-ejemplo">Código de ejemplo</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#insertion-sort">Insertion sort</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id1">Ejemplo</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id2">Código de ejemplo</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Yo Cmás</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+          <li><a href="ordenamiento.html">Algoritmos de Ordenamiento</a> &raquo;</li>
+        
+      <li>Algoritmos de fuerza bruta</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/ordenamiento/fuerza_bruta.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="algoritmos-de-fuerza-bruta">
+<h1>Algoritmos de fuerza bruta<a class="headerlink" href="#algoritmos-de-fuerza-bruta" title="Enlazar permanentemente con este título">¶</a></h1>
+<div class="section" id="acerca-de">
+<h2>Acerca de<a class="headerlink" href="#acerca-de" title="Enlazar permanentemente con este título">¶</a></h2>
+<p>Los algoritmos de fuerza bruta son algoritmo en general simples, que realizan una idea de “”Todos con todos””. Esto puede llegar a ser muy costoso en complejidad.</p>
+</div>
+<div class="section" id="bubble-sort">
+<h2>Bubble sort<a class="headerlink" href="#bubble-sort" title="Enlazar permanentemente con este título">¶</a></h2>
+<ul class="simple">
+<li><p>Se van comparando los elementos, haciendo que los más grandes suban
+en el arreglo, como una burbuja.</p></li>
+<li><p>Da lo mismo cómo estén ordenadas las cosas, porque puedes modificar
+la función de comparación.</p></li>
+<li><p>Funciona invirtiendo el orden de cada par de elementos, si es que el
+primero es mayor que el segundo.</p></li>
+<li><p>Por ejemplo, se podría usar para contar el número de inversiones que
+hay que hacer.</p></li>
+</ul>
+<div class="section" id="ejemplo">
+<h3>Ejemplo<a class="headerlink" href="#ejemplo" title="Enlazar permanentemente con este título">¶</a></h3>
+<blockquote>
+<div><table class="docutils align-default">
+<colgroup>
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p>Iter</p></td>
+<td><p>Pos 0</p></td>
+<td><p>Pos 1</p></td>
+<td><p>Pos 2</p></td>
+<td><p>Pos 3</p></td>
+</tr>
+<tr class="row-even"><td><p>0</p></td>
+<td><p>5</p></td>
+<td><p>3</p></td>
+<td><p>4</p></td>
+<td><p>1</p></td>
+</tr>
+<tr class="row-odd"><td><p>1</p></td>
+<td><p><em>5</em></p></td>
+<td><p><em>3</em></p></td>
+<td><p>4</p></td>
+<td><p>1</p></td>
+</tr>
+<tr class="row-even"><td><p>2</p></td>
+<td><p>3</p></td>
+<td><p><em>5</em></p></td>
+<td><p><em>4</em></p></td>
+<td><p>1</p></td>
+</tr>
+<tr class="row-odd"><td><p>3</p></td>
+<td><p>3</p></td>
+<td><p>4</p></td>
+<td><p><em>5</em></p></td>
+<td><p><em>1</em></p></td>
+</tr>
+<tr class="row-even"><td><p>4</p></td>
+<td><p>3</p></td>
+<td><p>4</p></td>
+<td><p>1</p></td>
+<td><p><strong>5</strong></p></td>
+</tr>
+<tr class="row-odd"><td><p>5</p></td>
+<td><p><em>3</em></p></td>
+<td><p><em>4</em></p></td>
+<td><p>1</p></td>
+<td><p><strong>5</strong></p></td>
+</tr>
+<tr class="row-even"><td><p>6</p></td>
+<td><p>3</p></td>
+<td><p><em>1</em></p></td>
+<td><p><em>4</em></p></td>
+<td><p><strong>5</strong></p></td>
+</tr>
+<tr class="row-odd"><td><p>7</p></td>
+<td><p>3</p></td>
+<td><p>1</p></td>
+<td><p><strong>4</strong></p></td>
+<td><p><strong>5</strong></p></td>
+</tr>
+<tr class="row-even"><td><p>8</p></td>
+<td><p><em>3</em></p></td>
+<td><p><em>1</em></p></td>
+<td><p><strong>4</strong></p></td>
+<td><p><strong>5</strong></p></td>
+</tr>
+<tr class="row-odd"><td><p>9</p></td>
+<td><p>1</p></td>
+<td><p><strong>3</strong></p></td>
+<td><p><strong>4</strong></p></td>
+<td><p><strong>5</strong></p></td>
+</tr>
+<tr class="row-even"><td><p>10</p></td>
+<td><p><strong>1</strong></p></td>
+<td><p><strong>3</strong></p></td>
+<td><p><strong>4</strong></p></td>
+<td><p><strong>5</strong></p></td>
+</tr>
+</tbody>
+</table>
+</div></blockquote>
+</div>
+<div class="section" id="codigo-de-ejemplo">
+<h3>Código de ejemplo<a class="headerlink" href="#codigo-de-ejemplo" title="Enlazar permanentemente con este título">¶</a></h3>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">void</span> <span class="n">swap</span><span class="p">(</span><span class="n">vector</span><span class="o">&lt;</span><span class="nb">int</span><span class="o">&gt;</span> <span class="o">&amp;</span><span class="n">arr</span><span class="p">,</span> <span class="nb">int</span> <span class="n">i</span><span class="p">,</span> <span class="nb">int</span> <span class="n">j</span><span class="p">){</span>
+    <span class="nb">int</span> <span class="n">aux</span> <span class="o">=</span> <span class="n">arr</span><span class="p">[</span><span class="n">i</span><span class="p">];</span>
+    <span class="n">arr</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">arr</span><span class="p">[</span><span class="n">j</span><span class="p">];</span>
+    <span class="n">arr</span><span class="p">[</span><span class="n">j</span><span class="p">]</span> <span class="o">=</span> <span class="n">aux</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="n">void</span> <span class="n">bubblesort</span> <span class="p">(</span><span class="n">vector</span><span class="o">&lt;</span><span class="nb">int</span><span class="o">&gt;</span> <span class="o">&amp;</span><span class="n">vec</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nb">int</span> <span class="n">size</span> <span class="o">=</span> <span class="n">vec</span><span class="o">.</span><span class="n">size</span><span class="p">();</span>
+    <span class="k">for</span> <span class="p">(</span><span class="nb">int</span> <span class="n">i</span> <span class="o">=</span> <span class="n">size</span> <span class="o">-</span> <span class="mi">1</span><span class="p">;</span> <span class="n">i</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">;</span> <span class="o">--</span><span class="n">i</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">for</span> <span class="p">(</span><span class="nb">int</span> <span class="n">j</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">j</span> <span class="o">&lt;</span> <span class="n">i</span><span class="p">;</span> <span class="o">++</span><span class="n">j</span><span class="p">)</span> <span class="p">{</span>
+            <span class="k">if</span> <span class="p">(</span><span class="n">vec</span><span class="p">[</span><span class="n">j</span><span class="p">]</span> <span class="o">&gt;</span> <span class="n">vec</span><span class="p">[</span><span class="n">j</span><span class="o">+</span><span class="mi">1</span><span class="p">])</span> <span class="p">{</span>
+                <span class="n">swap</span><span class="p">(</span><span class="n">arr</span><span class="p">,</span> <span class="n">j</span><span class="p">,</span> <span class="n">j</span> <span class="o">+</span> <span class="mi">1</span><span class="p">);</span>
+            <span class="p">}</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+    <span class="k">return</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="insertion-sort">
+<h2>Insertion sort<a class="headerlink" href="#insertion-sort" title="Enlazar permanentemente con este título">¶</a></h2>
+<ul class="simple">
+<li><p>Se va de izquierda a derecha, se compara el segundo con el primero, se intercambian si el segundo es menor, si este es el caso, se vuelve a preguntar si el de la izquierda es menor al de mas a la izquierda y así hasta que se encuentre un caso en el que no o se llegue al principio del arreglo.</p></li>
+</ul>
+<div class="section" id="id1">
+<h3>Ejemplo<a class="headerlink" href="#id1" title="Enlazar permanentemente con este título">¶</a></h3>
+<blockquote>
+<div><table class="docutils align-default">
+<colgroup>
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p>Iter</p></td>
+<td><p>Pos 0</p></td>
+<td><p>Pos 1</p></td>
+<td><p>Pos 2</p></td>
+<td><p>Pos 3</p></td>
+</tr>
+<tr class="row-even"><td><p>0</p></td>
+<td><p>5</p></td>
+<td><p>3</p></td>
+<td><p>4</p></td>
+<td><p>1</p></td>
+</tr>
+<tr class="row-odd"><td><p>1</p></td>
+<td><p>5</p></td>
+<td><p>3</p></td>
+<td><p>4</p></td>
+<td><p><em>1</em></p></td>
+</tr>
+<tr class="row-even"><td><p>2</p></td>
+<td><p>1</p></td>
+<td><p>5</p></td>
+<td><p><em>3</em></p></td>
+<td><p>4</p></td>
+</tr>
+<tr class="row-odd"><td><p>3</p></td>
+<td><p>1</p></td>
+<td><p>3</p></td>
+<td><p>5</p></td>
+<td><p><em>4</em></p></td>
+</tr>
+<tr class="row-even"><td><p>4</p></td>
+<td><p>1</p></td>
+<td><p>3</p></td>
+<td><p>4</p></td>
+<td><p>5</p></td>
+</tr>
+</tbody>
+</table>
+</div></blockquote>
+</div>
+<div class="section" id="id2">
+<h3>Código de ejemplo<a class="headerlink" href="#id2" title="Enlazar permanentemente con este título">¶</a></h3>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">void</span> <span class="n">swap</span><span class="p">(</span><span class="n">vector</span><span class="o">&lt;</span><span class="nb">int</span><span class="o">&gt;</span> <span class="o">&amp;</span><span class="n">arr</span><span class="p">,</span> <span class="nb">int</span> <span class="n">i</span><span class="p">,</span> <span class="nb">int</span> <span class="n">j</span><span class="p">){</span>
+    <span class="nb">int</span> <span class="n">aux</span> <span class="o">=</span> <span class="n">arr</span><span class="p">[</span><span class="n">i</span><span class="p">];</span>
+    <span class="n">arr</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">arr</span><span class="p">[</span><span class="n">j</span><span class="p">];</span>
+    <span class="n">arr</span><span class="p">[</span><span class="n">j</span><span class="p">]</span> <span class="o">=</span> <span class="n">aux</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="n">void</span> <span class="n">insertion_sort</span><span class="p">(</span><span class="n">vector</span><span class="o">&lt;</span><span class="nb">int</span><span class="o">&gt;</span> <span class="o">&amp;</span><span class="n">arr</span><span class="p">){</span>
+    <span class="k">for</span><span class="p">(</span><span class="nb">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">arr</span><span class="o">.</span><span class="n">size</span><span class="p">();</span> <span class="o">++</span><span class="n">i</span><span class="p">){</span>
+        <span class="k">for</span><span class="p">(</span><span class="nb">int</span> <span class="n">j</span> <span class="o">=</span> <span class="n">i</span><span class="p">;</span> <span class="n">j</span> <span class="o">&gt;=</span> <span class="mi">0</span><span class="p">;</span> <span class="o">--</span><span class="n">j</span><span class="p">){</span>
+            <span class="o">//</span><span class="n">caso</span> <span class="n">swap</span>
+            <span class="k">if</span><span class="p">(</span><span class="n">arr</span><span class="p">[</span><span class="n">j</span><span class="p">]</span> <span class="o">&lt;</span> <span class="n">arr</span><span class="p">[</span><span class="n">j</span><span class="o">-</span><span class="mi">1</span><span class="p">]){</span>
+              <span class="n">swap</span><span class="p">(</span><span class="n">arr</span><span class="p">,</span> <span class="n">j</span><span class="p">,</span> <span class="n">j</span><span class="o">-</span><span class="mi">1</span><span class="p">);</span>
+            <span class="p">}</span>
+            <span class="o">//</span><span class="n">caso</span> <span class="n">no</span> <span class="n">swap</span> <span class="o">=</span> <span class="n">todo</span> <span class="n">ok</span> <span class="n">todo</span> <span class="n">correcto</span> <span class="p">:]</span>
+            <span class="k">else</span> <span class="k">if</span><span class="p">(</span><span class="n">arr</span><span class="p">[</span><span class="n">j</span><span class="p">]</span> <span class="o">&gt;=</span> <span class="n">arr</span><span class="p">[</span><span class="n">j</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">||</span> <span class="n">j</span> <span class="o">==</span> <span class="mi">0</span><span class="p">){</span>
+                <span class="k">break</span><span class="p">;</span>
+            <span class="p">}</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+    <span class="k">return</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p><strong>Nota: este código fue robado de Julieta Coloma</strong></p>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+      
+        <a href="ordenamiento.html" class="btn btn-neutral float-left" title="Algoritmos de Ordenamiento" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        
+        &copy; Copyright 2020, Comunidad del taller avanzado
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

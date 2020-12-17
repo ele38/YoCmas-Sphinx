@@ -4,12 +4,17 @@ Estructuras de Datos No Lineales
 Acerca de 
 ---------
 
-Véase: arbol binario
+A diferencia de las EDD lineales, las no lineales se basan en el hecho de que ahora los elementos no estan contiguos, sino que la forma de buscarlos sigue alguna otra lógica que no sea mirar el siguiente. 
+
+Algunos ejemplos son:
+
+* Árboles binarios
+* Tablas de hashing
 
 Set (conjunto) 
 --------------
 
-Es una lista que no permite que hayan elementos repetidos.
+Es una EDD que consiste en organizar elementos no repetidos. Esto quiere decir que cada elemento va a encontrar una y una sola vez en el conjunto.
 
 Inicialización 
 **************
@@ -85,25 +90,24 @@ Toma dos datos, una llave y un valor. Puedes buscar una llave en tiempo logarít
 Ejemplo cotidiano 
 *****************
 
-.. list-table:: Libros
+* Libros:
 
-	* - Título (Llave)
-	  - Autor (Valor)
-	* - The C Programming Language
-	  - Brian Keringhan
-	* - The AWK Programming Language
-	  - Brian Keringhan
-	* - 1984
-	  - George Orwell
+   ============================ ===============
+   Título (Llave)               Autor (Valor)
+   ============================ ===============
+   The C Programming Language   Brian Keringhan
+   The AWK Programming Language Brian Keringhan
+   1984                         George Orwell
+   ============================ ===============
 
-.. list-table:: Cursos
+* Curso:
 
-	* - Apellido
-	  - Cantidad de alumnos con el apellido
-	* - Gonzalez
-	  - 3
-	* - Perez
-	  - 2
+   ======== ===================================
+   Apellido Cantidad de alumnos con el apellido
+   ======== ===================================
+   Gonzalez 3
+   Perez    2
+   ======== ===================================
 
 Inicializar {#inicializar}
 **************************
@@ -111,14 +115,14 @@ Inicializar {#inicializar}
 Incluimos la librería de map:
 
 ::
-	
+
 	#include <map>
 
 
 Inicializamos el mapa curso:
 
 ::
-	
+
 	map<string, int> curso;
 
 Insert (insertar)

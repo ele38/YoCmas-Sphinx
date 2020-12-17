@@ -27,7 +27,7 @@ Inicializar un array por su tamaño
 Para inicializar un array por su tamaño, lo único que hay que especificar es el nombre de la variable y colocar entre "[]" el tamaño de nuestro arreglo. Recordar que como los arrays parten en 0, el valor máximo que podremos acceder será el tamaño del array menos 1.
 
 ::
-	
+
 	// Inicializar un arreglo de ints de tamaño 38.
 	int arreglo[38]; 
 
@@ -67,8 +67,6 @@ Para esto, hay que especificar la variable, el índice al cuál acceder y especi
 	
 	// El indice 3 de nuestro arreglo, ahora tiene el valor 3
 	arreglo2[3] = 5;
-
-
 
 Arrays multidimensionales 
 -------------------------

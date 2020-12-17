@@ -37,6 +37,7 @@
     
     <link rel="index" title="Índice" href="../genindex.html" />
     <link rel="search" title="Búsqueda" href="../search.html" />
+    <link rel="next" title="Algoritmos de Ordenamiento" href="../ordenamiento/ordenamiento.html" />
     <link rel="prev" title="Estructuras de Datos Lineales" href="lineales.html" /> 
 </head>
 
@@ -110,6 +111,7 @@
 </li>
 </ul>
 </li>
+<li class="toctree-l1"><a class="reference internal" href="../ordenamiento/ordenamiento.html">Algoritmos de Ordenamiento</a></li>
 </ul>
 
             
@@ -181,11 +183,16 @@
 <h1>Estructuras de Datos No Lineales<a class="headerlink" href="#estructuras-de-datos-no-lineales" title="Enlazar permanentemente con este título">¶</a></h1>
 <div class="section" id="acerca-de">
 <h2>Acerca de<a class="headerlink" href="#acerca-de" title="Enlazar permanentemente con este título">¶</a></h2>
-<p>Véase: arbol binario</p>
+<p>A diferencia de las EDD lineales, las no lineales se basan en el hecho de que ahora los elementos no estan contiguos, sino que la forma de buscarlos sigue alguna otra lógica que no sea mirar el siguiente.</p>
+<p>Algunos ejemplos son:</p>
+<ul class="simple">
+<li><p>Árboles binarios</p></li>
+<li><p>Tablas de hashing</p></li>
+</ul>
 </div>
 <div class="section" id="set-conjunto">
 <h2>Set (conjunto)<a class="headerlink" href="#set-conjunto" title="Enlazar permanentemente con este título">¶</a></h2>
-<p>Es una lista que no permite que hayan elementos repetidos.</p>
+<p>Es una EDD que consiste en organizar elementos no repetidos. Esto quiere decir que cada elemento va a encontrar una y una sola vez en el conjunto.</p>
 <div class="section" id="inicializacion">
 <h3>Inicialización<a class="headerlink" href="#inicializacion" title="Enlazar permanentemente con este título">¶</a></h3>
 <p>Incluimos la librería:</p>
@@ -245,16 +252,20 @@
 <p>Toma dos datos, una llave y un valor. Puedes buscar una llave en tiempo logarítmico con la implementación de la STL. Pero con otras implementaciones se puede hacer en tiempo constante. Las llaves no se pueden repetir.</p>
 <div class="section" id="ejemplo-cotidiano">
 <h3>Ejemplo cotidiano<a class="headerlink" href="#ejemplo-cotidiano" title="Enlazar permanentemente con este título">¶</a></h3>
-<table class="docutils align-default" id="id4">
-<caption><span class="caption-text">Libros</span><a class="headerlink" href="#id4" title="Enlace permanente a esta tabla">¶</a></caption>
+<ul>
+<li><p>Libros:</p>
+<blockquote>
+<div><table class="docutils align-default">
 <colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
+<col style="width: 65%" />
+<col style="width: 35%" />
 </colgroup>
-<tbody>
-<tr class="row-odd"><td><p>Título (Llave)</p></td>
-<td><p>Autor (Valor)</p></td>
+<thead>
+<tr class="row-odd"><th class="head"><p>Título (Llave)</p></th>
+<th class="head"><p>Autor (Valor)</p></th>
 </tr>
+</thead>
+<tbody>
 <tr class="row-even"><td><p>The C Programming Language</p></td>
 <td><p>Brian Keringhan</p></td>
 </tr>
@@ -266,16 +277,21 @@
 </tr>
 </tbody>
 </table>
-<table class="docutils align-default" id="id5">
-<caption><span class="caption-text">Cursos</span><a class="headerlink" href="#id5" title="Enlace permanente a esta tabla">¶</a></caption>
+</div></blockquote>
+</li>
+<li><p>Curso:</p>
+<blockquote>
+<div><table class="docutils align-default">
 <colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
+<col style="width: 19%" />
+<col style="width: 81%" />
 </colgroup>
-<tbody>
-<tr class="row-odd"><td><p>Apellido</p></td>
-<td><p>Cantidad de alumnos con el apellido</p></td>
+<thead>
+<tr class="row-odd"><th class="head"><p>Apellido</p></th>
+<th class="head"><p>Cantidad de alumnos con el apellido</p></th>
 </tr>
+</thead>
+<tbody>
 <tr class="row-even"><td><p>Gonzalez</p></td>
 <td><p>3</p></td>
 </tr>
@@ -284,6 +300,9 @@
 </tr>
 </tbody>
 </table>
+</div></blockquote>
+</li>
+</ul>
 </div>
 <div class="section" id="inicializar-inicializar">
 <h3>Inicializar {#inicializar}<a class="headerlink" href="#inicializar-inicializar" title="Enlazar permanentemente con este título">¶</a></h3>
@@ -393,6 +412,8 @@ Asignamos el iterador <code class="docutils literal notranslate"><span class="pr
           <footer>
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../ordenamiento/ordenamiento.html" class="btn btn-neutral float-right" title="Algoritmos de Ordenamiento" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
         <a href="lineales.html" class="btn btn-neutral float-left" title="Estructuras de Datos Lineales" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
