@@ -14,7 +14,7 @@ Selection sort
 -  Busca el valor mínimo entre los elementos no ordenados y lo añade al final de los ordenados.
 
 Ejemplo
-****************
+*******
 	
     ===== ===== ===== ===== =====
     Step  Pos 0 Pos 1 Pos 2 Pos 3
@@ -26,7 +26,7 @@ Ejemplo
     ===== ===== ===== ===== =====
 
 Código de ejemplo
-**************************
+*****************
 
 .. code:: cpp
     :number-lines: 

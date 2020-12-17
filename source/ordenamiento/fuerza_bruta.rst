@@ -32,8 +32,8 @@ Ejemplo
     10    **1** **3** **4** **5**
     ===== ===== ===== ===== =====
 
-Código de ejemplo
-*****************
+Código
+******
 
 .. code:: cpp
     :number-lines: 
@@ -62,7 +62,7 @@ Insertion sort
 -  Se va de izquierda a derecha, se compara el segundo con el primero, se intercambian si el segundo es menor, si este es el caso, se vuelve a preguntar si el de la izquierda es menor al de mas a la izquierda y así hasta que se encuentre un caso en el que no o se llegue al principio del arreglo.
 
 Ejemplo
-****************
+*******
 
     ===== ===== ===== ===== =====
     Step  Pos 0 Pos 1 Pos 2 Pos 3
@@ -78,8 +78,8 @@ Ejemplo
     9     **1** **3** **4** **5**
     ===== ===== ===== ===== =====
 
-Código de ejemplo
-**************************
+Código
+******
 
 .. code:: cpp
     :number-lines: 

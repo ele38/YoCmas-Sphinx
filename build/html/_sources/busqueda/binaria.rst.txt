@@ -1,4 +1,4 @@
-Búsqueda binaria
+Búsqueda Binaria
 ================
 
 Acerca de
@@ -18,21 +18,23 @@ después del centro, dividiendo la cantidad de números a la mitad.
 
 La complejidad de este algoritmo es **O(log(N))**, comparada con un
 algoritmo lineal, que en el peor de los casos tiene complejidad
-**O(N)**.
+**O(N)**. 
+
+Pero hay que notar que para aplicar este algoritmo uno debe tener el grupo ordenado, debido a que si no esta ordenado no hay forma de poder saber hacia donde moverse según la respuesta dada a la comparación.
 
 #. Ejemplos
 
-   #. en la vida real
+    #. en la vida real
 
-      Ir al medio de un diccionario, y buscar alfabéticamente, tomando
-      una palabra central (más o menos), viendo si la palabra que
-      queremos está antes o después y repetir el proceso de buscar una
-      palabra central.
+        Ir al medio de un diccionario, y buscar alfabéticamente, tomando
+        una palabra central (más o menos), viendo si la palabra que
+        queremos está antes o después y repetir el proceso de buscar una
+        palabra central.
 
-   #. Ejemplo computacional
+    #. Ejemplo computacional
 
-      En esta imágen, se usa la búsqueda binaria para encontrar el 19.
-      |image1|
+        En esta imágen, se usa la búsqueda binaria para encontrar el 19.
+        |image1|
 
 Uso mediante la librería STL
 ----------------------------
@@ -110,7 +112,7 @@ Implementación con while
     {
 
         while (l <= r) {
-            //esto es lo mismo que hacer (r + l) / 2 
+            // Esto es lo mismo que hacer (r + l) / 2 
             int m = l + (r - l) / 2;
 
             // Revisa si x esta al medio
@@ -141,7 +143,7 @@ Implementación recursiva
 
     int binarySearch(int arr[], int l, int r, int x){
         if (r >= l){
-            //esto es lo mismo que hacer (r + l) / 2 
+            // Esto es lo mismo que hacer (r + l) / 2 
             int mid = l + (r - l) / 2;
 
             // Revisa si x esta al medio
