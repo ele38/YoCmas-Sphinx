@@ -13,6 +13,8 @@ La principal idea de este documento es realizar un espacio en el cual se present
 Cualquier aporte es bienvenido.
 
 .. toctree::
-    edd/edd
-    ordenamiento/_index.md
-    busqueda/index.md
+	:maxdepth: 3
+
+	edd/edd
+	ordenamiento/ordenamiento
+	busqueda/busqueda

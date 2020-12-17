@@ -26,8 +26,9 @@ Inicializar un array por su tamaño
 
 Para inicializar un array por su tamaño, lo único que hay que especificar es el nombre de la variable y colocar entre "[]" el tamaño de nuestro arreglo. Recordar que como los arrays parten en 0, el valor máximo que podremos acceder será el tamaño del array menos 1.
 
-::
-	
+.. code:: cpp
+    :number-lines: 
+
 	// Inicializar un arreglo de ints de tamaño 38.
 	int arreglo[38]; 
 
@@ -38,7 +39,8 @@ Inicializar un array con valores por defecto
 
 Para inicializar un array con valores por defecto, no es necesario especificar el tamaño de nuestro array, pues este está implícito en la cantidad de valores que introducimos.
 
-::
+.. code:: cpp
+    :number-lines: 
 
 	// Esto genera el arreglo siguiente 
 	//[3, 6, 2, 1]
@@ -51,7 +53,8 @@ Leer el valor de un arreglo
 
 Para leer un valor de nuestro arreglo, solo hay que especificar el nombre del arreglo y su índice. Notar que sólo se puede acceder a un valor de un arreglo a la vez.
 
-::
+.. code:: cpp
+    :number-lines: 
 
 	// Retorna 1
 	arreglo2[3];
@@ -63,12 +66,11 @@ Asignar valores a un arreglo
 
 Para esto, hay que especificar la variable, el índice al cuál acceder y especificar su nuevo valor. Recordar que el valor del índice puede ser una variable, pero que no puede estar fuera del rango del tamaño de nuestro arreglo.
 
-::
+.. code:: cpp
+    :number-lines: 
 	
 	// El indice 3 de nuestro arreglo, ahora tiene el valor 3
 	arreglo2[3] = 5;
-
-
 
 Arrays multidimensionales 
 -------------------------
@@ -81,7 +83,8 @@ Inicializar un arreglo multidimensional
 
 Para esto, hay que especificar el tamaño de cada dimensión del array. Notar que la regla de que empiezan en 0 y terminan en n-1 se sigue cumpliendo. Es posible asignarles valores predeterminados, pero creo que eso se va poniendo exponencialmente más psicópata a medida de que vas incrementando las dimensiones del array a crear, por lo que no lo voy a demostrar.
 
-::
+.. code:: cpp
+    :number-lines: 
 
 	int matriz[3][4];
 	int tridimensional[100][100][100];
@@ -93,7 +96,8 @@ Asignar valores en un arreglo multidimensional
 
 Es muy similar a cómo se hace en un arreglo unidimensional, solo que se especifica cada índice.
 
-::
+.. code:: cpp
+    :number-lines: 
 
 	int n = 3, m = 5;
 	matriz[2][1] = 10;
@@ -111,14 +115,16 @@ Inicializar un vector
 
 Incluimos la librería:
 
-::
+.. code:: cpp
+    :number-lines: 
 
 	#include <vector>
 
 
 Inicializamos nuestro vector "vec":
 
-::
+.. code:: cpp
+    :number-lines: 
 
 	// Inicializa un vector de tamaño 3 con todos sus valores = 0
 	// Tanto el tamaño como valor son opcionales.
@@ -130,7 +136,8 @@ Inicializamos nuestro vector "vec":
 Asignar un valor
 ****************
 
-::
+.. code:: cpp
+    :number-lines: 
 
 	// Asigna el valor "1" al índice 2 (es decir, al 3er valor del vector)
 	vec[2] = 1; 
@@ -142,7 +149,8 @@ push back (empujar atrás)
 
 Si no sabemos el tamaño de nuestro vector, podemos simplemente usar push\_back(valor); para enviar es valor al final del vector.
 
-::
+.. code:: cpp
+    :number-lines: 
 
 	// Inserta un 1 al final del vector
 	vec.push_back(1);
@@ -150,7 +158,8 @@ Si no sabemos el tamaño de nuestro vector, podemos simplemente usar push\_back(
 
 Por ejemplo, se podría usar en un for, sin necesidad de inicializar el vector con una cantidad de valores.
 
-::
+.. code:: cpp
+    :number-lines: 
 
 	vector <int> vec2;
 	int n;
@@ -166,7 +175,8 @@ pop back (quitar atrás)
 
 Elimina el último valor del vector.
 
-::
+.. code:: cpp
+    :number-lines: 
 
 	// En este caso, elimina el 1
 	vec.pop_back();
@@ -176,7 +186,8 @@ insert (insertar)
 
 Podemos insertar un valor entre dos indices de un vector. El problema de esto es que mueve todos los valores que estén más adelante, lo que es lento.
 
-::
+.. code:: cpp
+    :number-lines: 
 
 	// Inserta el valor 4 al índice 2
 	vec.insert(vec.begin() + 2, 4);
@@ -186,7 +197,8 @@ erase (borrar)
 
 Borra un dato del vector. Al igual que el insert, tiene que mover todos los datos siguientes (esta vez a la derecha).
 
-::
+.. code:: cpp
+    :number-lines: 
 
 	// Elimina el valor con índice 2
 	// En nuestro caso, el 4 que insertamos antes.
@@ -208,7 +220,8 @@ Stacks (pilas)
 
 La pila es una estructura de datos lineal al que sólo puedes acceder al último elemento que fue insertado. Imagina una pila de platos, por ejemplo.
 
-::
+.. code:: cpp
+    :number-lines: 
 
 	stack < int > pilita;
 
@@ -217,7 +230,8 @@ push (empujar)
 
 Empuja un dato a la cima de la pila.
 
-::
+.. code:: cpp
+    :number-lines: 
 
 	// Empuja un 8 a la cima de la pila.
 	pilita.push(8);
@@ -227,7 +241,8 @@ top (cima)
 
 Lee lo que hay en la cima de la pila.
 
-::
+.. code:: cpp
+    :number-lines: 
 
 	// Siguiendo el ejemplo anterior
 	// Esto retorna 8
@@ -238,7 +253,8 @@ pop (quitar)
 
 Remueve el dato de la cima de la pila.
 
-::
+.. code:: cpp
+    :number-lines: 
 
 	// Siguiendo el ejemplo anterior
 	// Remueve el 8
@@ -249,7 +265,8 @@ empty (vacío)
 
 Retorna 1 si la pila está vacía, de lo contrario retorna 0.
 
-::
+.. code:: cpp
+    :number-lines: 
 
 	// Retorna 1 ya que nuestra pila está vacía.
 	pilita.empty();
@@ -259,7 +276,8 @@ size (tamaño)
 
 Retorna el tamaño de nuestra pila.
 
-::
+.. code:: cpp
+    :number-lines: 
 
 	// Retorna 0 ya que nuestra pila no tiene datos.
 	pilita.size();
@@ -269,7 +287,8 @@ Queues (colas)
 
 La cola es una estructura de datos lineal al que sólo puedes acceder al primer elemento que fue insertado. Imagina una fila de una caja de un supermercado, por ejemplo.
 
-::
+.. code:: cpp
+    :number-lines: 
 
 	queue < int > colita;
 
@@ -278,7 +297,8 @@ push (empujar)
 
 Añade un dato al final de la cola.
 
-::
+.. code:: cpp
+    :number-lines: 
 
 	colita.push(5);
 	colita.push(4);
@@ -291,7 +311,8 @@ front (frente)
 
 Lee el dato que está al frente de la cola.
 
-::
+.. code:: cpp
+    :number-lines: 
 
 	// Siguiendo el ejemplo construido antes
 	// Retorna 5, ya que fue lo primero que empujamos a la cola
@@ -302,7 +323,8 @@ pop (quitar)
 
 Remueve el dato que está al frente de la cola
 
-::
+.. code:: cpp
+    :number-lines: 
 
 	// Remueve el 5
 	colita.pop();
@@ -314,7 +336,8 @@ empty (vacío)
 
 Retorna 1 si la cola está vacía, de lo contrario retorna 0.
 
-::
+.. code:: cpp
+    :number-lines: 
 
 	// Retorna 1 ya que nuestra cola está vacía.
 	colita.empty();
@@ -324,7 +347,8 @@ size (tamaño)
 
 Retorna el tamaño de nuestra cola.
 
-::
+.. code:: cpp
+    :number-lines: 
 
 	// Retorna 0 ya que nuestra cola no tiene datos.
 	colita.size();

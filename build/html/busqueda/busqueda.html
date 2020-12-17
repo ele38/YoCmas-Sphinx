@@ -7,7 +7,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Estructuras de Datos &mdash; documentación de Yo Cmás - </title>
+  <title>Algoritmos de búsqueda &mdash; documentación de Yo Cmás - </title>
   
 
   
@@ -37,8 +37,8 @@
     
     <link rel="index" title="Índice" href="../genindex.html" />
     <link rel="search" title="Búsqueda" href="../search.html" />
-    <link rel="next" title="Estructuras de Datos Lineales" href="lineales.html" />
-    <link rel="prev" title="¡Bienvenido A la documentación de YoC+!" href="../index.html" /> 
+    <link rel="next" title="Búsqueda Lineal" href="lineal.html" />
+    <link rel="prev" title="Algoritmos de Decrecer y Conquistar" href="../ordenamiento/dec_conq.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -84,13 +84,13 @@
             
             
               <ul class="current">
-<li class="toctree-l1 current"><a class="current reference internal" href="#">Estructuras de Datos</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="lineales.html">Estructuras de Datos Lineales</a></li>
-<li class="toctree-l2"><a class="reference internal" href="no_lineales.html">Estructuras de Datos No Lineales</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../edd/edd.html">Estructuras de Datos</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ordenamiento/ordenamiento.html">Algoritmos de Ordenamiento</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Algoritmos de búsqueda</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="lineal.html">Búsqueda Lineal</a></li>
+<li class="toctree-l2"><a class="reference internal" href="binaria.html">Búsqueda Binaria</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../ordenamiento/ordenamiento.html">Algoritmos de Ordenamiento</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../busqueda/busqueda.html">Algoritmos de búsqueda</a></li>
 </ul>
 
             
@@ -137,13 +137,13 @@
     
       <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
         
-      <li>Estructuras de Datos</li>
+      <li>Algoritmos de búsqueda</li>
     
     
       <li class="wy-breadcrumbs-aside">
         
             
-            <a href="../_sources/edd/edd.rst.txt" rel="nofollow"> View page source</a>
+            <a href="../_sources/busqueda/busqueda.rst.txt" rel="nofollow"> View page source</a>
           
         
       </li>
@@ -156,24 +156,22 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="estructuras-de-datos">
-<h1>Estructuras de Datos<a class="headerlink" href="#estructuras-de-datos" title="Enlazar permanentemente con este título">¶</a></h1>
-<p>Las estructuras de datos son una forma que el programador tiene para organizar los datos de manera eficiente. Existen diferentes tipos de estructuras de datos, algunas que se pueden aplicar a muchos temas mientras que otras son especializaciadas en tareas específicas.</p>
-<p>En este curso vamos a revisar dos tipos: estructuras de datos lineales y las no lineales.</p>
+  <div class="section" id="algoritmos-de-busqueda">
+<h1>Algoritmos de búsqueda<a class="headerlink" href="#algoritmos-de-busqueda" title="Enlazar permanentemente con este título">¶</a></h1>
+<p>Otro problema muy recurrente dentro de la programación es el buscar uno o más elementos dentro de un grupo de datos. Para ello se han desarrollado varios algoritmos de tal forma de optimizar esta busqueda.</p>
+<p>Los dos principales y más nombrados son la búsqueda lineal y binaria. Estas dos búsquedas se detallarán para comprender su uso y benificio.</p>
 <div class="toctree-wrapper compound">
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="lineales.html">Estructuras de Datos Lineales</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="lineales.html#acerca-de">Acerca de</a></li>
-<li class="toctree-l2"><a class="reference internal" href="lineales.html#arrays">Arrays</a></li>
-<li class="toctree-l2"><a class="reference internal" href="lineales.html#arrays-multidimensionales">Arrays multidimensionales</a></li>
-<li class="toctree-l2"><a class="reference internal" href="lineales.html#stacks-pilas">Stacks (pilas)</a></li>
-<li class="toctree-l2"><a class="reference internal" href="lineales.html#queues-colas">Queues (colas)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="lineal.html">Búsqueda Lineal</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="lineal.html#acerca-de">Acerca de</a></li>
+<li class="toctree-l2"><a class="reference internal" href="lineal.html#ejemplo">Ejemplo</a></li>
+<li class="toctree-l2"><a class="reference internal" href="lineal.html#codigo">Código</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="no_lineales.html">Estructuras de Datos No Lineales</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="no_lineales.html#acerca-de">Acerca de</a></li>
-<li class="toctree-l2"><a class="reference internal" href="no_lineales.html#set-conjunto">Set (conjunto)</a></li>
-<li class="toctree-l2"><a class="reference internal" href="no_lineales.html#map-mapa-tabla-de-hashing">Map (mapa, tabla de hashing)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="binaria.html">Búsqueda Binaria</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="binaria.html#acerca-de">Acerca de</a></li>
+<li class="toctree-l2"><a class="reference internal" href="binaria.html#uso-mediante-la-libreria-stl">Uso mediante la librería STL</a></li>
+<li class="toctree-l2"><a class="reference internal" href="binaria.html#implementaciones-propias">Implementaciones propias</a></li>
 </ul>
 </li>
 </ul>
@@ -188,10 +186,10 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="lineales.html" class="btn btn-neutral float-right" title="Estructuras de Datos Lineales" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="lineal.html" class="btn btn-neutral float-right" title="Búsqueda Lineal" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="../index.html" class="btn btn-neutral float-left" title="¡Bienvenido A la documentación de YoC+!" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="../ordenamiento/dec_conq.html" class="btn btn-neutral float-left" title="Algoritmos de Decrecer y Conquistar" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
