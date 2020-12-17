@@ -9,22 +9,21 @@ Para agregar un temario, debe primero agregar una carpeta llamada acortada, desc
 |   +-- busqueda
 |   +-- edd
 |   +-- ordanamiento
-|	+-- temario
-|   |	+-- temario.rst
-|	+-- index.rst
+|   +-- temario
+|   |   +-- temario.rst
+|   +-- index.rst
 ```
 
 Ahora dentro del archivo index.rst, deben añadir el camino, pongalo donde creen que debería corresponder. Si es que se debe cambiar se cambiará.
 
 ```rst
-
 .. toctree::
-	:maxdepth: 3
+    :maxdepth: 3
 
-	edd/edd
-	ordenamiento/ordenamiento
-	busqueda/busqueda
-	temario/temario
+    edd/edd
+    ordenamiento/ordenamiento
+    busqueda/busqueda
+    temario/temario
 ```
 
 Luego, dentro de este temario.rst se debe escribir una descripción respecto al temario y un toctree para mostrar las subcategorias dentro de este temario. Y cada una de estas subcategorias deben estar dentor de la misma carpeta temario.
@@ -38,7 +37,7 @@ Luego, dentro de este temario.rst se debe escribir una descripción respecto al 
 |   |   +-- temario.rst
 |   |   +-- catego1.rst
 |   |   +-- catego2.rst
-|	+-- index.rst
+|   +-- index.rst
 ```
 
 ### Formato
