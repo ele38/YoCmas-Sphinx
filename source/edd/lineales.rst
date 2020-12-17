@@ -4,7 +4,7 @@ Estructuras de Datos Lineales
 Acerca de
 ---------
 
-Rellenar página
+Estas estructuras se basan en que los elementos estan contiguos, esto quiere decir que los elementos estan ordenados de manera que un elemento va a después del otro.
 
 Arrays
 ------
@@ -17,7 +17,7 @@ Una cosa muy importante que al principio uno suele olvidar es que los índices d
 
 
 Inicialización 
---------------
+**************
 
 Hay dos formas de inicializar un array, especificando su tamaño o llenandolo con valores por defecto.
 
@@ -221,8 +221,6 @@ Empuja un dato a la cima de la pila.
 
 	// Empuja un 8 a la cima de la pila.
 	pilita.push(8);
-
-
 
 top (cima)
 **********

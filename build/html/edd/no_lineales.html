@@ -1,0 +1,443 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="es" >
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Estructuras de Datos No Lineales &mdash; documentación de Yo Cmás - </title>
+  
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+
+  
+  
+  
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/language_data.js"></script>
+        <script src="../_static/translations.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Índice" href="../genindex.html" />
+    <link rel="search" title="Búsqueda" href="../search.html" />
+    <link rel="prev" title="Estructuras de Datos Lineales" href="lineales.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home" alt="Documentation Home"> Yo Cmás
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="edd.html">Estructuras de Datos</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="lineales.html">Estructuras de Datos Lineales</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Estructuras de Datos No Lineales</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#acerca-de">Acerca de</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#set-conjunto">Set (conjunto)</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#inicializacion">Inicialización</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#insert-insertar">insert (Insertar)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#find-encontrar">find (Encontrar)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#erase-borrar">erase (borrar)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#iterar-a-traves-de-un-conjunto">Iterar a través de un conjunto</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#map-mapa-tabla-de-hashing">Map (mapa, tabla de hashing)</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#ejemplo-cotidiano">Ejemplo cotidiano</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#inicializar-inicializar">Inicializar {#inicializar}</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id1">Insert (insertar)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#operar-con-los-valores">Operar con los valores</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id2">Find (encontrar)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id3">Erase (borrar)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#recorrer-los-valores-de-un-mapa">Recorrer los valores de un mapa</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#dudas-que-no-dejan-dormir">Dudas que no dejan dormir</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Yo Cmás</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+          <li><a href="edd.html">Estructuras de Datos</a> &raquo;</li>
+        
+      <li>Estructuras de Datos No Lineales</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/edd/no_lineales.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="estructuras-de-datos-no-lineales">
+<h1>Estructuras de Datos No Lineales<a class="headerlink" href="#estructuras-de-datos-no-lineales" title="Enlazar permanentemente con este título">¶</a></h1>
+<div class="section" id="acerca-de">
+<h2>Acerca de<a class="headerlink" href="#acerca-de" title="Enlazar permanentemente con este título">¶</a></h2>
+<p>Véase: arbol binario</p>
+</div>
+<div class="section" id="set-conjunto">
+<h2>Set (conjunto)<a class="headerlink" href="#set-conjunto" title="Enlazar permanentemente con este título">¶</a></h2>
+<p>Es una lista que no permite que hayan elementos repetidos.</p>
+<div class="section" id="inicializacion">
+<h3>Inicialización<a class="headerlink" href="#inicializacion" title="Enlazar permanentemente con este título">¶</a></h3>
+<p>Incluimos la librería:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1">#include &lt;set&gt;</span>
+</pre></div>
+</div>
+<p>Inicializamos nuestro conjunto:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="nb">set</span> <span class="o">&lt;</span> <span class="nb">int</span> <span class="o">&gt;</span> <span class="n">conjunto</span><span class="p">;</span> <span class="o">//</span> <span class="nb">int</span> <span class="n">puede</span> <span class="n">ser</span> <span class="n">reemplazado</span> <span class="n">con</span> <span class="n">cualquier</span> <span class="n">otro</span> <span class="n">tipo</span> <span class="n">de</span> <span class="n">dato</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="insert-insertar">
+<h3>insert (Insertar)<a class="headerlink" href="#insert-insertar" title="Enlazar permanentemente con este título">¶</a></h3>
+<p>Inserta un dato. Retorna un par de elementos, el primero siendo el iterador del valor insertado y el segundo siendo un bool que marca si es que ya existía o no. En el ejemplo de abajo, usamos .second para comprobar si se insertó correctamente o no.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">//</span> <span class="n">Retorna</span> <span class="n">TRUE</span> <span class="n">ya</span> <span class="n">que</span> <span class="n">no</span> <span class="n">estaba</span> <span class="n">anteriormente</span>
+<span class="k">if</span> <span class="p">(</span><span class="n">conjunto</span><span class="o">.</span><span class="n">insert</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span><span class="o">.</span><span class="n">second</span><span class="p">)</span>
+        <span class="o">//</span> <span class="n">Retorna</span> <span class="n">FALSE</span> <span class="n">ya</span> <span class="n">que</span> <span class="n">ya</span> <span class="n">había</span> <span class="n">un</span> <span class="mf">10.</span>
+    <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s2">&quot;ganai</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">;</span> <span class="k">if</span> <span class="p">(</span><span class="n">conjunto</span><span class="o">.</span><span class="n">insert</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span><span class="o">.</span><span class="n">second</span><span class="p">);</span>
+<span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s2">&quot;no ganai</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">;</span>
+<span class="n">conjunto</span><span class="o">.</span><span class="n">insert</span><span class="p">(</span><span class="mi">20</span><span class="p">);</span>
+<span class="n">conjunto</span><span class="o">.</span><span class="n">insert</span><span class="p">(</span><span class="mi">40</span><span class="p">);</span>
+<span class="n">conjunto</span><span class="o">.</span><span class="n">insert</span><span class="p">(</span><span class="mi">30</span><span class="p">);</span>
+<span class="n">conjunto</span><span class="o">.</span><span class="n">insert</span><span class="p">(</span><span class="mi">11</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="find-encontrar">
+<h3>find (Encontrar)<a class="headerlink" href="#find-encontrar" title="Enlazar permanentemente con este título">¶</a></h3>
+<p>Busca un elemento en el set y si lo encuentra retorna un iterador al valor. De lo contrario, retorna conjunto.end();</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">if</span> <span class="p">(</span><span class="n">conjunto</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span> <span class="o">!=</span> <span class="n">conjunto</span><span class="o">.</span><span class="n">end</span><span class="p">())</span>
+    <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s2">&quot;ganai</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">;</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="erase-borrar">
+<h3>erase (borrar)<a class="headerlink" href="#erase-borrar" title="Enlazar permanentemente con este título">¶</a></h3>
+<p>Puedes borrar un valor si le entregas el iterador al valor.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="nb">set</span> <span class="o">&lt;</span> <span class="nb">int</span> <span class="o">&gt;</span><span class="p">::</span><span class="n">iterator</span> <span class="n">it</span> <span class="o">=</span> <span class="n">conjunto</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="mi">11</span><span class="p">);</span>
+<span class="k">if</span> <span class="p">(</span><span class="n">it</span> <span class="o">!=</span> <span class="n">conjunto</span><span class="o">.</span><span class="n">end</span><span class="p">())</span>
+    <span class="n">conjunto</span><span class="o">.</span><span class="n">erase</span><span class="p">(</span><span class="n">it</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="iterar-a-traves-de-un-conjunto">
+<h3>Iterar a través de un conjunto<a class="headerlink" href="#iterar-a-traves-de-un-conjunto" title="Enlazar permanentemente con este título">¶</a></h3>
+<p>Puedes iterar a través de un conjunto con los valores ya ordenados con un iterador:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">//</span> <span class="n">Imprime</span> <span class="mi">10</span> <span class="mi">11</span> <span class="mi">20</span> <span class="mi">30</span> <span class="mi">40</span>
+<span class="k">for</span> <span class="p">(</span><span class="n">it</span> <span class="o">=</span> <span class="n">conjunto</span><span class="o">.</span><span class="n">begin</span><span class="p">();</span> <span class="n">it</span> <span class="o">!=</span> <span class="n">conjunto</span><span class="o">.</span><span class="n">end</span><span class="p">();</span> <span class="o">++</span><span class="n">it</span><span class="p">)</span>
+    <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="o">*</span><span class="n">it</span> <span class="o">&lt;&lt;</span> <span class="s2">&quot; &quot;</span><span class="p">;</span>
+<span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">;</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="map-mapa-tabla-de-hashing">
+<h2>Map (mapa, tabla de hashing)<a class="headerlink" href="#map-mapa-tabla-de-hashing" title="Enlazar permanentemente con este título">¶</a></h2>
+<p>Toma dos datos, una llave y un valor. Puedes buscar una llave en tiempo logarítmico con la implementación de la STL. Pero con otras implementaciones se puede hacer en tiempo constante. Las llaves no se pueden repetir.</p>
+<div class="section" id="ejemplo-cotidiano">
+<h3>Ejemplo cotidiano<a class="headerlink" href="#ejemplo-cotidiano" title="Enlazar permanentemente con este título">¶</a></h3>
+<table class="docutils align-default" id="id4">
+<caption><span class="caption-text">Libros</span><a class="headerlink" href="#id4" title="Enlace permanente a esta tabla">¶</a></caption>
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p>Título (Llave)</p></td>
+<td><p>Autor (Valor)</p></td>
+</tr>
+<tr class="row-even"><td><p>The C Programming Language</p></td>
+<td><p>Brian Keringhan</p></td>
+</tr>
+<tr class="row-odd"><td><p>The AWK Programming Language</p></td>
+<td><p>Brian Keringhan</p></td>
+</tr>
+<tr class="row-even"><td><p>1984</p></td>
+<td><p>George Orwell</p></td>
+</tr>
+</tbody>
+</table>
+<table class="docutils align-default" id="id5">
+<caption><span class="caption-text">Cursos</span><a class="headerlink" href="#id5" title="Enlace permanente a esta tabla">¶</a></caption>
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p>Apellido</p></td>
+<td><p>Cantidad de alumnos con el apellido</p></td>
+</tr>
+<tr class="row-even"><td><p>Gonzalez</p></td>
+<td><p>3</p></td>
+</tr>
+<tr class="row-odd"><td><p>Perez</p></td>
+<td><p>2</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="inicializar-inicializar">
+<h3>Inicializar {#inicializar}<a class="headerlink" href="#inicializar-inicializar" title="Enlazar permanentemente con este título">¶</a></h3>
+<p>Incluimos la librería de map:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1">#include &lt;map&gt;</span>
+</pre></div>
+</div>
+<p>Inicializamos el mapa curso:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="nb">map</span><span class="o">&lt;</span><span class="n">string</span><span class="p">,</span> <span class="nb">int</span><span class="o">&gt;</span> <span class="n">curso</span><span class="p">;</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="id1">
+<h3>Insert (insertar)<a class="headerlink" href="#id1" title="Enlazar permanentemente con este título">¶</a></h3>
+<ul class="simple">
+<li><p>Forma 1:</p></li>
+</ul>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">curso</span><span class="p">[</span><span class="s2">&quot;perez&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>Forma 2:</p></li>
+</ul>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">curso</span><span class="o">.</span><span class="n">insert</span><span class="p">(</span><span class="n">pair</span><span class="o">&lt;</span><span class="n">string</span><span class="p">,</span> <span class="nb">int</span><span class="o">&gt;</span><span class="p">(</span><span class="s2">&quot;gonzalez, 3&quot;</span><span class="p">));</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="operar-con-los-valores">
+<h3>Operar con los valores<a class="headerlink" href="#operar-con-los-valores" title="Enlazar permanentemente con este título">¶</a></h3>
+<p>Se puede operar con el valor tomando la llave.
+Ejemplo 1:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">//</span> <span class="n">Incrementar</span> <span class="n">el</span> <span class="n">valor</span> <span class="n">de</span> <span class="n">la</span> <span class="n">llave</span> <span class="n">perez</span><span class="p">,</span> <span class="n">por</span> <span class="n">ejemplo</span><span class="o">.</span>
+<span class="o">++</span><span class="n">curso</span><span class="o">.</span><span class="p">[</span><span class="s2">&quot;perez&quot;</span><span class="p">];</span>
+</pre></div>
+</div>
+<p>Ejemplo 2:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="n">curso</span><span class="o">.</span><span class="p">[</span><span class="s2">&quot;perez&quot;</span><span class="p">]</span> <span class="o">&lt;&lt;</span> <span class="n">endl</span><span class="p">;</span> <span class="o">//</span> <span class="n">El</span> <span class="n">output</span> <span class="n">será</span> <span class="mf">2.</span>
+</pre></div>
+</div>
+<p>Cuidado con operar con valores no existentes, pues los inicializará de una forma inesperada.</p>
+</div>
+<div class="section" id="id2">
+<h3>Find (encontrar)<a class="headerlink" href="#id2" title="Enlazar permanentemente con este título">¶</a></h3>
+<p>Retorna un iterador, si no lo encuentra, apunta a map.end().
+Asignamos el iterador <code class="docutils literal notranslate"><span class="pre">it</span></code> a gonzalez, y luego lo usamos:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="nb">map</span><span class="o">&lt;</span><span class="n">string</span><span class="p">,</span> <span class="nb">int</span><span class="o">&gt;</span><span class="p">::</span><span class="n">iterator</span> <span class="n">it</span><span class="p">;</span>
+<span class="n">it</span> <span class="o">=</span> <span class="n">curso</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="s2">&quot;gonzalez&quot;</span><span class="p">);</span>
+
+<span class="k">if</span> <span class="p">(</span><span class="n">it</span> <span class="o">!=</span> <span class="n">curso</span><span class="o">.</span><span class="n">end</span><span class="p">()){</span>
+        <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s2">&quot;Hay &quot;</span> <span class="o">&lt;&lt;</span> <span class="n">it</span><span class="o">-&gt;</span><span class="n">second</span> <span class="o">&lt;&lt;</span> <span class="s2">&quot; &quot;</span> <span class="o">&lt;&lt;</span> <span class="n">it</span><span class="o">-&gt;</span><span class="n">first</span> <span class="o">&lt;&lt;</span> <span class="s2">&quot; en el curso:</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">;</span>
+        <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s2">&quot;Llave: &quot;</span> <span class="o">&lt;&lt;</span> <span class="n">it</span><span class="o">-&gt;</span><span class="n">first</span> <span class="o">&lt;&lt;</span> <span class="s2">&quot; Valor: &quot;</span> <span class="o">&lt;&lt;</span> <span class="n">it</span><span class="o">-&gt;</span><span class="n">second</span> <span class="o">&lt;&lt;</span> <span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>Podemos incluso operar usando los iteradores:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">it</span><span class="o">-&gt;++</span><span class="n">second</span><span class="p">;</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="id3">
+<h3>Erase (borrar)<a class="headerlink" href="#id3" title="Enlazar permanentemente con este título">¶</a></h3>
+<ul class="simple">
+<li><p>Forma 1:</p></li>
+</ul>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">it</span> <span class="o">=</span> <span class="n">curso</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="s2">&quot;perez&quot;</span><span class="p">);</span>
+<span class="n">curso</span><span class="o">.</span><span class="n">erase</span><span class="p">(</span><span class="n">it</span><span class="p">);</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>Forma 2:</p></li>
+</ul>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">curso</span><span class="o">.</span><span class="n">erase</span><span class="p">(</span><span class="s2">&quot;gonzalez&quot;</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="recorrer-los-valores-de-un-mapa">
+<h3>Recorrer los valores de un mapa<a class="headerlink" href="#recorrer-los-valores-de-un-mapa" title="Enlazar permanentemente con este título">¶</a></h3>
+<p>Es exactamente igual que en un conjunto:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="p">(</span><span class="n">it</span> <span class="o">=</span> <span class="n">curso</span><span class="o">.</span><span class="n">begin</span><span class="p">();</span> <span class="n">it</span> <span class="o">!=</span> <span class="n">curso</span><span class="o">.</span><span class="n">end</span><span class="p">();</span> <span class="o">++</span><span class="n">it</span><span class="p">){</span>
+    <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s2">&quot;Llave: &quot;</span> <span class="o">&lt;&lt;</span> <span class="n">it</span><span class="o">-&gt;</span><span class="n">first</span> <span class="o">&lt;&lt;</span> <span class="s2">&quot; Valor: &quot;</span> <span class="o">&lt;&lt;</span> <span class="n">it</span><span class="o">-&gt;</span><span class="n">second</span> <span class="o">&lt;&lt;</span> <span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="dudas-que-no-dejan-dormir">
+<h3>Dudas que no dejan dormir<a class="headerlink" href="#dudas-que-no-dejan-dormir" title="Enlazar permanentemente con este título">¶</a></h3>
+<ol class="arabic simple">
+<li><p>¿Qué pasa si modifico una llave?</p></li>
+</ol>
+<p>No se puede, tu código no compilará pues es ilegal hacerlo 👮🚓🚨</p>
+<ol class="arabic simple" start="2">
+<li><p>¿Puedo buscar con el second?</p></li>
+</ol>
+<p>No, en ese caso recomendamos otra estructura, o tener dos maps 👀</p>
+<ol class="arabic simple" start="3">
+<li><p>¿Puedo tener un map dentro de un map?</p></li>
+</ol>
+<p>Si, pero es de psicópata buscar dentro de ese map.</p>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+      
+        <a href="lineales.html" class="btn btn-neutral float-left" title="Estructuras de Datos Lineales" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        
+        &copy; Copyright 2020, Comunidad del taller avanzado
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>
