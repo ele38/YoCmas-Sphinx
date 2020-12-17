@@ -6,5 +6,7 @@ Otro problema muy recurrente dentro de la programación es el buscar uno o más 
 Los dos principales y más nombrados son la búsqueda lineal y binaria. Estas dos búsquedas se detallarán para comprender su uso y benificio.
 
 .. toctree::
+	:maxdepth: 2
+
 	lineal.rst
 	binaria.rst

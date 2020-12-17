@@ -6,5 +6,7 @@ Las estructuras de datos son una forma que el programador tiene para organizar l
 En este curso vamos a revisar dos tipos: estructuras de datos lineales y las no lineales.
 
 .. toctree::
+	:maxdepth: 2
+
 	lineales
 	no_lineales
