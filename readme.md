@@ -43,6 +43,11 @@ Luego, dentro de este temario.rst se debe escribir una descripción respecto al 
 Ejemplo en el interior de temario.rst.
 
 ```rst
+Temario
+=======
+
+Descripcion bla bla
+
 .. toctree::
     :maxdepth: 3
 
