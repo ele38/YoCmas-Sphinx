@@ -34,10 +34,10 @@ Luego, dentro de este temario.rst se debe escribir una descripción respecto al 
 |   +-- busqueda
 |   +-- edd
 |   +-- ordanamiento
-|	+-- temario
-|   |	+-- temario.rst
-|	|	+-- catego1.rst
-|	|	+-- catego2.rst
+|   +-- temario
+|   |   +-- temario.rst
+|   |   +-- catego1.rst
+|   |   +-- catego2.rst
 |	+-- index.rst
 ```
 
