@@ -6,16 +6,13 @@
 ¡Bienvenido A la documentación de YoC+!
 =======================================
 
+Esta es una documentación realiza por Mateo León, Vicente Villaroel, alumnos del Taller Yo C+ y el tutor Gabriel Carmona, tutor del taller de nivel avanzado.
+
+La principal idea de este documento es realizar un espacio en el cual se presente la materia vista a través del taller y explicaciones a los contest que se han hecho a través del tiempo.
+
+Cualquier aporte es bienvenido.
+
 .. toctree::
-        busqueda/index.md
-        edd/_index.md
-        ordenamiento/_index.md
-
-
-
-Indices and tables
-==================
-
-* :ref:`busqueda`
-* :ref:`modindex`
-* :ref:`search`
+    edd/edd
+    ordenamiento/_index.md
+    busqueda/index.md
