@@ -26,7 +26,7 @@ Ahora dentro del archivo index.rst, deben añadir el camino, pongalo donde creen
     temario/temario
 ```
 
-Luego, dentro de este temario.rst se debe escribir una descripción respecto al temario y un toctree para mostrar las subcategorias dentro de este temario. Y cada una de estas subcategorias deben estar dentor de la misma carpeta temario.
+Luego, dentro de este temario.rst se debe escribir una descripción respecto al temario y un toctree para mostrar las subcategorias dentro de este temario. Y cada una de estas subcategorias deben estar dentro de la misma carpeta temario.
 
 ```
 +-- source
@@ -38,6 +38,16 @@ Luego, dentro de este temario.rst se debe escribir una descripción respecto al 
 |   |   +-- catego1.rst
 |   |   +-- catego2.rst
 |   +-- index.rst
+```
+
+Ejemplo en el interior de temario.rst.
+
+```rst
+.. toctree::
+    :maxdepth: 3
+
+    catego1.rst
+    catego2.rst
 ```
 
 ### Formato
