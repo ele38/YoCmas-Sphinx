@@ -1,0 +1,549 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="es" >
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Estructuras de Datos Lineales &mdash; documentación de Yo Cmás - </title>
+  
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+
+  
+  
+  
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/language_data.js"></script>
+        <script src="../_static/translations.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Índice" href="../genindex.html" />
+    <link rel="search" title="Búsqueda" href="../search.html" />
+    <link rel="next" title="Estructuras de Datos No Lineales" href="no_lineales.html" />
+    <link rel="prev" title="Estructuras de Datos" href="edd.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home" alt="Documentation Home"> Yo Cmás
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="edd.html">Estructuras de Datos</a><ul class="current">
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Estructuras de Datos Lineales</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#acerca-de">Acerca de</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#arrays">Arrays</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#inicializacion">Inicialización</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#inicializar-un-array-por-su-tamano">Inicializar un array por su tamaño</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#inicializar-un-array-con-valores-por-defecto">Inicializar un array con valores por defecto</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#leer-el-valor-de-un-arreglo">Leer el valor de un arreglo</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#asignar-valores-a-un-arreglo">Asignar valores a un arreglo</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#arrays-multidimensionales">Arrays multidimensionales</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#inicializar-un-arreglo-multidimensional">Inicializar un arreglo multidimensional</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#asignar-valores-en-un-arreglo-multidimensional">Asignar valores en un arreglo multidimensional</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#inicializar-un-vector">Inicializar un vector</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#asignar-un-valor">Asignar un valor</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#push-back-empujar-atras">push back (empujar atrás)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pop-back-quitar-atras">pop back (quitar atrás)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#insert-insertar">insert (insertar)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#erase-borrar">erase (borrar)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#iteradores-de-un-arreglo">Iteradores de un arreglo</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#stacks-pilas">Stacks (pilas)</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#push-empujar">push (empujar)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#top-cima">top (cima)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pop-quitar">pop (quitar)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#empty-vacio">empty (vacío)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#size-tamano">size (tamaño)</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#queues-colas">Queues (colas)</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id1">push (empujar)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#front-frente">front (frente)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id2">pop (quitar)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id3">empty (vacío)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id4">size (tamaño)</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="no_lineales.html">Estructuras de Datos No Lineales</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../ordenamiento/ordenamiento.html">Algoritmos de Ordenamiento</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../busqueda/busqueda.html">Algoritmos de búsqueda</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Yo Cmás</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+          <li><a href="edd.html">Estructuras de Datos</a> &raquo;</li>
+        
+      <li>Estructuras de Datos Lineales</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/edd/lineales.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="estructuras-de-datos-lineales">
+<h1>Estructuras de Datos Lineales<a class="headerlink" href="#estructuras-de-datos-lineales" title="Enlazar permanentemente con este título">¶</a></h1>
+<div class="section" id="acerca-de">
+<h2>Acerca de<a class="headerlink" href="#acerca-de" title="Enlazar permanentemente con este título">¶</a></h2>
+<p>Estas estructuras se basan en que los elementos estan contiguos, esto quiere decir que los elementos estan ordenados de manera que un elemento va a después del otro.</p>
+</div>
+<div class="section" id="arrays">
+<h2>Arrays<a class="headerlink" href="#arrays" title="Enlazar permanentemente con este título">¶</a></h2>
+<p>Los arrays son conjuntos de datos que se almacenan en memoria de manera contigua usando el mismo nombre. Se usan índices para diferenciar los distintos valores del arreglo.</p>
+<p>Para crear una arreglo es necesario saber la cantidad de elementos que van a componer nuestro arreglo, pues la cantidad de elementos no se puede cambiar.</p>
+<p>Una cosa muy importante que al principio uno suele olvidar es que los índices de los arreglos parten en 0. Es decir, un arreglo de tamaño n puede tomar índices desde el 0 hasta el n-1.</p>
+<div class="section" id="inicializacion">
+<h3>Inicialización<a class="headerlink" href="#inicializacion" title="Enlazar permanentemente con este título">¶</a></h3>
+<p>Hay dos formas de inicializar un array, especificando su tamaño o llenandolo con valores por defecto.</p>
+</div>
+<div class="section" id="inicializar-un-array-por-su-tamano">
+<h3>Inicializar un array por su tamaño<a class="headerlink" href="#inicializar-un-array-por-su-tamano" title="Enlazar permanentemente con este título">¶</a></h3>
+<p>Para inicializar un array por su tamaño, lo único que hay que especificar es el nombre de la variable y colocar entre «[]» el tamaño de nuestro arreglo. Recordar que como los arrays parten en 0, el valor máximo que podremos acceder será el tamaño del array menos 1.</p>
+<div class="highlight-cpp notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2</pre></div></td><td class="code"><div class="highlight"><pre><span></span>    <span class="c1">// Inicializar un arreglo de ints de tamaño 38.</span>
+    <span class="kt">int</span> <span class="n">arreglo</span><span class="p">[</span><span class="mi">38</span><span class="p">];</span>
+</pre></div>
+</td></tr></table></div>
+</div>
+<div class="section" id="inicializar-un-array-con-valores-por-defecto">
+<h3>Inicializar un array con valores por defecto<a class="headerlink" href="#inicializar-un-array-con-valores-por-defecto" title="Enlazar permanentemente con este título">¶</a></h3>
+<p>Para inicializar un array con valores por defecto, no es necesario especificar el tamaño de nuestro array, pues este está implícito en la cantidad de valores que introducimos.</p>
+<div class="highlight-cpp notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3</pre></div></td><td class="code"><div class="highlight"><pre><span></span>    <span class="c1">// Esto genera el arreglo siguiente</span>
+    <span class="c1">//[3, 6, 2, 1]</span>
+    <span class="kt">int</span> <span class="n">arreglo2</span><span class="p">[]</span> <span class="o">=</span> <span class="p">{</span><span class="mi">3</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">};</span>
+</pre></div>
+</td></tr></table></div>
+</div>
+<div class="section" id="leer-el-valor-de-un-arreglo">
+<h3>Leer el valor de un arreglo<a class="headerlink" href="#leer-el-valor-de-un-arreglo" title="Enlazar permanentemente con este título">¶</a></h3>
+<p>Para leer un valor de nuestro arreglo, solo hay que especificar el nombre del arreglo y su índice. Notar que sólo se puede acceder a un valor de un arreglo a la vez.</p>
+<div class="highlight-cpp notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2</pre></div></td><td class="code"><div class="highlight"><pre><span></span>    <span class="c1">// Retorna 1</span>
+    <span class="n">arreglo2</span><span class="p">[</span><span class="mi">3</span><span class="p">];</span>
+</pre></div>
+</td></tr></table></div>
+</div>
+<div class="section" id="asignar-valores-a-un-arreglo">
+<h3>Asignar valores a un arreglo<a class="headerlink" href="#asignar-valores-a-un-arreglo" title="Enlazar permanentemente con este título">¶</a></h3>
+<p>Para esto, hay que especificar la variable, el índice al cuál acceder y especificar su nuevo valor. Recordar que el valor del índice puede ser una variable, pero que no puede estar fuera del rango del tamaño de nuestro arreglo.</p>
+<div class="highlight-cpp notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2</pre></div></td><td class="code"><div class="highlight"><pre><span></span>    <span class="c1">// El indice 3 de nuestro arreglo, ahora tiene el valor 3</span>
+    <span class="n">arreglo2</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span> <span class="o">=</span> <span class="mi">5</span><span class="p">;</span>
+</pre></div>
+</td></tr></table></div>
+</div>
+</div>
+<div class="section" id="arrays-multidimensionales">
+<h2>Arrays multidimensionales<a class="headerlink" href="#arrays-multidimensionales" title="Enlazar permanentemente con este título">¶</a></h2>
+<p>Un array multidimensional es aquel que requiuere de más de un índice para ser llamado, como su nombre lo indica, es útil para cuando necesitamos acceder a datos que requieren más de una dimensión, como por ejemplo valores dentro de una malla. Otra forma de enternder los arrays multidimensionales es como un arreglo de arreglos (de arreglos de arreglos.. n veces, siendo n la cantidad de dimensiones). Los arreglos de 2 dimensiones también son conocidos como matrices.</p>
+<div class="section" id="inicializar-un-arreglo-multidimensional">
+<h3>Inicializar un arreglo multidimensional<a class="headerlink" href="#inicializar-un-arreglo-multidimensional" title="Enlazar permanentemente con este título">¶</a></h3>
+<p>Para esto, hay que especificar el tamaño de cada dimensión del array. Notar que la regla de que empiezan en 0 y terminan en n-1 se sigue cumpliendo. Es posible asignarles valores predeterminados, pero creo que eso se va poniendo exponencialmente más psicópata a medida de que vas incrementando las dimensiones del array a crear, por lo que no lo voy a demostrar.</p>
+<div class="highlight-cpp notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2</pre></div></td><td class="code"><div class="highlight"><pre><span></span>    <span class="kt">int</span> <span class="n">matriz</span><span class="p">[</span><span class="mi">3</span><span class="p">][</span><span class="mi">4</span><span class="p">];</span>
+    <span class="kt">int</span> <span class="n">tridimensional</span><span class="p">[</span><span class="mi">100</span><span class="p">][</span><span class="mi">100</span><span class="p">][</span><span class="mi">100</span><span class="p">];</span>
+</pre></div>
+</td></tr></table></div>
+</div>
+<div class="section" id="asignar-valores-en-un-arreglo-multidimensional">
+<h3>Asignar valores en un arreglo multidimensional<a class="headerlink" href="#asignar-valores-en-un-arreglo-multidimensional" title="Enlazar permanentemente con este título">¶</a></h3>
+<p>Es muy similar a cómo se hace en un arreglo unidimensional, solo que se especifica cada índice.</p>
+<div class="highlight-cpp notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3</pre></div></td><td class="code"><div class="highlight"><pre><span></span>    <span class="kt">int</span> <span class="n">n</span> <span class="o">=</span> <span class="mi">3</span><span class="p">,</span> <span class="n">m</span> <span class="o">=</span> <span class="mi">5</span><span class="p">;</span>
+    <span class="n">matriz</span><span class="p">[</span><span class="mi">2</span><span class="p">][</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="mi">10</span><span class="p">;</span>
+    <span class="n">tridimensional</span><span class="p">[</span><span class="n">n</span><span class="p">][</span><span class="n">m</span><span class="p">]</span> <span class="o">=</span> <span class="mi">4</span><span class="p">;</span>
+</pre></div>
+</td></tr></table></div>
+<p>## Vectors (vectores) {#vectors–vectores}</p>
+<p>Los vectores son como arreglos, excepto de que el tamaño es dinámico, es decir, se puede cambiar.</p>
+</div>
+<div class="section" id="inicializar-un-vector">
+<h3>Inicializar un vector<a class="headerlink" href="#inicializar-un-vector" title="Enlazar permanentemente con este título">¶</a></h3>
+<p>Incluimos la librería:</p>
+<div class="highlight-cpp notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="highlight"><pre><span></span>    <span class="cp">#include</span> <span class="cpf">&lt;vector&gt;</span><span class="cp"></span>
+</pre></div>
+</td></tr></table></div>
+<p>Inicializamos nuestro vector «vec»:</p>
+<div class="highlight-cpp notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4</pre></div></td><td class="code"><div class="highlight"><pre><span></span>    <span class="c1">// Inicializa un vector de tamaño 3 con todos sus valores = 0</span>
+    <span class="c1">// Tanto el tamaño como valor son opcionales.</span>
+    <span class="kt">int</span> <span class="n">n</span> <span class="o">=</span> <span class="mi">3</span><span class="p">;</span>
+    <span class="n">vector</span> <span class="o">&lt;</span> <span class="kt">int</span> <span class="o">&gt;</span> <span class="n">vec</span><span class="p">(</span><span class="n">n</span><span class="p">,</span> <span class="mi">0</span><span class="p">);</span>
+</pre></div>
+</td></tr></table></div>
+</div>
+<div class="section" id="asignar-un-valor">
+<h3>Asignar un valor<a class="headerlink" href="#asignar-un-valor" title="Enlazar permanentemente con este título">¶</a></h3>
+<div class="highlight-cpp notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2</pre></div></td><td class="code"><div class="highlight"><pre><span></span>    <span class="c1">// Asigna el valor &quot;1&quot; al índice 2 (es decir, al 3er valor del vector)</span>
+    <span class="n">vec</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
+</pre></div>
+</td></tr></table></div>
+</div>
+<div class="section" id="push-back-empujar-atras">
+<h3>push back (empujar atrás)<a class="headerlink" href="#push-back-empujar-atras" title="Enlazar permanentemente con este título">¶</a></h3>
+<p>Si no sabemos el tamaño de nuestro vector, podemos simplemente usar push_back(valor); para enviar es valor al final del vector.</p>
+<div class="highlight-cpp notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2</pre></div></td><td class="code"><div class="highlight"><pre><span></span>    <span class="c1">// Inserta un 1 al final del vector</span>
+    <span class="n">vec</span><span class="p">.</span><span class="n">push_back</span><span class="p">(</span><span class="mi">1</span><span class="p">);</span>
+</pre></div>
+</td></tr></table></div>
+<p>Por ejemplo, se podría usar en un for, sin necesidad de inicializar el vector con una cantidad de valores.</p>
+<div class="highlight-cpp notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5
+6
+7
+8</pre></div></td><td class="code"><div class="highlight"><pre><span></span>    <span class="n">vector</span> <span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span> <span class="n">vec2</span><span class="p">;</span>
+    <span class="kt">int</span> <span class="n">n</span><span class="p">;</span>
+    <span class="n">cin</span> <span class="o">&gt;&gt;</span> <span class="n">n</span><span class="p">;</span>
+    <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">n</span><span class="p">;</span> <span class="o">++</span><span class="n">i</span><span class="p">){</span>
+        <span class="kt">int</span> <span class="n">valor</span><span class="p">;</span>
+        <span class="n">cin</span> <span class="o">&gt;&gt;</span> <span class="n">valor</span><span class="p">;</span>
+        <span class="n">vec2</span><span class="p">.</span><span class="n">push_back</span><span class="p">();</span>
+    <span class="p">}</span>
+</pre></div>
+</td></tr></table></div>
+</div>
+<div class="section" id="pop-back-quitar-atras">
+<h3>pop back (quitar atrás)<a class="headerlink" href="#pop-back-quitar-atras" title="Enlazar permanentemente con este título">¶</a></h3>
+<p>Elimina el último valor del vector.</p>
+<div class="highlight-cpp notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2</pre></div></td><td class="code"><div class="highlight"><pre><span></span>    <span class="c1">// En este caso, elimina el 1</span>
+    <span class="n">vec</span><span class="p">.</span><span class="n">pop_back</span><span class="p">();</span>
+</pre></div>
+</td></tr></table></div>
+</div>
+<div class="section" id="insert-insertar">
+<h3>insert (insertar)<a class="headerlink" href="#insert-insertar" title="Enlazar permanentemente con este título">¶</a></h3>
+<p>Podemos insertar un valor entre dos indices de un vector. El problema de esto es que mueve todos los valores que estén más adelante, lo que es lento.</p>
+<div class="highlight-cpp notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2</pre></div></td><td class="code"><div class="highlight"><pre><span></span>    <span class="c1">// Inserta el valor 4 al índice 2</span>
+    <span class="n">vec</span><span class="p">.</span><span class="n">insert</span><span class="p">(</span><span class="n">vec</span><span class="p">.</span><span class="n">begin</span><span class="p">()</span> <span class="o">+</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">4</span><span class="p">);</span>
+</pre></div>
+</td></tr></table></div>
+</div>
+<div class="section" id="erase-borrar">
+<h3>erase (borrar)<a class="headerlink" href="#erase-borrar" title="Enlazar permanentemente con este título">¶</a></h3>
+<p>Borra un dato del vector. Al igual que el insert, tiene que mover todos los datos siguientes (esta vez a la derecha).</p>
+<div class="highlight-cpp notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3</pre></div></td><td class="code"><div class="highlight"><pre><span></span>    <span class="c1">// Elimina el valor con índice 2</span>
+    <span class="c1">// En nuestro caso, el 4 que insertamos antes.</span>
+    <span class="n">vec</span><span class="p">.</span><span class="n">erase</span><span class="p">(</span><span class="n">vec</span><span class="p">.</span><span class="n">begin</span><span class="p">()</span> <span class="o">+</span> <span class="mi">2</span><span class="p">);</span>
+</pre></div>
+</td></tr></table></div>
+</div>
+<div class="section" id="iteradores-de-un-arreglo">
+<h3>Iteradores de un arreglo<a class="headerlink" href="#iteradores-de-un-arreglo" title="Enlazar permanentemente con este título">¶</a></h3>
+<p>Hay ciertos iteradores que podemos usar en un arreglo que nos ayudarán en algunos casos, como por ejemplo si quieremos recorrer un arreglo. Estos son:</p>
+<ul class="simple">
+<li><p>begin() – Iterador que accede al primer valor del arreglo.</p></li>
+<li><p>end() – Accede al final del arreglo.</p></li>
+<li><p>rbegin() – Accede al ultimo elemento del arreglo</p></li>
+<li><p>rend – Accede al inicio del arreglo</p></li>
+</ul>
+</div>
+</div>
+<div class="section" id="stacks-pilas">
+<h2>Stacks (pilas)<a class="headerlink" href="#stacks-pilas" title="Enlazar permanentemente con este título">¶</a></h2>
+<p>La pila es una estructura de datos lineal al que sólo puedes acceder al último elemento que fue insertado. Imagina una pila de platos, por ejemplo.</p>
+<div class="highlight-cpp notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="highlight"><pre><span></span>    <span class="n">stack</span> <span class="o">&lt;</span> <span class="kt">int</span> <span class="o">&gt;</span> <span class="n">pilita</span><span class="p">;</span>
+</pre></div>
+</td></tr></table></div>
+<div class="section" id="push-empujar">
+<h3>push (empujar)<a class="headerlink" href="#push-empujar" title="Enlazar permanentemente con este título">¶</a></h3>
+<p>Empuja un dato a la cima de la pila.</p>
+<div class="highlight-cpp notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2</pre></div></td><td class="code"><div class="highlight"><pre><span></span>    <span class="c1">// Empuja un 8 a la cima de la pila.</span>
+    <span class="n">pilita</span><span class="p">.</span><span class="n">push</span><span class="p">(</span><span class="mi">8</span><span class="p">);</span>
+</pre></div>
+</td></tr></table></div>
+</div>
+<div class="section" id="top-cima">
+<h3>top (cima)<a class="headerlink" href="#top-cima" title="Enlazar permanentemente con este título">¶</a></h3>
+<p>Lee lo que hay en la cima de la pila.</p>
+<div class="highlight-cpp notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3</pre></div></td><td class="code"><div class="highlight"><pre><span></span>    <span class="c1">// Siguiendo el ejemplo anterior</span>
+    <span class="c1">// Esto retorna 8</span>
+    <span class="n">pilita</span><span class="p">.</span><span class="n">top</span><span class="p">();</span>
+</pre></div>
+</td></tr></table></div>
+</div>
+<div class="section" id="pop-quitar">
+<h3>pop (quitar)<a class="headerlink" href="#pop-quitar" title="Enlazar permanentemente con este título">¶</a></h3>
+<p>Remueve el dato de la cima de la pila.</p>
+<div class="highlight-cpp notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3</pre></div></td><td class="code"><div class="highlight"><pre><span></span>    <span class="c1">// Siguiendo el ejemplo anterior</span>
+    <span class="c1">// Remueve el 8</span>
+    <span class="n">pilita</span><span class="p">.</span><span class="n">pop</span><span class="p">();</span>
+</pre></div>
+</td></tr></table></div>
+</div>
+<div class="section" id="empty-vacio">
+<h3>empty (vacío)<a class="headerlink" href="#empty-vacio" title="Enlazar permanentemente con este título">¶</a></h3>
+<p>Retorna 1 si la pila está vacía, de lo contrario retorna 0.</p>
+<div class="highlight-cpp notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2</pre></div></td><td class="code"><div class="highlight"><pre><span></span>    <span class="c1">// Retorna 1 ya que nuestra pila está vacía.</span>
+    <span class="n">pilita</span><span class="p">.</span><span class="n">empty</span><span class="p">();</span>
+</pre></div>
+</td></tr></table></div>
+</div>
+<div class="section" id="size-tamano">
+<h3>size (tamaño)<a class="headerlink" href="#size-tamano" title="Enlazar permanentemente con este título">¶</a></h3>
+<p>Retorna el tamaño de nuestra pila.</p>
+<div class="highlight-cpp notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2</pre></div></td><td class="code"><div class="highlight"><pre><span></span>    <span class="c1">// Retorna 0 ya que nuestra pila no tiene datos.</span>
+    <span class="n">pilita</span><span class="p">.</span><span class="n">size</span><span class="p">();</span>
+</pre></div>
+</td></tr></table></div>
+</div>
+</div>
+<div class="section" id="queues-colas">
+<h2>Queues (colas)<a class="headerlink" href="#queues-colas" title="Enlazar permanentemente con este título">¶</a></h2>
+<p>La cola es una estructura de datos lineal al que sólo puedes acceder al primer elemento que fue insertado. Imagina una fila de una caja de un supermercado, por ejemplo.</p>
+<div class="highlight-cpp notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="highlight"><pre><span></span>    <span class="n">queue</span> <span class="o">&lt;</span> <span class="kt">int</span> <span class="o">&gt;</span> <span class="n">colita</span><span class="p">;</span>
+</pre></div>
+</td></tr></table></div>
+<div class="section" id="id1">
+<h3>push (empujar)<a class="headerlink" href="#id1" title="Enlazar permanentemente con este título">¶</a></h3>
+<p>Añade un dato al final de la cola.</p>
+<div class="highlight-cpp notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5</pre></div></td><td class="code"><div class="highlight"><pre><span></span>    <span class="n">colita</span><span class="p">.</span><span class="n">push</span><span class="p">(</span><span class="mi">5</span><span class="p">);</span>
+    <span class="n">colita</span><span class="p">.</span><span class="n">push</span><span class="p">(</span><span class="mi">4</span><span class="p">);</span>
+    <span class="n">colita</span><span class="p">.</span><span class="n">push</span><span class="p">(</span><span class="mi">3</span><span class="p">);</span>
+    <span class="n">colita</span><span class="p">.</span><span class="n">push</span><span class="p">(</span><span class="mi">2</span><span class="p">);</span>
+    <span class="n">colita</span><span class="p">.</span><span class="n">push</span><span class="p">(</span><span class="mi">1</span><span class="p">);</span>
+</pre></div>
+</td></tr></table></div>
+</div>
+<div class="section" id="front-frente">
+<h3>front (frente)<a class="headerlink" href="#front-frente" title="Enlazar permanentemente con este título">¶</a></h3>
+<p>Lee el dato que está al frente de la cola.</p>
+<div class="highlight-cpp notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3</pre></div></td><td class="code"><div class="highlight"><pre><span></span>    <span class="c1">// Siguiendo el ejemplo construido antes</span>
+    <span class="c1">// Retorna 5, ya que fue lo primero que empujamos a la cola</span>
+    <span class="n">colita</span><span class="p">.</span><span class="n">front</span><span class="p">();</span>
+</pre></div>
+</td></tr></table></div>
+</div>
+<div class="section" id="id2">
+<h3>pop (quitar)<a class="headerlink" href="#id2" title="Enlazar permanentemente con este título">¶</a></h3>
+<p>Remueve el dato que está al frente de la cola</p>
+<div class="highlight-cpp notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4</pre></div></td><td class="code"><div class="highlight"><pre><span></span>    <span class="c1">// Remueve el 5</span>
+    <span class="n">colita</span><span class="p">.</span><span class="n">pop</span><span class="p">();</span>
+    <span class="c1">// Retorna 4, ya que fue lo segundo que empujamos a la cola (y que ahora está primero).</span>
+    <span class="n">colita</span><span class="p">.</span><span class="n">front</span><span class="p">();</span>
+</pre></div>
+</td></tr></table></div>
+</div>
+<div class="section" id="id3">
+<h3>empty (vacío)<a class="headerlink" href="#id3" title="Enlazar permanentemente con este título">¶</a></h3>
+<p>Retorna 1 si la cola está vacía, de lo contrario retorna 0.</p>
+<div class="highlight-cpp notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2</pre></div></td><td class="code"><div class="highlight"><pre><span></span>    <span class="c1">// Retorna 1 ya que nuestra cola está vacía.</span>
+    <span class="n">colita</span><span class="p">.</span><span class="n">empty</span><span class="p">();</span>
+</pre></div>
+</td></tr></table></div>
+</div>
+<div class="section" id="id4">
+<h3>size (tamaño)<a class="headerlink" href="#id4" title="Enlazar permanentemente con este título">¶</a></h3>
+<p>Retorna el tamaño de nuestra cola.</p>
+<div class="highlight-cpp notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2</pre></div></td><td class="code"><div class="highlight"><pre><span></span>    <span class="c1">// Retorna 0 ya que nuestra cola no tiene datos.</span>
+    <span class="n">colita</span><span class="p">.</span><span class="n">size</span><span class="p">();</span>
+</pre></div>
+</td></tr></table></div>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="no_lineales.html" class="btn btn-neutral float-right" title="Estructuras de Datos No Lineales" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="edd.html" class="btn btn-neutral float-left" title="Estructuras de Datos" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        
+        &copy; Copyright 2020, Comunidad del taller avanzado
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>
