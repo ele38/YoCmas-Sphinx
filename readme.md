@@ -75,3 +75,6 @@ Sub Sub Titulo 2
 Sub Titulo 2
 ------------
 ```
+
+## Compilar
+Luego, para compilar basta correr el comando 'make github' desde la raiz del proyecto. Para poder probar los cambios recién hechos, puedes abrir docs/index.html con tu navegador.
