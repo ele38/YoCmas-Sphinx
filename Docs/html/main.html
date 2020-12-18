@@ -1,0 +1,1037 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="es" >
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Estructuras de datos &mdash; documentación de Yo Cmás - </title>
+  
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+
+  
+  
+  
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/language_data.js"></script>
+        <script src="_static/translations.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Índice" href="genindex.html" />
+    <link rel="search" title="Búsqueda" href="search.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="index.html" class="icon icon-home" alt="Documentation Home"> Yo Cmás
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="edd/edd.html">Estructuras de Datos</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ordenamiento/ordenamiento.html">Algoritmos de Ordenamiento</a></li>
+<li class="toctree-l1"><a class="reference internal" href="busqueda/busqueda.html">Algoritmos de búsqueda</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Yo Cmás</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+        
+      <li>Estructuras de datos</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/main.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="estructuras-de-datos">
+<h1>Estructuras de datos<a class="headerlink" href="#estructuras-de-datos" title="Enlazar permanentemente con este título">¶</a></h1>
+<div class="section" id="estructuras-lineales">
+<h2>Estructuras lineales<a class="headerlink" href="#estructuras-lineales" title="Enlazar permanentemente con este título">¶</a></h2>
+<div class="section" id="acerca-de">
+<h3>Acerca de<a class="headerlink" href="#acerca-de" title="Enlazar permanentemente con este título">¶</a></h3>
+<p>Rellenar página</p>
+</div>
+<div class="section" id="arrays-arreglos">
+<h3>Arrays (arreglos)<a class="headerlink" href="#arrays-arreglos" title="Enlazar permanentemente con este título">¶</a></h3>
+<p>Los arrays son conjuntos de datos que se almacenan en memoria de manera
+contigua usando el mismo nombre. Se usan índices para diferenciar los
+distintos valores del arreglo. Para crear una arreglo es necesario saber
+la cantidad de elementos que van a componer nuestro arreglo, pues la
+cantidad de elementos no se puede cambiar. Una cosa muy importante que
+al principio uno suele olvidar es que los índices de los arreglos parten
+en 0. Es decir, un arreglo de tamaño n puede tomar índices desde el 0
+hasta el n-1.</p>
+<ol class="arabic">
+<li><p>Inicialización</p>
+<p>Hay dos formas de inicializar un array, especificando su tamaño o
+llenandolo con valores por defecto.</p>
+<ol class="arabic">
+<li><p>Inicializar un array por su tamaño</p>
+<p>Para inicializar un array por su tamaño, lo único que hay que
+especificar es el nombre de la variable y colocar entre «[]» el
+tamaño de nuestro arreglo. Recordar que como los arrays parten en
+0, el valor máximo que podremos acceder será el tamaño del array
+menos 1.</p>
+<div class="highlight-cpp notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="kt">int</span> <span class="n">arreglo</span><span class="p">[</span><span class="mi">38</span><span class="p">];</span> <span class="c1">// Inicializar un arreglo de ints de tamaño 38.</span>
+</pre></div>
+</td></tr></table></div>
+</li>
+<li><p>Inicializar un array con valores por defecto</p>
+<p>Para inicializar un array con valores por defecto, no es necesario
+especificar el tamaño de nuestro array, pues este está implícito
+en la cantidad de valores que introducimos.</p>
+<div class="highlight-cpp notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="kt">int</span> <span class="n">arreglo2</span><span class="p">[]</span> <span class="o">=</span> <span class="p">{</span><span class="mi">3</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">};</span>
+</pre></div>
+</td></tr></table></div>
+</li>
+</ol>
+</li>
+<li><p>Leer el valor de un arreglo</p>
+<p>Para leer un valor de nuestro arreglo, solo hay que especificar el
+nombre del arreglo y su índice. Notar que sólo se puede acceder a un
+valor de un arreglo a la vez.</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">arreglo2</span><span class="p">[</span><span class="mi">3</span><span class="p">];</span> <span class="c1">// Retorna 1</span>
+</pre></div>
+</div>
+</li>
+<li><p>Asignar valores a un arreglo</p>
+<p>Para esto, hay que especificar la variable, el índice al cuál acceder
+y especificar su nuevo valor. Recordar que el valor del índice puede
+ser una variable, pero que no puede estar fuera del rango del tamaño
+de nuestro arreglo.</p>
+<div class="highlight-cpp notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="n">arreglo2</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span> <span class="o">=</span> <span class="mi">5</span><span class="p">;</span> <span class="c1">// El indice 3 de nuestro arreglo, ahora tiene el valor 3</span>
+</pre></div>
+</td></tr></table></div>
+</li>
+</ol>
+</div>
+<div class="section" id="arrays-multidimensionales">
+<h3>Arrays multidimensionales<a class="headerlink" href="#arrays-multidimensionales" title="Enlazar permanentemente con este título">¶</a></h3>
+<p>Un array multidimensional es aquel que requiuere de más de un índice
+para ser llamado, como su nombre lo indica, es útil para cuando
+necesitamos acceder a datos que requieren más de una dimensión, como por
+ejemplo valores dentro de una malla. Otra forma de enternder los arrays
+multidimensionales es como un arreglo de arreglos (de arreglos de
+arreglos.. n veces, siendo n la cantidad de dimensiones). Los arreglos
+de 2 dimensiones también son conocidos como matrices.</p>
+<ol class="arabic">
+<li><p>Inicializar un arreglo multidimensional</p>
+<p>Para esto, hay que especificar el tamaño de cada dimensión del array.
+Notar que la regla de que empiezan en 0 y terminan en n-1 se sigue
+cumpliendo. Es posible asignarles valores predeterminados, pero creo
+que eso se va poniendo exponencialmente más psicópata a medida de que
+vas incrementando las dimensiones del array a crear, por lo que no lo
+voy a demostrar.</p>
+<div class="highlight-cpp notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="kt">int</span> <span class="n">matriz</span><span class="p">[</span><span class="mi">3</span><span class="p">][</span><span class="mi">4</span><span class="p">];</span>
+<span class="kt">int</span> <span class="n">tridimensional</span><span class="p">[</span><span class="mi">100</span><span class="p">][</span><span class="mi">100</span><span class="p">][</span><span class="mi">100</span><span class="p">];</span>
+</pre></div>
+</td></tr></table></div>
+</li>
+<li><p>Asignar valores en un arreglo multidimensional</p>
+<p>Es muy similar a cómo se hace en un arreglo unidimensional, solo que
+se especifica cada índice.</p>
+<div class="highlight-cpp notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="kt">int</span> <span class="n">n</span> <span class="o">=</span> <span class="mi">3</span><span class="p">,</span> <span class="n">m</span> <span class="o">=</span> <span class="mi">5</span><span class="p">;</span>
+<span class="n">matriz</span><span class="p">[</span><span class="mi">2</span><span class="p">][</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="mi">10</span><span class="p">;</span>
+<span class="n">tridimensional</span><span class="p">[</span><span class="n">n</span><span class="p">][</span><span class="n">m</span><span class="p">]</span> <span class="o">=</span> <span class="mi">4</span><span class="p">;</span>
+</pre></div>
+</td></tr></table></div>
+</li>
+</ol>
+</div>
+<div class="section" id="vectors-vectores">
+<h3>Vectors (vectores)<a class="headerlink" href="#vectors-vectores" title="Enlazar permanentemente con este título">¶</a></h3>
+<p>Los vectores son como arreglos, excepto de que el tamaño es dinámico, es
+decir, se puede cambiar.</p>
+<ol class="arabic">
+<li><p>Inicializar un vector</p>
+<p>Incluimos la librería:</p>
+<div class="highlight-cpp notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="cp">#include</span> <span class="cpf">&lt;vector&gt;</span><span class="cp"></span>
+</pre></div>
+</td></tr></table></div>
+<p>Inicializamos nuestro vector «vec»:</p>
+<div class="highlight-cpp notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="kt">int</span> <span class="n">n</span> <span class="o">=</span> <span class="mi">3</span><span class="p">;</span>
+<span class="n">vector</span> <span class="o">&lt;</span> <span class="kt">int</span> <span class="o">&gt;</span> <span class="n">vec</span><span class="p">(</span><span class="n">n</span><span class="p">,</span> <span class="mi">0</span><span class="p">);</span> <span class="c1">// Inicializa un vector de tamaño 3 con todos sus valores = 0. Tanto el tamaño como valor son opcionales.</span>
+</pre></div>
+</td></tr></table></div>
+</li>
+<li><p>Asignar un valor</p>
+<div class="highlight-cpp notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="n">vec</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span> <span class="c1">// Asigna el valor &quot;1&quot; al índice 2 (es decir, al 3er valor del vector)</span>
+</pre></div>
+</td></tr></table></div>
+</li>
+<li><p>push back (empujar atrás)</p>
+<p>Si no sabemos el tamaño de nuestro vector, podemos simplemente usar
+push<sub>back</sub>(valor); para enviar es valor al final del vector.</p>
+<div class="highlight-cpp notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="n">vec</span><span class="p">.</span><span class="n">push_back</span><span class="p">(</span><span class="mi">1</span><span class="p">);</span> <span class="c1">// Inserta un 1 al final del vector</span>
+</pre></div>
+</td></tr></table></div>
+<p>Por ejemplo, se podría usar en un for, sin necesidad de inicializar
+el vector con una cantidad de valores.</p>
+<div class="highlight-cpp notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5
+6
+7
+8</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="n">vector</span> <span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span> <span class="n">vec2</span><span class="p">;</span>
+<span class="kt">int</span> <span class="n">n</span><span class="p">;</span>
+<span class="n">cin</span> <span class="o">&gt;&gt;</span> <span class="n">n</span><span class="p">;</span>
+<span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">n</span><span class="p">;</span> <span class="o">++</span><span class="n">i</span><span class="p">){</span>
+    <span class="kt">int</span> <span class="n">valor</span><span class="p">;</span>
+    <span class="n">cin</span> <span class="o">&gt;&gt;</span> <span class="n">valor</span><span class="p">;</span>
+    <span class="n">vec2</span><span class="p">.</span><span class="n">push_back</span><span class="p">();</span>
+<span class="p">}</span>
+</pre></div>
+</td></tr></table></div>
+</li>
+<li><p>pop back (quitar atrás)</p>
+<p>Elimina el último valor del vector.</p>
+<div class="highlight-cpp notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="n">vec</span><span class="p">.</span><span class="n">pop_back</span><span class="p">();</span> <span class="c1">// En este caso, elimina el 1</span>
+</pre></div>
+</td></tr></table></div>
+</li>
+<li><p>insert (insertar)</p>
+<p>Podemos insertar un valor entre dos indices de un vector. El problema
+de esto es que mueve todos los valores que estén más adelante, lo que
+es lento.</p>
+<div class="highlight-cpp notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="n">vec</span><span class="p">.</span><span class="n">insert</span><span class="p">(</span><span class="n">vec</span><span class="p">.</span><span class="n">begin</span><span class="p">()</span> <span class="o">+</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">4</span><span class="p">);</span> <span class="c1">// Inserta el valor 4 al índice 2</span>
+</pre></div>
+</td></tr></table></div>
+</li>
+<li><p>erase (borrar)</p>
+<p>Borra un dato del vector. Al igual que el insert, tiene que mover
+todos los datos siguientes (esta vez a la derecha).</p>
+<div class="highlight-cpp notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="n">vec</span><span class="p">.</span><span class="n">erase</span><span class="p">(</span><span class="n">vec</span><span class="p">.</span><span class="n">begin</span><span class="p">()</span> <span class="o">+</span> <span class="mi">2</span><span class="p">);</span> <span class="c1">// Elimina el valor con índice 2, en nuestro caso, el 4 que insertamos antes.</span>
+</pre></div>
+</td></tr></table></div>
+</li>
+<li><p>Iteradores de un arreglo</p>
+<p>Hay ciertos iteradores que podemos usar en un arreglo que nos
+ayudarán en algunos casos, como por ejemplo si quieremos recorrer un
+arreglo. Estos son:</p>
+<ul class="simple">
+<li><p>begin() – Iterador que accede al primer valor del arreglo.</p></li>
+<li><p>end() – Accede al final del arreglo.</p></li>
+<li><p>rbegin() – Accede al ultimo elemento del arreglo</p></li>
+<li><p>rend – Accede al inicio del arreglo</p></li>
+</ul>
+</li>
+</ol>
+</div>
+<div class="section" id="stacks-pilas">
+<h3>Stacks (pilas)<a class="headerlink" href="#stacks-pilas" title="Enlazar permanentemente con este título">¶</a></h3>
+<p>La pila es una estructura de datos lineal al que sólo puedes acceder al
+último elemento que fue insertado. Imagina una pila de platos, por
+ejemplo.</p>
+<div class="highlight-cpp notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="n">stack</span> <span class="o">&lt;</span> <span class="kt">int</span> <span class="o">&gt;</span> <span class="n">pilita</span><span class="p">;</span>
+</pre></div>
+</td></tr></table></div>
+<ol class="arabic">
+<li><p>push (empujar)</p>
+<p>Empuja un dato a la cima de la pila.</p>
+<div class="highlight-cpp notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="n">pilita</span><span class="p">.</span><span class="n">push</span><span class="p">(</span><span class="mi">8</span><span class="p">);</span> <span class="c1">// Empuja un 8 a la cima de la pila.</span>
+</pre></div>
+</td></tr></table></div>
+</li>
+<li><p>top (cima)</p>
+<p>Lee lo que hay en la cima de la pila.</p>
+<div class="highlight-cpp notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="n">pilita</span><span class="p">.</span><span class="n">top</span><span class="p">();</span> <span class="c1">// Retorna el 8.</span>
+</pre></div>
+</td></tr></table></div>
+</li>
+<li><p>pop (quitar)</p>
+<p>Remueve el dato de la cima de la pila.</p>
+<div class="highlight-cpp notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="n">pilita</span><span class="p">.</span><span class="n">pop</span><span class="p">();</span> <span class="c1">// Remueve el 8.</span>
+</pre></div>
+</td></tr></table></div>
+</li>
+<li><p>empty (vacío)</p>
+<p>Retorna 1 si la pila está vacía, de lo contrario retorna 0.</p>
+<div class="highlight-cpp notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="n">pilita</span><span class="p">.</span><span class="n">empty</span><span class="p">();</span> <span class="c1">// Retorna 1 ya que nuestra pila está vacía.</span>
+</pre></div>
+</td></tr></table></div>
+</li>
+<li><p>size (tamaño)</p>
+<p>Retorna el tamaño de nuestra pila.</p>
+<div class="highlight-cpp notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="n">pilita</span><span class="p">.</span><span class="n">size</span><span class="p">();</span> <span class="c1">// Retorna 0 ya que nuestra pila no tiene datos.</span>
+</pre></div>
+</td></tr></table></div>
+</li>
+</ol>
+</div>
+<div class="section" id="queues-colas">
+<h3>Queues (colas)<a class="headerlink" href="#queues-colas" title="Enlazar permanentemente con este título">¶</a></h3>
+<p>La cola es una estructura de datos lineal al que sólo puedes acceder al
+primer elemento que fue insertado. Imagina una fila de una caja de un
+supermercado, por ejemplo.</p>
+<div class="highlight-cpp notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="n">queue</span> <span class="o">&lt;</span> <span class="kt">int</span> <span class="o">&gt;</span> <span class="n">colita</span><span class="p">;</span>
+</pre></div>
+</td></tr></table></div>
+<ol class="arabic">
+<li><p>push (empujar)</p>
+<p>Añade un dato al final de la cola.</p>
+<div class="highlight-cpp notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="n">colita</span><span class="p">.</span><span class="n">push</span><span class="p">(</span><span class="mi">5</span><span class="p">);</span>
+<span class="n">colita</span><span class="p">.</span><span class="n">push</span><span class="p">(</span><span class="mi">4</span><span class="p">);</span>
+<span class="n">colita</span><span class="p">.</span><span class="n">push</span><span class="p">(</span><span class="mi">3</span><span class="p">);</span>
+<span class="n">colita</span><span class="p">.</span><span class="n">push</span><span class="p">(</span><span class="mi">2</span><span class="p">);</span>
+<span class="n">colita</span><span class="p">.</span><span class="n">push</span><span class="p">(</span><span class="mi">1</span><span class="p">);</span>
+</pre></div>
+</td></tr></table></div>
+</li>
+<li><p>front (frente)</p>
+<p>Lee el dato que está al frente de la cola.</p>
+<div class="highlight-cpp notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="n">colita</span><span class="p">.</span><span class="n">front</span><span class="p">();</span> <span class="c1">// Retorna 5, ya que fue lo primero que empujamos a la cola.</span>
+</pre></div>
+</td></tr></table></div>
+</li>
+<li><p>pop (quitar)</p>
+<p>Remueve el dato que está al frente de la cola</p>
+<div class="highlight-cpp notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="n">colita</span><span class="p">.</span><span class="n">pop</span><span class="p">();</span>   <span class="c1">// Remueve el 5</span>
+<span class="n">colita</span><span class="p">.</span><span class="n">front</span><span class="p">();</span> <span class="c1">// Retorna 4, ya que fue lo segundo que empujamos a la cola (y que ahora está primero).</span>
+</pre></div>
+</td></tr></table></div>
+</li>
+<li><p>empty (vacío)</p>
+<p>Retorna 1 si la cola está vacía, de lo contrario retorna 0.</p>
+<div class="highlight-cpp notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="n">colita</span><span class="p">.</span><span class="n">empty</span><span class="p">();</span> <span class="c1">// Retorna 1 ya que nuestra cola está vacía.</span>
+</pre></div>
+</td></tr></table></div>
+</li>
+<li><p>size (tamaño)</p>
+<p>Retorna el tamaño de nuestra cola.</p>
+<div class="highlight-cpp notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="n">colita</span><span class="p">.</span><span class="n">size</span><span class="p">();</span> <span class="c1">// Retorna 0 ya que nuestra cola no tiene datos.</span>
+</pre></div>
+</td></tr></table></div>
+</li>
+</ol>
+</div>
+</div>
+<div class="section" id="estructuras-en-forma-de-arbol">
+<h2>Estructuras en forma de árbol<a class="headerlink" href="#estructuras-en-forma-de-arbol" title="Enlazar permanentemente con este título">¶</a></h2>
+<div class="section" id="acerca-de-1">
+<span id="id1"></span><h3>Acerca de<a class="headerlink" href="#acerca-de-1" title="Enlazar permanentemente con este título">¶</a></h3>
+<p>Véase: arbol binario</p>
+</div>
+<div class="section" id="set-conjunto">
+<h3>Set (conjunto)<a class="headerlink" href="#set-conjunto" title="Enlazar permanentemente con este título">¶</a></h3>
+<p>Es una lista que no permite que hayan elementos repetidos.</p>
+<ol class="arabic">
+<li><p>Inicialización</p>
+<p>Incluimos la librería:</p>
+<div class="highlight-cpp notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="cp">#include</span> <span class="cpf">&lt;set&gt;</span><span class="cp"></span>
+</pre></div>
+</td></tr></table></div>
+<p>Inicializamos nuestro conjunto:</p>
+<div class="highlight-cpp notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="n">set</span> <span class="o">&lt;</span> <span class="kt">int</span> <span class="o">&gt;</span> <span class="n">conjunto</span><span class="p">;</span> <span class="c1">// int puede ser reemplazado con cualquier otro tipo de dato</span>
+</pre></div>
+</td></tr></table></div>
+</li>
+<li><p>insert (Insertar)</p>
+<p>Inserta un dato. Retorna un par de elementos, el primero siendo el
+iterador del valor insertado y el segundo siendo un bool que marca si
+es que ya existía o no. En el ejemplo de abajo, usamos .second para
+comprobar si se insertó correctamente o no.</p>
+<div class="highlight-cpp notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5
+6
+7</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="k">if</span> <span class="p">(</span><span class="n">conjunto</span><span class="p">.</span><span class="n">insert</span><span class="p">(</span><span class="mi">10</span><span class="p">).</span><span class="n">second</span><span class="p">)</span> <span class="c1">// Retorna TRUE ya que no estaba anteriormente</span>
+    <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;ganai</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">;</span> <span class="k">if</span> <span class="p">(</span><span class="n">conjunto</span><span class="p">.</span><span class="n">insert</span><span class="p">(</span><span class="mi">10</span><span class="p">).</span><span class="n">second</span><span class="p">);</span> <span class="c1">// Retorna FALSE ya que ya había un 10.</span>
+<span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;no ganai</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">;</span>
+<span class="n">conjunto</span><span class="p">.</span><span class="n">insert</span><span class="p">(</span><span class="mi">20</span><span class="p">);</span>
+<span class="n">conjunto</span><span class="p">.</span><span class="n">insert</span><span class="p">(</span><span class="mi">40</span><span class="p">);</span>
+<span class="n">conjunto</span><span class="p">.</span><span class="n">insert</span><span class="p">(</span><span class="mi">30</span><span class="p">);</span>
+<span class="n">conjunto</span><span class="p">.</span><span class="n">insert</span><span class="p">(</span><span class="mi">11</span><span class="p">);</span>
+</pre></div>
+</td></tr></table></div>
+</li>
+<li><p>find (Encontrar)</p>
+<p>Busca un elemento en el set y si lo encuentra retorna un iterador al
+valor. De lo contrario, retorna conjunto.end();</p>
+<div class="highlight-cpp notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="k">if</span> <span class="p">(</span><span class="n">conjunto</span><span class="p">.</span><span class="n">find</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span> <span class="o">!=</span> <span class="n">conjunto</span><span class="p">.</span><span class="n">end</span><span class="p">())</span>
+    <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;ganai</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">;</span>
+</pre></div>
+</td></tr></table></div>
+</li>
+<li><p>erase (borrar)</p>
+<p>Puedes borrar un valor si le entregas el iterador al valor.</p>
+<div class="highlight-cpp notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="n">set</span> <span class="o">&lt;</span> <span class="kt">int</span> <span class="o">&gt;::</span><span class="n">iterator</span> <span class="n">it</span> <span class="o">=</span> <span class="n">conjunto</span><span class="p">.</span><span class="n">find</span><span class="p">(</span><span class="mi">11</span><span class="p">);</span>
+<span class="k">if</span> <span class="p">(</span><span class="n">it</span> <span class="o">!=</span> <span class="n">conjunto</span><span class="p">.</span><span class="n">end</span><span class="p">())</span>
+    <span class="n">conjunto</span><span class="p">.</span><span class="n">erase</span><span class="p">(</span><span class="n">it</span><span class="p">);</span>
+</pre></div>
+</td></tr></table></div>
+</li>
+<li><p>Iterar a través de un conjunto</p>
+<p>Puedes iterar a través de un conjunto con los valores ya ordenados
+con un iterador:</p>
+<div class="highlight-cpp notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="c1">// Imprime 10 11 20 30 40</span>
+<span class="k">for</span> <span class="p">(</span><span class="n">it</span> <span class="o">=</span> <span class="n">conjunto</span><span class="p">.</span><span class="n">begin</span><span class="p">();</span> <span class="n">it</span> <span class="o">!=</span> <span class="n">conjunto</span><span class="p">.</span><span class="n">end</span><span class="p">();</span> <span class="o">++</span><span class="n">it</span><span class="p">)</span>
+    <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="o">*</span><span class="n">it</span> <span class="o">&lt;&lt;</span> <span class="s">&quot; &quot;</span><span class="p">;</span>
+<span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="sc">&#39;\n&#39;</span><span class="p">;</span>
+</pre></div>
+</td></tr></table></div>
+</li>
+</ol>
+</div>
+<div class="section" id="map-mapa-tabla-de-hashing">
+<h3>Map (mapa, tabla de hashing)<a class="headerlink" href="#map-mapa-tabla-de-hashing" title="Enlazar permanentemente con este título">¶</a></h3>
+<p>Toma dos datos, una llave y un valor. Puedes buscar una llave en tiempo
+logarítmico con la implementación de la STL. Pero con otras
+implementaciones se puede hacer en tiempo constante. Las llaves no se
+pueden repetir.</p>
+<ol class="arabic">
+<li><p>Ejemplo cotidiano</p>
+<p>Libros:</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 65%" />
+<col style="width: 35%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Título (Llave)</p></th>
+<th class="head"><p>Autor (Valor)</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>The C Programming Language</p></td>
+<td><p>Brian Keringhan</p></td>
+</tr>
+<tr class="row-odd"><td><p>The AWK Programming Language</p></td>
+<td><p>Brian Keringhan</p></td>
+</tr>
+<tr class="row-even"><td><p>1984</p></td>
+<td><p>George Orwell</p></td>
+</tr>
+</tbody>
+</table>
+<p>Curso:</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 19%" />
+<col style="width: 81%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Apellido</p></th>
+<th class="head"><p>Cantidad de alumnos con el apellido</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Gonzalez</p></td>
+<td><p>3</p></td>
+</tr>
+<tr class="row-odd"><td><p>Perez</p></td>
+<td><p>2</p></td>
+</tr>
+</tbody>
+</table>
+</li>
+<li><p>Inicializar</p>
+<p>Incluimos la librería de map:</p>
+<div class="highlight-cpp notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="cp">#include</span> <span class="cpf">&lt;map&gt;</span><span class="cp"></span>
+</pre></div>
+</td></tr></table></div>
+<p>Inicializamos el mapa curso:</p>
+<div class="highlight-cpp notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="n">map</span><span class="o">&lt;</span><span class="n">string</span><span class="p">,</span> <span class="kt">int</span><span class="o">&gt;</span> <span class="n">curso</span><span class="p">;</span>
+</pre></div>
+</td></tr></table></div>
+</li>
+<li><p>Insert (insertar)</p>
+<p>Forma 1:</p>
+<div class="highlight-cpp notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="n">curso</span><span class="p">[</span><span class="s">&quot;perez&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
+</pre></div>
+</td></tr></table></div>
+<p>Forma 2:</p>
+<div class="highlight-cpp notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="n">curso</span><span class="p">.</span><span class="n">insert</span><span class="p">(</span><span class="n">pair</span><span class="o">&lt;</span><span class="n">string</span><span class="p">,</span> <span class="kt">int</span><span class="o">&gt;</span><span class="p">(</span><span class="s">&quot;gonzalez, 3&quot;</span><span class="p">));</span>
+</pre></div>
+</td></tr></table></div>
+</li>
+<li><p>Operar con los valores</p>
+<p>Se puede operar con el valor tomando la llave. Ejemplo 1:</p>
+<div class="highlight-cpp notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="o">++</span><span class="n">curso</span><span class="p">.[</span><span class="s">&quot;perez&quot;</span><span class="p">];</span> <span class="c1">// Incrementar el valor de la llave perez, por ejemplo.</span>
+</pre></div>
+</td></tr></table></div>
+<p>Ejemplo 2:</p>
+<div class="highlight-cpp notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="n">curso</span><span class="p">.[</span><span class="s">&quot;perez&quot;</span><span class="p">]</span> <span class="o">&lt;&lt;</span> <span class="n">endl</span><span class="p">;</span> <span class="c1">// El output será 2.</span>
+</pre></div>
+</td></tr></table></div>
+<p>Cuidado con operar con valores no existentes, pues los inicializará
+de una forma inesperada.</p>
+</li>
+<li><p>Find (encontrar)</p>
+<p>Retorna un iterador, si no lo encuentra, apunta a map.end() Asignamos
+el iterador it a gonzalez, y luego lo usamos:</p>
+<div class="highlight-cpp notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5
+6
+7</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="n">map</span><span class="o">&lt;</span><span class="n">string</span><span class="p">,</span> <span class="kt">int</span><span class="o">&gt;::</span><span class="n">iterator</span> <span class="n">it</span><span class="p">;</span>
+<span class="n">it</span> <span class="o">=</span> <span class="n">curso</span><span class="p">.</span><span class="n">find</span><span class="p">(</span><span class="s">&quot;gonzalez&quot;</span><span class="p">);</span>
+
+<span class="k">if</span> <span class="p">(</span><span class="n">it</span> <span class="o">!=</span> <span class="n">curso</span><span class="p">.</span><span class="n">end</span><span class="p">()){</span>
+<span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;Hay &quot;</span> <span class="o">&lt;&lt;</span> <span class="n">it</span><span class="o">-&gt;</span><span class="n">second</span> <span class="o">&lt;&lt;</span> <span class="s">&quot; &quot;</span> <span class="o">&lt;&lt;</span> <span class="n">it</span><span class="o">-&gt;</span><span class="n">first</span> <span class="o">&lt;&lt;</span> <span class="s">&quot; en el curso:</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">;</span>
+<span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;Llave: &quot;</span> <span class="o">&lt;&lt;</span> <span class="n">it</span><span class="o">-&gt;</span><span class="n">first</span> <span class="o">&lt;&lt;</span> <span class="s">&quot; Valor: &quot;</span> <span class="o">&lt;&lt;</span> <span class="n">it</span><span class="o">-&gt;</span><span class="n">second</span> <span class="o">&lt;&lt;</span> <span class="sc">&#39;\n&#39;</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</td></tr></table></div>
+<p>Podemos incluso operar usando los iteradores:</p>
+<div class="highlight-cpp notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="n">it</span><span class="o">-&gt;++</span><span class="n">second</span><span class="p">;</span>
+</pre></div>
+</td></tr></table></div>
+</li>
+<li><p>Erase (borrar)</p>
+<p>Forma 1:</p>
+<div class="highlight-cpp notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="n">it</span> <span class="o">=</span> <span class="n">curso</span><span class="p">.</span><span class="n">find</span><span class="p">(</span><span class="s">&quot;perez&quot;</span><span class="p">);</span>
+<span class="n">curso</span><span class="p">.</span><span class="n">erase</span><span class="p">(</span><span class="n">it</span><span class="p">);</span>
+</pre></div>
+</td></tr></table></div>
+<p>Forma 2:</p>
+<div class="highlight-cpp notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="n">curso</span><span class="p">.</span><span class="n">erase</span><span class="p">(</span><span class="s">&quot;gonzalez&quot;</span><span class="p">);</span>
+</pre></div>
+</td></tr></table></div>
+</li>
+<li><p>Recorrer los valores de un mapa</p>
+<p>Es exactamente igual que en un conjunto:</p>
+<div class="highlight-cpp notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="p">(</span><span class="n">it</span> <span class="o">=</span> <span class="n">curso</span><span class="p">.</span><span class="n">begin</span><span class="p">();</span> <span class="n">it</span> <span class="o">!=</span> <span class="n">curso</span><span class="p">.</span><span class="n">end</span><span class="p">();</span> <span class="o">++</span><span class="n">it</span><span class="p">){</span>
+    <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;Llave: &quot;</span> <span class="o">&lt;&lt;</span> <span class="n">it</span><span class="o">-&gt;</span><span class="n">first</span> <span class="o">&lt;&lt;</span> <span class="s">&quot; Valor: &quot;</span> <span class="o">&lt;&lt;</span> <span class="n">it</span><span class="o">-&gt;</span><span class="n">second</span> <span class="o">&lt;&lt;</span> <span class="sc">&#39;\n&#39;</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</td></tr></table></div>
+</li>
+<li><p>Dudas que no dejan dormir</p>
+<ol class="arabic">
+<li><p>¿Qué pasa si modifico una llave?</p>
+<p>No se puede, tu código no compilará pues es ilegal hacerlo 👮🚓🚨</p>
+</li>
+<li><p>¿Puedo buscar con el second?</p>
+<p>No, en ese caso recomendamos otra estructura, o tener dos maps 👀</p>
+</li>
+<li><p>¿Puedo tener un map dentro de un map?</p>
+<p>Si, pero es de psicópata buscar dentro de ese map.</p>
+</li>
+</ol>
+</li>
+</ol>
+</div>
+</div>
+</div>
+<div class="section" id="algoritmos-de-ordenamiento">
+<h1>Algoritmos de ordenamiento<a class="headerlink" href="#algoritmos-de-ordenamiento" title="Enlazar permanentemente con este título">¶</a></h1>
+<div class="section" id="acerca-de-2">
+<span id="id2"></span><h2>Acerca de<a class="headerlink" href="#acerca-de-2" title="Enlazar permanentemente con este título">¶</a></h2>
+<p>Un algoritmo de ordenamiento es aquel que toma los elementos de una
+estructura y les asigna un orden. Cada algoritmo de ordenamiento tiene
+su forma de operar, y podría ayudar a conseguir la respuesta a un
+problema, no necesariamente por el resultado del ordenamiento.</p>
+</div>
+<div class="section" id="algoritmos-de-fuerza-bruta">
+<h2>Algoritmos de fuerza bruta<a class="headerlink" href="#algoritmos-de-fuerza-bruta" title="Enlazar permanentemente con este título">¶</a></h2>
+<div class="section" id="acerca-de-3">
+<span id="id3"></span><h3>Acerca de<a class="headerlink" href="#acerca-de-3" title="Enlazar permanentemente con este título">¶</a></h3>
+<p>Rellenar</p>
+</div>
+<div class="section" id="bubble-sort">
+<h3>Bubble sort<a class="headerlink" href="#bubble-sort" title="Enlazar permanentemente con este título">¶</a></h3>
+<ul class="simple">
+<li><p>Se van comparando los elementos, haciendo que los más grandes suban
+en el arreglo, como una burbuja.</p></li>
+<li><p>Da lo mismo cómo estén ordenadas las cosas, porque puedes modificar
+la función de comparación.</p></li>
+<li><p>Funciona invirtiendo el orden de cada par de elementos, si es que el
+primero es mayor que el segundo.</p></li>
+<li><p>Por ejemplo, se podría usar para contar el número de inversiones que
+hay que hacer.</p></li>
+</ul>
+<ol class="arabic">
+<li><p>Ejemplo</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 25%" />
+<col style="width: 25%" />
+<col style="width: 25%" />
+<col style="width: 25%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><em>5</em></p></td>
+<td><p><em>3</em></p></td>
+<td><p>4</p></td>
+<td><p>1</p></td>
+</tr>
+<tr class="row-even"><td><p>3</p></td>
+<td><p><em>5</em></p></td>
+<td><p><em>4</em></p></td>
+<td><p>1</p></td>
+</tr>
+<tr class="row-odd"><td><p>3</p></td>
+<td><p>4</p></td>
+<td><p><em>5</em></p></td>
+<td><p><em>1</em></p></td>
+</tr>
+<tr class="row-even"><td><p>3</p></td>
+<td><p>4</p></td>
+<td><p>1</p></td>
+<td><p><strong>5</strong></p></td>
+</tr>
+<tr class="row-odd"><td><p><em>3</em></p></td>
+<td><p><em>4</em></p></td>
+<td><p>1</p></td>
+<td><p><strong>5</strong></p></td>
+</tr>
+<tr class="row-even"><td><p>3</p></td>
+<td><p><em>1</em></p></td>
+<td><p><em>4</em></p></td>
+<td><p><strong>5</strong></p></td>
+</tr>
+<tr class="row-odd"><td><p>3</p></td>
+<td><p>1</p></td>
+<td><p><strong>4</strong></p></td>
+<td><p><strong>5</strong></p></td>
+</tr>
+<tr class="row-even"><td><p><em>3</em></p></td>
+<td><p><em>1</em></p></td>
+<td><p><strong>4</strong></p></td>
+<td><p><strong>5</strong></p></td>
+</tr>
+<tr class="row-odd"><td><p>1</p></td>
+<td><p><strong>3</strong></p></td>
+<td><p><strong>4</strong></p></td>
+<td><p><strong>5</strong></p></td>
+</tr>
+<tr class="row-even"><td><p><strong>1</strong></p></td>
+<td><p><strong>3</strong></p></td>
+<td><p><strong>4</strong></p></td>
+<td><p><strong>5</strong></p></td>
+</tr>
+</tbody>
+</table>
+</li>
+<li><p>Código de ejemplo:</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="kt">void</span> <span class="nf">bubblesort</span> <span class="p">(</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span> <span class="o">&amp;</span><span class="n">vec</span><span class="p">)</span> <span class="p">{</span>
+    <span class="kt">int</span> <span class="n">size</span> <span class="o">=</span> <span class="n">vec</span><span class="p">.</span><span class="n">size</span><span class="p">();</span>
+    <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="n">size</span><span class="mi">-1</span><span class="p">;</span> <span class="n">i</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">;</span> <span class="o">--</span><span class="n">i</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">j</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">j</span> <span class="o">&lt;</span> <span class="n">i</span><span class="p">;</span> <span class="o">++</span><span class="n">j</span><span class="p">)</span> <span class="p">{</span>
+            <span class="k">if</span> <span class="p">(</span><span class="n">vec</span><span class="p">[</span><span class="n">j</span><span class="p">]</span> <span class="o">&gt;</span> <span class="n">vec</span><span class="p">[</span><span class="n">j</span><span class="o">+</span><span class="mi">1</span><span class="p">])</span> <span class="p">{</span>
+                <span class="kt">int</span> <span class="n">aux</span> <span class="o">=</span> <span class="n">vec</span><span class="p">[</span><span class="n">j</span><span class="p">];</span>
+                <span class="n">vec</span><span class="p">[</span><span class="n">j</span><span class="p">]</span> <span class="o">=</span> <span class="n">vec</span><span class="p">[</span><span class="n">j</span><span class="o">+</span><span class="mi">1</span><span class="p">];</span>
+                <span class="n">vec</span><span class="p">[</span><span class="n">j</span><span class="o">+</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="n">aux</span><span class="p">;</span>
+            <span class="p">}</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+    <span class="k">return</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</li>
+</ol>
+</div>
+<div class="section" id="insertion-sort">
+<h3>Insertion sort<a class="headerlink" href="#insertion-sort" title="Enlazar permanentemente con este título">¶</a></h3>
+<ul class="simple">
+<li><p>Se va de izquierda a derecha, se compara el segundo con el primero,
+se intercambian si el segundo es menor, si este es el caso, se vuelve
+a preguntar si el de la izquierda es menor al de mas a la izquierda y
+así hasta que se encuentre un caso en el que no o se llegue al
+principio del arreglo.</p></li>
+</ul>
+<ol class="arabic simple">
+<li><p>Rellenar ejemplo</p></li>
+<li><p>Rellenar codigo de ejemplo</p></li>
+</ol>
+</div>
+</div>
+<div class="section" id="algoritmos-de-decrecer-y-conquistar">
+<h2>Algoritmos de «decrecer y conquistar»<a class="headerlink" href="#algoritmos-de-decrecer-y-conquistar" title="Enlazar permanentemente con este título">¶</a></h2>
+<div class="section" id="acerca-de-4">
+<span id="id4"></span><h3>Acerca de<a class="headerlink" href="#acerca-de-4" title="Enlazar permanentemente con este título">¶</a></h3>
+<p>Rellenar</p>
+</div>
+<div class="section" id="selection-sort">
+<h3>Selection sort<a class="headerlink" href="#selection-sort" title="Enlazar permanentemente con este título">¶</a></h3>
+<ul class="simple">
+<li><p>Tiene dos sub-arreglos, uno de elementos ya ordenados y uno de los
+elementos resantes.</p></li>
+<li><p>El arreglo ya ordenado parte vacío.</p></li>
+<li><p>Busca el valor mínimo entre los elementos no ordenados y lo añade al
+final de los ordenados.</p></li>
+</ul>
+<ol class="arabic simple">
+<li><p>Rellenar ejemplo</p></li>
+<li><p>Rellenar codigo de ejemplo</p></li>
+</ol>
+</div>
+</div>
+</div>
+<div class="section" id="algoritmos-de-busqueda">
+<h1>Algoritmos de búsqueda<a class="headerlink" href="#algoritmos-de-busqueda" title="Enlazar permanentemente con este título">¶</a></h1>
+<div class="section" id="busqueda-binaria">
+<h2>Búsqueda binaria<a class="headerlink" href="#busqueda-binaria" title="Enlazar permanentemente con este título">¶</a></h2>
+<div class="section" id="acerca-de-5">
+<span id="id5"></span><h3>Acerca de<a class="headerlink" href="#acerca-de-5" title="Enlazar permanentemente con este título">¶</a></h3>
+<p>La búsqueda binaria es un algoritmo de <em>divide and conquer</em> (dividir y
+conquistar), que nos permite encontrar un elemento dentro de una
+estructura <strong>ordenada</strong> rápidamente. Al ejecutarse, toma el centro de un
+arreglo y comprueba si el valor que se busca es igual al del centro. De
+no serlo, verifica si el valor es menor o mayor al del centro.</p>
+<p>Si el valor es mayor al del centro, se ignoran todos los valores
+anteriores al centro, dividiendo la cantidad de números a la mitad.</p>
+<p>Si el valor es menor al del centro, se ignoran todos los valores de
+después del centro, dividiendo la cantidad de números a la mitad.</p>
+<p>La complejidad de este algoritmo es <strong>Olog(N)</strong>, comparada con un
+algoritmo lineal, que en el peor de los casos tiene complejidad
+<strong>O(N)</strong>.</p>
+<ol class="arabic">
+<li><p>Ejemplos</p>
+<ol class="arabic">
+<li><p>en la vida real</p>
+<p>Ir al medio de un diccionario, y buscar alfabéticamente, tomando
+una palabra central (más o menos), viendo si la palabra que
+queremos está antes o después y repetir el proceso de buscar una
+palabra central.</p>
+</li>
+<li><p>Ejemplo computacional</p>
+<p>En esta imágen, se usa la búsqueda binaria para encontrar el 19.
+<img alt="image1" src="https://uniwebsidad.com/static/libros/imagenes/algoritmos-python/f0801.png" /></p>
+</li>
+</ol>
+</li>
+</ol>
+</div>
+<div class="section" id="uso-mediante-la-libreria-stl">
+<h3>Uso mediante la librería STL<a class="headerlink" href="#uso-mediante-la-libreria-stl" title="Enlazar permanentemente con este título">¶</a></h3>
+<ol class="arabic">
+<li><p>Importar</p>
+<p>Podemos directamente importar toda la stl o podemos importar la
+librería &lt;algorithm&gt; de la siguiente forma:</p>
+<div class="highlight-cpp notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="cp">#include</span> <span class="cpf">&lt;algorithm&gt;</span><span class="cp"></span>
+</pre></div>
+</td></tr></table></div>
+</li>
+<li><p>binary<sub>search</sub>()</p>
+<p>La librería STL ya incluye binary search, si queremos saber si el
+valor 3 está en un vector, podemos ejecutar:</p>
+<div class="highlight-cpp notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5
+6
+7</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span> <span class="n">v</span><span class="p">{</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">7</span><span class="p">};</span>
+<span class="k">if</span> <span class="p">(</span><span class="n">binary_search</span> <span class="p">(</span><span class="n">v</span><span class="p">.</span><span class="n">begin</span><span class="p">(),</span> <span class="n">v</span><span class="p">.</span><span class="n">end</span><span class="p">(),</span> <span class="mi">3</span><span class="p">))</span> <span class="p">{</span>
+    <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;Se encuentra el valor 3 en nuestro vector</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="k">else</span> <span class="p">{</span>
+    <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;No hay ningún 3 en nuestro vector</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</td></tr></table></div>
+<p>Retorna un <em>bool</em>.</p>
+</li>
+<li><p>lower<sub>bound</sub>() (límite inferior)</p>
+<p>La función lower<sub>bound</sub>() de la librería STL retorna un
+puntero a un valor <strong>superior</strong> o, si es posible, <strong>igual</strong> al
+entregado dentro de una estructura ordenada.</p>
+<p>Si todos los elementos en el arreglo son inferiores al valor pedido,
+se entrega el último elemento del arreglo. Si los elementos del
+arreglo son superiores al valor pedido, se entrega el primer elemento
+del arreglo.</p>
+<p>Por ejemplo:</p>
+<div class="highlight-cpp notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span> <span class="n">v</span><span class="p">{</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">30</span><span class="p">,</span> <span class="mi">30</span><span class="p">,</span> <span class="mi">30</span><span class="p">,</span> <span class="mi">40</span><span class="p">,</span> <span class="mi">50</span> <span class="p">};</span>
+<span class="o">*</span><span class="n">lower_bound</span><span class="p">(</span><span class="n">v</span><span class="p">.</span><span class="n">begin</span><span class="p">(),</span> <span class="n">v</span><span class="p">.</span><span class="n">end</span><span class="p">(),</span> <span class="mi">30</span><span class="p">);</span>
+</pre></div>
+</td></tr></table></div>
+<p>Valor de retorno: un iterador que apunta hacia <strong>30</strong> (el primero en
+el arreglo, en la posición [2])</p>
+</li>
+<li><p>upper<sub>bound</sub>() (límite superior)</p>
+<p>La función upper<sub>bound</sub>() de la librería STL nos entrega un
+puntero a un valor <strong>superior</strong> al pedido en un arreglo ordenado.</p>
+<p>En el caso de que no haya un valor superior al pedido, nos entrega el
+último valor del arreglo.</p>
+<p>Por ejemplo:</p>
+<div class="highlight-cpp notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="o">*</span><span class="n">upper_bound</span><span class="p">(</span><span class="n">v</span><span class="p">.</span><span class="n">begin</span><span class="p">(),</span> <span class="n">v</span><span class="p">.</span><span class="n">end</span><span class="p">(),</span> <span class="mi">30</span><span class="p">);</span>
+</pre></div>
+</td></tr></table></div>
+<p>Valor de retorno: iterador al <strong>40</strong> (posición [4])</p>
+</li>
+</ol>
+</div>
+<div class="section" id="implementaciones-propias">
+<h3>Implementaciones propias<a class="headerlink" href="#implementaciones-propias" title="Enlazar permanentemente con este título">¶</a></h3>
+<ol class="arabic">
+<li><p>Implementación con while</p>
+<p>Esta implementación nos retorna el índice del número a buscar dentro
+de un arreglo.</p>
+<div class="highlight-cpp notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="kt">int</span> <span class="nf">binarySearch</span><span class="p">(</span><span class="kt">int</span> <span class="n">arr</span><span class="p">[],</span> <span class="kt">int</span> <span class="n">l</span><span class="p">,</span> <span class="kt">int</span> <span class="n">r</span><span class="p">,</span> <span class="kt">int</span> <span class="n">x</span><span class="p">)</span>
+<span class="p">{</span>
+
+    <span class="k">while</span> <span class="p">(</span><span class="n">l</span> <span class="o">&lt;=</span> <span class="n">r</span><span class="p">)</span> <span class="p">{</span>
+        <span class="kt">int</span> <span class="n">m</span> <span class="o">=</span> <span class="n">l</span> <span class="o">+</span> <span class="p">(</span><span class="n">r</span> <span class="o">-</span> <span class="n">l</span><span class="p">)</span> <span class="o">/</span> <span class="mi">2</span><span class="p">;</span>
+
+        <span class="c1">// Revisa si x esta al medio</span>
+        <span class="k">if</span> <span class="p">(</span><span class="n">arr</span><span class="p">[</span><span class="n">m</span><span class="p">]</span> <span class="o">==</span> <span class="n">x</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">m</span><span class="p">;</span>
+
+        <span class="c1">// Si x es mayor, ignorar la izquierda</span>
+        <span class="k">if</span> <span class="p">(</span><span class="n">arr</span><span class="p">[</span><span class="n">m</span><span class="p">]</span> <span class="o">&lt;</span> <span class="n">x</span><span class="p">)</span>
+        <span class="n">l</span> <span class="o">=</span> <span class="n">m</span> <span class="o">+</span> <span class="mi">1</span><span class="p">;</span>
+
+        <span class="c1">// Si x es menor, ignorar la derecha</span>
+        <span class="k">else</span>
+        <span class="n">r</span> <span class="o">=</span> <span class="n">m</span> <span class="o">-</span> <span class="mi">1</span><span class="p">;</span>
+
+    <span class="p">}</span>
+    <span class="k">return</span> <span class="mi">-1</span><span class="p">;</span>
+
+<span class="p">}</span>
+</pre></div>
+</td></tr></table></div>
+</li>
+<li><p>Implementación recursiva</p>
+<p>Esta implementación nos retorna el índice del número a buscar dentro
+de un arreglo.</p>
+<div class="highlight-cpp notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="kt">int</span> <span class="nf">binarySearch</span><span class="p">(</span><span class="kt">int</span> <span class="n">arr</span><span class="p">[],</span> <span class="kt">int</span> <span class="n">l</span><span class="p">,</span> <span class="kt">int</span> <span class="n">r</span><span class="p">,</span> <span class="kt">int</span> <span class="n">x</span><span class="p">)</span>
+<span class="p">{</span>
+
+    <span class="k">if</span> <span class="p">(</span><span class="n">r</span> <span class="o">&gt;=</span> <span class="n">l</span><span class="p">)</span> <span class="p">{</span>
+
+        <span class="kt">int</span> <span class="n">mid</span> <span class="o">=</span> <span class="n">l</span> <span class="o">+</span> <span class="p">(</span><span class="n">r</span> <span class="o">-</span> <span class="n">l</span><span class="p">)</span> <span class="o">/</span> <span class="mi">2</span><span class="p">;</span>
+
+        <span class="c1">// Revisa si x esta al medio</span>
+
+        <span class="k">if</span> <span class="p">(</span><span class="n">arr</span><span class="p">[</span><span class="n">mid</span><span class="p">]</span> <span class="o">==</span> <span class="n">x</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">mid</span><span class="p">;</span>
+
+        <span class="c1">// Si x es mayor, ignorar la izquierda</span>
+        <span class="k">if</span> <span class="p">(</span><span class="n">arr</span><span class="p">[</span><span class="n">mid</span><span class="p">]</span> <span class="o">&gt;</span> <span class="n">x</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">binarySearch</span><span class="p">(</span><span class="n">arr</span><span class="p">,</span> <span class="n">l</span><span class="p">,</span> <span class="n">mid</span> <span class="o">-</span> <span class="mi">1</span><span class="p">,</span> <span class="n">x</span><span class="p">);</span>
+        <span class="c1">// Si x es mayor, ignorar la derecha</span>
+        <span class="k">return</span> <span class="n">binarySearch</span><span class="p">(</span><span class="n">arr</span><span class="p">,</span> <span class="n">mid</span> <span class="o">+</span> <span class="mi">1</span><span class="p">,</span> <span class="n">r</span><span class="p">,</span> <span class="n">x</span><span class="p">);</span>
+    <span class="p">}</span>
+    <span class="k">return</span> <span class="mi">-1</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</td></tr></table></div>
+</li>
+</ol>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        
+        &copy; Copyright 2020, Comunidad del taller avanzado
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>
