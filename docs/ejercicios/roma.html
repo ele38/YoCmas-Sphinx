@@ -1,0 +1,574 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="es" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>«Todos los caminos llevan a Roma» &mdash; documentación de Yo Cmás - </title>
+  
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/translations.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Índice" href="../genindex.html" />
+    <link rel="search" title="Búsqueda" href="../search.html" />
+    <link rel="prev" title="Ejercicios resueltos" href="ejercicios.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> Yo Cmás
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../edd/edd.html">Estructuras de Datos</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ordenamiento/ordenamiento.html">Algoritmos de Ordenamiento</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../busqueda/busqueda.html">Algoritmos de búsqueda</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="ejercicios.html">Ejercicios resueltos</a><ul class="current">
+<li class="toctree-l2 current"><a class="current reference internal" href="#">«Todos los caminos llevan a Roma»</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#problema">Problema</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#descripcion">Descripción</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#input">Input</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#output">Output</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#sample-input">Sample Input</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#sample-output">Sample Output</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#solucion">Solución</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#explicacion-de-la-solucion">Explicación de la solución</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#codigo">Código</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#informacion-adicional">Información adicional</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#contacto-en-caso-de-dudas">Contacto en caso de dudas:</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Yo Cmás</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+          <li><a href="ejercicios.html">Ejercicios resueltos</a> &raquo;</li>
+        
+      <li>«Todos los caminos llevan a Roma»</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="../_sources/ejercicios/roma.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="todos-los-caminos-llevan-a-roma">
+<h1>«Todos los caminos llevan a Roma»<a class="headerlink" href="#todos-los-caminos-llevan-a-roma" title="Enlazar permanentemente con este título">¶</a></h1>
+<div class="section" id="problema">
+<h2>Problema<a class="headerlink" href="#problema" title="Enlazar permanentemente con este título">¶</a></h2>
+<div class="section" id="descripcion">
+<h3>Descripción<a class="headerlink" href="#descripcion" title="Enlazar permanentemente con este título">¶</a></h3>
+<p>There is an ancient saying that “All Roads Lead to Rome”. If this were true, then there is a simple
+algorithm for finding a path between any two cities. To go from city A to city B, a traveller could take
+a road from A to Rome, then from Rome to B. Of course, a shorter route may exist.</p>
+<p>The network of roads in the Roman Empire had a simple structure: beginning at Rome, a number
+of roads extended to the nearby cities. From these cities, more roads extended to the next further
+cities, and so on. Thus, the cities could be thought of as existing in levels around Rome, with cities
+in the ith level only connected to cities in the i − 1th and i + 1th levels (Rome was considered to be
+at level 0). No loops existed in the road network. Any city in level i was connected to a single city in
+level i − 1, but was connected to zero or more cities in level i + 1. Thus, to get to Rome from a given
+city in level i, a traveller could simply walk along the single road leading to the connected i − 1 level
+city, and repeat this process, with each step getting closer to Rome.</p>
+<p>Given a network of roads and cities, your task is to find the shortest route between any two given
+cities, where distance is measured in the number of intervening cities.</p>
+</div>
+<div class="section" id="input">
+<h3>Input<a class="headerlink" href="#input" title="Enlazar permanentemente con este título">¶</a></h3>
+<p>The first line is the number of test cases, followed by a blank line.</p>
+<p>The first line of each test case of the input contains two numbers in decimal notation separated by
+a single space. The first number (m) is the number of roads in the road network to be considered. The
+second number (n) represents the number of queries to follow later in the file.</p>
+<p>For each test case, in the next m lines in the input each contain the names of a pair of cities separated
+by a single space. A city name consists of one or more letters, the first of which is in uppercase. No
+two cities begin with the same letter. The name Rome always appears at least once in this section of
+input, for each test case; this city is considered to be at level 0, the lowest-numbered level. The pairs
+of names indicate that a road connects the two named cities. The first city named on a line exists in a
+lower level than the second named city. The road structure obeys the rules described above. For each
+test case, no two lines of input in this section are repeated.</p>
+<p>The next n lines, for each test case in the input each contain the names of a pair of cities separated
+by a single space. City names are as described above. These pairs of cities are the query pairs. Your
+task for each query pair is to find the shortest route from the first named city to the second. Each of
+the cities in a query pair is guaranteed to have appeared somewhere in the previous input section, for
+each test case, describing the road structure.</p>
+<p>Each test case will be separated by a single line.</p>
+</div>
+<div class="section" id="output">
+<h3>Output<a class="headerlink" href="#output" title="Enlazar permanentemente con este título">¶</a></h3>
+<p>In each test case, for each of the n query pairs, output a sequence of uppercase letters indicating the
+shortest route between the two query pair cities. The sequence must be output as consecutive letters,
+without intervening whitespace, on a single line. For each test case, the first output line corresponds
+to the first query pair, the second output line corresponds to the second query pair, and so on. The
+letters in each sequence indicate the first letter of the cities on the desired route between the query pair
+cities, including the query pair cities themselves. A city will never be paired with itself in a query.</p>
+<p>Print a blank line between the outputs for two consecutive test cases.</p>
+</div>
+<div class="section" id="sample-input">
+<h3>Sample Input<a class="headerlink" href="#sample-input" title="Enlazar permanentemente con este título">¶</a></h3>
+<p>1</p>
+<p>7 3</p>
+<p>Rome Turin</p>
+<p>Turin Venice</p>
+<p>Turin Genoa</p>
+<p>Rome Pisa</p>
+<p>Pisa Florence</p>
+<p>Venice Athens</p>
+<p>Turin Milan</p>
+<p>Turin Pisa</p>
+<p>Milan Florence</p>
+<p>Athens Genoa</p>
+</div>
+<div class="section" id="sample-output">
+<h3>Sample Output<a class="headerlink" href="#sample-output" title="Enlazar permanentemente con este título">¶</a></h3>
+<p>TRP</p>
+<p>MTRPF</p>
+<p>AVTG</p>
+</div>
+</div>
+</div>
+<div class="section" id="solucion">
+<h1>Solución<a class="headerlink" href="#solucion" title="Enlazar permanentemente con este título">¶</a></h1>
+<div class="section" id="explicacion-de-la-solucion">
+<h2>Explicación de la solución<a class="headerlink" href="#explicacion-de-la-solucion" title="Enlazar permanentemente con este título">¶</a></h2>
+<p>Este es un problema de grafos en el que nos piden ir de un punto A a un punto B desde el camino más corto.
+Teniendo la particularidad de que nuestro grafo siempre va a tener forma de árbol y que roma siempre será
+la raiz de éste.</p>
+<p>La primera solución que se viene a la cabeza es hacer un bfs desde el punto A hasta el punto B. Si bien esta
+solución funciona en este caso en particular, no me gusta porque no es tan rápida como podría serlo, puesto
+que el tiempo que demora por cada caso de prueba es la cantidad de queries * la cantidad de ciudades.</p>
+<p>Mi solución, sin embargo, logra ser la cantidad de queries * la profundidad del árbol. Si bien el peor caso,
+que es tener un arbol con solo 1 hijo en todas las etapas menos la primera, es igual de lento, la complejidad
+promedio es n log n, con la base siendo la cantidad de hijos que tiene cada nodo.</p>
+<p>Mi solución, lo que hace es aprovecharse de que este grafo es un árbol, lo que simplifica mucho las cosas
+en cuanto a tiempo porque solo va a haber un camino no redundante. Esto se debe a que cada nodo tiene solo 1
+nodo que está mas cerca de Roma, por lo que dice el enunciado.
+Este camino consiste en ir desde A hasta el primer pariente que tienen en común y después tomar el camino
+inverso de b hasta el pariente que tienen en común, es decir, A -&gt; pariente -&gt; B.</p>
+<p>Al igual que la solución naive, implementa un bfs, pero a diferencia de la otra, este lo hace solo una vez,
+en vez de n veces. Toma el bfs de roma como raíz, guarda la distancia que hay entre cada ciudad y roma, y
+guarda el pariente de cada nodo.</p>
+<p>Luego, sabemos que porque es un árbol con Roma como raíz, sabemos que subir a través de cada pariente nos lleva a
+Roma, por cómo funcionan los árboles. Lo que en código significa leer iterativamente el mapa que tenemos que nos guía
+de un nodo a su pariente, hasta llegar a Roma.</p>
+<p>Después solo queda fijarse que si tienen algún pariente en común, de ahí en adelante todo el camino es redundante, pues
+desde ese pariente puedes bajar directamente, sin tener que hacer todo el camino hasta Roma (hay que hacer este paso para
+asegurarnos de que sea el camino más corto, porque es lo que nos piden). Esto en código lo implementé con un deque, porque
+así es más fácil pasar de un sentido a otro, esto es util porque nos interesa el camino de A al pariente, pero después es al
+revés, del pariente a B.</p>
+<p>Y finalmente queda unir los trazos, como dije recién, hay que asegurarse que quede en el orden correcto, pero además de eso
+estamos listos, solo queda formatear el problema como dice el enunciado, y esto queda como tarea para el lector.</p>
+<p>PD: Guardar la distancia en este caso no es necesario, pues sabemos cual va a ser el camino más corto, pero para mantener el
+bfs genérico, decidí dejarlo. Un simple bool revisando que no hayamos pasado por ahí anteriormente es más que suficiente.</p>
+<p>Por ejemplo, tenemos el siguiente diagrama:</p>
+<img alt="../_images/diagrama_roma.png" src="../_images/diagrama_roma.png" />
+</div>
+<div class="section" id="codigo">
+<h2>Código<a class="headerlink" href="#codigo" title="Enlazar permanentemente con este título">¶</a></h2>
+<div class="highlight-cpp notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>  1
+  2
+  3
+  4
+  5
+  6
+  7
+  8
+  9
+ 10
+ 11
+ 12
+ 13
+ 14
+ 15
+ 16
+ 17
+ 18
+ 19
+ 20
+ 21
+ 22
+ 23
+ 24
+ 25
+ 26
+ 27
+ 28
+ 29
+ 30
+ 31
+ 32
+ 33
+ 34
+ 35
+ 36
+ 37
+ 38
+ 39
+ 40
+ 41
+ 42
+ 43
+ 44
+ 45
+ 46
+ 47
+ 48
+ 49
+ 50
+ 51
+ 52
+ 53
+ 54
+ 55
+ 56
+ 57
+ 58
+ 59
+ 60
+ 61
+ 62
+ 63
+ 64
+ 65
+ 66
+ 67
+ 68
+ 69
+ 70
+ 71
+ 72
+ 73
+ 74
+ 75
+ 76
+ 77
+ 78
+ 79
+ 80
+ 81
+ 82
+ 83
+ 84
+ 85
+ 86
+ 87
+ 88
+ 89
+ 90
+ 91
+ 92
+ 93
+ 94
+ 95
+ 96
+ 97
+ 98
+ 99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="cp">#include</span> <span class="cpf">&lt;bits/stdc++.h&gt;</span><span class="cp"></span>
+<span class="k">using</span> <span class="k">namespace</span> <span class="n">std</span><span class="p">;</span>
+
+<span class="cp">#define INF 10000</span>
+<span class="n">map</span><span class="o">&lt;</span><span class="n">string</span><span class="p">,</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">string</span><span class="o">&gt;&gt;</span> <span class="n">adjlist</span><span class="p">;</span>
+<span class="n">map</span><span class="o">&lt;</span><span class="n">string</span><span class="p">,</span><span class="kt">int</span><span class="o">&gt;</span> <span class="n">distancia</span><span class="p">;</span>
+<span class="n">map</span><span class="o">&lt;</span><span class="n">string</span><span class="p">,</span><span class="n">string</span><span class="o">&gt;</span> <span class="n">bajar</span><span class="p">;</span>
+
+<span class="c1">// Este es un BFS común con la única diferencia que es con maps y que guarda</span>
+<span class="c1">//el pariente de cada nodo (menos el de la raiz)</span>
+<span class="kt">void</span> <span class="nf">bfs</span> <span class="p">(</span><span class="n">string</span> <span class="n">start</span><span class="p">)</span> <span class="p">{</span>
+  <span class="n">queue</span><span class="o">&lt;</span><span class="n">string</span><span class="o">&gt;</span> <span class="n">colita</span><span class="p">;</span>
+  <span class="n">colita</span><span class="p">.</span><span class="n">push</span><span class="p">(</span><span class="n">start</span><span class="p">);</span>
+  <span class="n">distancia</span><span class="p">[</span><span class="n">start</span><span class="p">]</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+  <span class="k">while</span> <span class="p">(</span><span class="o">!</span><span class="n">colita</span><span class="p">.</span><span class="n">empty</span><span class="p">()){</span>
+    <span class="n">string</span> <span class="n">actual</span> <span class="o">=</span> <span class="n">colita</span><span class="p">.</span><span class="n">front</span><span class="p">();</span>
+    <span class="n">colita</span><span class="p">.</span><span class="n">pop</span><span class="p">();</span>
+    <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">adjlist</span><span class="p">[</span><span class="n">actual</span><span class="p">].</span><span class="n">size</span><span class="p">();</span> <span class="o">++</span><span class="n">i</span><span class="p">)</span> <span class="p">{</span>
+      <span class="n">string</span> <span class="n">vecino</span> <span class="o">=</span> <span class="n">adjlist</span><span class="p">[</span><span class="n">actual</span><span class="p">][</span><span class="n">i</span><span class="p">];</span>
+      <span class="k">if</span> <span class="p">(</span><span class="n">distancia</span><span class="p">[</span><span class="n">vecino</span><span class="p">]</span> <span class="o">==</span> <span class="n">INF</span><span class="p">)</span> <span class="p">{</span>
+        <span class="n">colita</span><span class="p">.</span><span class="n">push</span><span class="p">(</span><span class="n">vecino</span><span class="p">);</span>
+        <span class="n">distancia</span><span class="p">[</span><span class="n">vecino</span><span class="p">]</span> <span class="o">=</span> <span class="n">distancia</span><span class="p">[</span><span class="n">actual</span><span class="p">]</span><span class="o">+</span><span class="mi">1</span><span class="p">;</span>
+ <span class="c1">// Este es el mapa que referencia al pariente de cada nodo</span>
+        <span class="n">bajar</span><span class="p">[</span><span class="n">vecino</span><span class="p">]</span> <span class="o">=</span> <span class="n">actual</span><span class="p">;</span>
+      <span class="p">}</span>
+    <span class="p">}</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="kt">int</span> <span class="nf">main</span> <span class="p">()</span> <span class="p">{</span>
+  <span class="kt">int</span> <span class="n">t</span><span class="p">;</span>
+  <span class="n">cin</span> <span class="o">&gt;&gt;</span> <span class="n">t</span><span class="p">;</span>
+  <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">t</span><span class="p">;</span> <span class="o">++</span><span class="n">i</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">if</span> <span class="p">(</span><span class="n">i</span><span class="p">)</span> <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">;</span>
+    <span class="kt">int</span> <span class="n">caminos</span><span class="p">,</span> <span class="n">preguntas</span><span class="p">;</span>
+    <span class="n">cin</span> <span class="o">&gt;&gt;</span> <span class="n">caminos</span> <span class="o">&gt;&gt;</span> <span class="n">preguntas</span><span class="p">;</span>
+
+    <span class="c1">// Limpiamos nuestros maps porque es un caso nuevo independiente,</span>
+    <span class="c1">//los podría haber definido</span>
+    <span class="c1">// dentro del for para evitar esto, pero implicaria tener que llamarlo</span>
+    <span class="c1">//en la funcion y mucho texto (aunque es la mejor práctica).</span>
+    <span class="n">adjlist</span><span class="p">.</span><span class="n">clear</span><span class="p">();</span>
+    <span class="n">distancia</span><span class="p">.</span><span class="n">clear</span><span class="p">();</span>
+    <span class="n">bajar</span><span class="p">.</span><span class="n">clear</span><span class="p">();</span>
+
+    <span class="c1">// Leemos el árbol y lo metemos a la lista de adyacencia,</span>
+    <span class="c1">//aprovechamos de poner la distancia como INF temporalmente.</span>
+    <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">j</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">j</span> <span class="o">&lt;</span> <span class="n">caminos</span><span class="p">;</span> <span class="o">++</span><span class="n">j</span><span class="p">)</span> <span class="p">{</span>
+      <span class="n">string</span> <span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">;</span>
+      <span class="n">cin</span> <span class="o">&gt;&gt;</span> <span class="n">a</span> <span class="o">&gt;&gt;</span> <span class="n">b</span><span class="p">;</span>
+      <span class="n">adjlist</span><span class="p">[</span><span class="n">a</span><span class="p">].</span><span class="n">push_back</span><span class="p">(</span><span class="n">b</span><span class="p">);</span>
+      <span class="n">adjlist</span><span class="p">[</span><span class="n">b</span><span class="p">].</span><span class="n">push_back</span><span class="p">(</span><span class="n">a</span><span class="p">);</span>
+      <span class="n">distancia</span><span class="p">[</span><span class="n">a</span><span class="p">]</span> <span class="o">=</span> <span class="n">INF</span><span class="p">;</span>
+      <span class="n">distancia</span><span class="p">[</span><span class="n">b</span><span class="p">]</span> <span class="o">=</span> <span class="n">INF</span><span class="p">;</span>
+    <span class="p">}</span>
+
+    <span class="c1">// Hacemos el bfs de Roma, recordar que tambien genera el</span>
+    <span class="c1">//mapa con los parientes de cada nodo.</span>
+    <span class="n">bfs</span><span class="p">(</span><span class="s">&quot;Rome&quot;</span><span class="p">);</span>
+
+    <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">j</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">j</span> <span class="o">&lt;</span> <span class="n">preguntas</span><span class="p">;</span> <span class="o">++</span><span class="n">j</span><span class="p">){</span>
+
+      <span class="c1">// Leemos los queries</span>
+      <span class="n">string</span> <span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">;</span>
+      <span class="n">cin</span> <span class="o">&gt;&gt;</span> <span class="n">a</span> <span class="o">&gt;&gt;</span> <span class="n">b</span><span class="p">;</span>
+
+      <span class="c1">// Creamos nuestra cola doble, que nos indica como ir de A</span>
+      <span class="c1">//al pariente (bajada) y del pariente a B (subida).</span>
+      <span class="n">deque</span><span class="o">&lt;</span><span class="n">string</span><span class="o">&gt;</span> <span class="n">bajada</span><span class="p">,</span> <span class="n">subida</span><span class="p">;</span>
+      <span class="n">bajada</span><span class="p">.</span><span class="n">push_back</span><span class="p">(</span><span class="n">a</span><span class="p">);</span>
+      <span class="n">subida</span><span class="p">.</span><span class="n">push_back</span><span class="p">(</span><span class="n">b</span><span class="p">);</span>
+
+      <span class="c1">// Vamos siguiendo el camino hasta Roma.</span>
+      <span class="k">while</span> <span class="p">(</span><span class="n">bajada</span><span class="p">.</span><span class="n">back</span><span class="p">()</span> <span class="o">!=</span> <span class="s">&quot;Rome&quot;</span><span class="p">){</span>
+        <span class="n">bajada</span><span class="p">.</span><span class="n">push_back</span><span class="p">(</span><span class="n">bajar</span><span class="p">[</span><span class="n">bajada</span><span class="p">.</span><span class="n">back</span><span class="p">()]);</span>
+      <span class="p">}</span>
+      <span class="k">while</span> <span class="p">(</span><span class="n">subida</span><span class="p">.</span><span class="n">back</span><span class="p">()</span> <span class="o">!=</span> <span class="s">&quot;Rome&quot;</span><span class="p">){</span>
+        <span class="n">subida</span><span class="p">.</span><span class="n">push_back</span><span class="p">(</span><span class="n">bajar</span><span class="p">[</span><span class="n">subida</span><span class="p">.</span><span class="n">back</span><span class="p">()]);</span>
+      <span class="p">}</span>
+
+      <span class="c1">// Eliminamos todo el camino redundante que pasa por ciudades que</span>
+      <span class="c1">//comparten en el camino, y guardamos la ultima que tienen en comun,</span>
+      <span class="c1">// este es nuestro punto &quot;medio&quot; o pariente como me referi anteriormente.</span>
+      <span class="n">string</span> <span class="n">medio</span><span class="p">;</span>
+      <span class="k">while</span> <span class="p">(</span><span class="o">!</span><span class="n">subida</span><span class="p">.</span><span class="n">empty</span><span class="p">()</span> <span class="o">&amp;&amp;</span> <span class="o">!</span><span class="n">bajada</span><span class="p">.</span><span class="n">empty</span><span class="p">()</span> <span class="o">&amp;&amp;</span> <span class="n">bajada</span><span class="p">.</span><span class="n">back</span><span class="p">()</span> <span class="o">==</span> <span class="n">subida</span><span class="p">.</span><span class="n">back</span><span class="p">()){</span>
+        <span class="n">medio</span> <span class="o">=</span> <span class="n">bajada</span><span class="p">.</span><span class="n">back</span><span class="p">();</span>
+        <span class="n">bajada</span><span class="p">.</span><span class="n">pop_back</span><span class="p">();</span>
+        <span class="n">subida</span><span class="p">.</span><span class="n">pop_back</span><span class="p">();</span>
+      <span class="p">}</span>
+
+      <span class="n">string</span> <span class="n">camino</span> <span class="o">=</span> <span class="s">&quot;&quot;</span><span class="p">;</span>
+      <span class="c1">// En el de bajada es front porque bajamos (más cercano a A)</span>
+      <span class="c1">//y viceversa. Guardamos sólo el primer carácter porque es lo que</span>
+      <span class="c1">//pide el enunciado.</span>
+      <span class="k">while</span><span class="p">(</span><span class="o">!</span><span class="n">bajada</span><span class="p">.</span><span class="n">empty</span><span class="p">()){</span>
+        <span class="n">camino</span> <span class="o">+=</span> <span class="n">bajada</span><span class="p">.</span><span class="n">front</span><span class="p">()[</span><span class="mi">0</span><span class="p">];</span>
+        <span class="n">bajada</span><span class="p">.</span><span class="n">pop_front</span><span class="p">();</span>
+      <span class="p">}</span>
+      <span class="n">camino</span> <span class="o">+=</span> <span class="n">medio</span><span class="p">[</span><span class="mi">0</span><span class="p">];</span>
+      <span class="k">while</span><span class="p">(</span><span class="o">!</span><span class="n">subida</span><span class="p">.</span><span class="n">empty</span><span class="p">()){</span>
+        <span class="n">camino</span> <span class="o">+=</span> <span class="n">subida</span><span class="p">.</span><span class="n">back</span><span class="p">()[</span><span class="mi">0</span><span class="p">];</span>
+        <span class="n">subida</span><span class="p">.</span><span class="n">pop_back</span><span class="p">();</span>
+      <span class="p">}</span>
+      <span class="c1">// Lo imprimimos y ganamos.</span>
+      <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="n">camino</span> <span class="o">&lt;&lt;</span> <span class="n">endl</span><span class="p">;</span>
+    <span class="p">}</span>
+  <span class="p">}</span>
+  <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</td></tr></table></div>
+</div>
+</div>
+<div class="section" id="informacion-adicional">
+<h1>Información adicional<a class="headerlink" href="#informacion-adicional" title="Enlazar permanentemente con este título">¶</a></h1>
+<p>Link del problema: <a class="reference external" href="https://dmoj.ca/problem/cco96p5">https://dmoj.ca/problem/cco96p5</a></p>
+<p>Autor de la solución: Vicente Villarroel</p>
+<p>Ilustraciones: Gabriel Carmona (ya no)</p>
+<div class="section" id="contacto-en-caso-de-dudas">
+<h2>Contacto en caso de dudas:<a class="headerlink" href="#contacto-en-caso-de-dudas" title="Enlazar permanentemente con este título">¶</a></h2>
+<p>Discord: 5038#1629</p>
+<p>Email: <a class="reference external" href="mailto:ele38&#37;&#52;&#48;pm&#46;me">ele38<span>&#64;</span>pm<span>&#46;</span>me</a></p>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+        <a href="ejercicios.html" class="btn btn-neutral float-left" title="Ejercicios resueltos" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Derechos de autor 2020, Comunidad del taller avanzado.
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

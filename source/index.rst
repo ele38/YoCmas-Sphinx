@@ -18,3 +18,4 @@ Cualquier aporte es bienvenido.
 	edd/edd
 	ordenamiento/ordenamiento
 	busqueda/busqueda
+        ejercicios/ejercicios
