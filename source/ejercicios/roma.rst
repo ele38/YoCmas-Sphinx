@@ -99,10 +99,10 @@ MTRPF
 AVTG
 
 Solución
-========
+--------
 
 Explicación de la solución
---------------------------
+**************************
 
 Este es un problema de grafos en el que nos piden ir de un punto A a un punto B desde el camino más corto.
 Teniendo la particularidad de que nuestro grafo siempre va a tener forma de árbol y que roma siempre será
@@ -147,7 +147,7 @@ Por ejemplo, tenemos el siguiente diagrama:
 .. image:: diagrama_roma.png
 
 Código
-------
+******
 
 .. code:: cpp
    :number-lines:
@@ -264,7 +264,7 @@ Código
 
 
 Información adicional
-=====================
+---------------------
 
 Link del problema: https://dmoj.ca/problem/cco96p5
 
@@ -273,7 +273,7 @@ Autor de la solución: Vicente Villarroel
 Ilustraciones: Gabriel Carmona (ya no)
 
 Contacto en caso de dudas:
---------------------------
+**************************
 
 Discord: 5038#1629
 
