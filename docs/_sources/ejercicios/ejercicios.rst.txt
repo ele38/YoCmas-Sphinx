@@ -7,4 +7,6 @@ Si quieres subir uno ejercicio, contácta a 5038#1629 a través de discord o por
 .. toctree::
    :maxdepth: 2
 
+   graph_connectivity
    roma
+
