@@ -1,0 +1,374 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="es" >
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Where’s My Internet? &mdash; documentación de Yo Cmás - </title>
+  
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+
+  
+  
+  
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/language_data.js"></script>
+        <script src="../_static/translations.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Índice" href="../genindex.html" />
+    <link rel="search" title="Búsqueda" href="../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home" alt="Documentation Home"> Yo Cmás
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../edd/edd.html">Estructuras de Datos</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ordenamiento/ordenamiento.html">Algoritmos de Ordenamiento</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../busqueda/busqueda.html">Algoritmos de búsqueda</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ejercicios.html">Ejercicios resueltos</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Yo Cmás</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+      <li>Where’s My Internet?</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/ejercicios/party.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="where-s-my-internet">
+<h1>Where’s My Internet?<a class="headerlink" href="#where-s-my-internet" title="Enlazar permanentemente con este título">¶</a></h1>
+<div class="section" id="problema">
+<h2>Problema<a class="headerlink" href="#problema" title="Enlazar permanentemente con este título">¶</a></h2>
+<div class="section" id="descripcion">
+<h3>Descripción<a class="headerlink" href="#descripcion" title="Enlazar permanentemente con este título">¶</a></h3>
+<p>Don Giovanni likes to dance-especially with girls! And everyone else in the party enjoyed the dance, too. Getting a chance to dance with the host (that is Don Giovanni) is the greatest honour; failing that, dancing with someone who has danced with the host or will dance with the host is the second greatest honour. This can go further. De ne the Giovanni number of a person as follows, at the time after the party is over and therefore who has danced with whom is completely known and fixed:</p>
+<ol class="arabic simple">
+<li><p>No one has a negative Giovanni number.</p></li>
+<li><p>The Giovanni number of Don Giovanni is 0.</p></li>
+<li><p>If a personpis not Don Giovanni himself, and has danced with someone with Giovanni number n, and has not danced with anyone with a Giovanni number smaller thann, thenphas Giovanni number n + 1.</p></li>
+<li><p>If a person’s Giovanni number cannot be determined from the above rules (he/she has not danced with anyone with a  nite Giovanni number), his/her Giovanni number is 1. Fortunately, you will not need this rule in this problem.</p></li>
+</ol>
+<p>Your job is to write a program to compute Giovanni numbers.</p>
+</div>
+<div class="section" id="input">
+<h3>Input<a class="headerlink" href="#input" title="Enlazar permanentemente con este título">¶</a></h3>
+<p>The input begins with a single positive integer on a line by it self indicating the number of the cases following, each of them as described below. This line is followed by a blank line, and there is also a blank line between two consecutive inputs.</p>
+<p>The  rst line has two numbersPandD; this means there are P persons in the party (including Don Giovanni) and Ddancing couples (P ≤ 1000 and D ≤ P(P - 1)/2). ThenDlines follow, each containing two distinct persons, meaning the two persons has danced. Persons are represented by numbers between 0 and P - 1; Don Giovanni is represented by 0.</p>
+<p>As noted, we design the input so that you will not need the1rule in computing Giovanni numbers.</p>
+<p>We have made our best effort to eliminate duplications in listing the dancing couples, e.g., if there is a line «4 7» among the D lines, then this is the only occurrence of «4 7», and there is no occurrence of «7 4». But just in case you see a duplication, you can ignore it (the duplication, not the first occurrence).</p>
+</div>
+<div class="section" id="output">
+<h3>Output<a class="headerlink" href="#output" title="Enlazar permanentemente con este título">¶</a></h3>
+<p>For each test case, the output must follow the description below. The outputs of two consecutive cases will be separated by a blank line.</p>
+<p>Output P - 1 lines. Line i is the Giovanni number of personi, for 1 ≤ i ≤ P - 1. Note that it is P - 1 because we skip Don Giovanni in the output.</p>
+</div>
+<div class="section" id="sample-input">
+<h3>Sample Input<a class="headerlink" href="#sample-input" title="Enlazar permanentemente con este título">¶</a></h3>
+<p>1</p>
+<p>5 6
+0 1
+0 2
+3 2
+2 4
+4 3
+1 2</p>
+</div>
+<div class="section" id="sample-output">
+<h3>Sample Output<a class="headerlink" href="#sample-output" title="Enlazar permanentemente con este título">¶</a></h3>
+<p>1
+1
+2
+2</p>
+</div>
+</div>
+<div class="section" id="solucion">
+<h2>Solución<a class="headerlink" href="#solucion" title="Enlazar permanentemente con este título">¶</a></h2>
+<div class="section" id="explicacion-de-la-solucion">
+<h3>Explicación de la solución<a class="headerlink" href="#explicacion-de-la-solucion" title="Enlazar permanentemente con este título">¶</a></h3>
+<p>Todo lo explicado durante el problema se puede traducir a un problema de grafos, donde se quiere saber la mínima distancia de un punto a cualquier lado. Además, se indica que las distancias serían todas equivalente. Por lo que se debe realizar un BFS, algoritmo que permitiría solucionar lo anterior mencionado. Donde cada pareja correspondería a una arista del grafo, que representaría la conexión. Entonces se aplicaría BFS, y luego se revisaría el arreglo de distancias desde 1 hasta P - 1 y se mostraría eso por pantalla.</p>
+</div>
+<div class="section" id="codigo">
+<h3>Código<a class="headerlink" href="#codigo" title="Enlazar permanentemente con este título">¶</a></h3>
+<div class="highlight-cpp notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="cp">#include</span><span class="cpf">&lt;bits/stdc++.h&gt;</span><span class="cp"></span>
+<span class="k">using</span> <span class="k">namespace</span> <span class="n">std</span><span class="p">;</span>
+
+<span class="cp">#define INF 1000000</span>
+
+<span class="n">vector</span> <span class="o">&lt;</span> <span class="n">vector</span><span class="o">&lt;</span> <span class="kt">int</span> <span class="o">&gt;</span> <span class="o">&gt;</span> <span class="n">adjlist</span><span class="p">;</span>
+<span class="n">vector</span> <span class="o">&lt;</span> <span class="kt">int</span> <span class="o">&gt;</span> <span class="n">distancia</span><span class="p">;</span>
+
+<span class="kt">void</span> <span class="nf">bfs</span><span class="p">(</span><span class="kt">int</span> <span class="n">nodoInicial</span><span class="p">){</span>
+    <span class="n">queue</span><span class="o">&lt;</span> <span class="kt">int</span> <span class="o">&gt;</span> <span class="n">colita</span><span class="p">;</span>
+    <span class="n">distancia</span><span class="p">[</span><span class="n">nodoInicial</span><span class="p">]</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+    <span class="n">colita</span><span class="p">.</span><span class="n">push</span><span class="p">(</span><span class="n">nodoInicial</span><span class="p">);</span>
+    <span class="k">while</span><span class="p">(</span><span class="o">!</span><span class="n">colita</span><span class="p">.</span><span class="n">empty</span><span class="p">()){</span>
+        <span class="kt">int</span> <span class="n">nodoActual</span> <span class="o">=</span> <span class="n">colita</span><span class="p">.</span><span class="n">front</span><span class="p">();</span>
+        <span class="n">colita</span><span class="p">.</span><span class="n">pop</span><span class="p">();</span>
+        <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">adjlist</span><span class="p">[</span><span class="n">nodoActual</span><span class="p">].</span><span class="n">size</span><span class="p">();</span> <span class="n">i</span><span class="o">++</span><span class="p">){</span>
+            <span class="kt">int</span> <span class="n">vecino</span> <span class="o">=</span> <span class="n">adjlist</span><span class="p">[</span><span class="n">nodoActual</span><span class="p">][</span><span class="n">i</span><span class="p">];</span>
+            <span class="k">if</span><span class="p">(</span><span class="n">distancia</span><span class="p">[</span><span class="n">vecino</span><span class="p">]</span> <span class="o">==</span> <span class="n">INF</span><span class="p">){</span>
+                <span class="n">distancia</span><span class="p">[</span><span class="n">vecino</span><span class="p">]</span> <span class="o">=</span> <span class="n">distancia</span><span class="p">[</span><span class="n">nodoActual</span><span class="p">]</span> <span class="o">+</span> <span class="mi">1</span><span class="p">;</span>
+                <span class="n">colita</span><span class="p">.</span><span class="n">push</span><span class="p">(</span><span class="n">vecino</span><span class="p">);</span>
+            <span class="p">}</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="kt">int</span> <span class="nf">main</span><span class="p">(){</span>
+    <span class="kt">int</span> <span class="n">t</span><span class="p">,</span> <span class="n">i</span><span class="p">;</span>
+    <span class="n">cin</span> <span class="o">&gt;&gt;</span> <span class="n">t</span><span class="p">;</span>
+    <span class="k">while</span><span class="p">(</span><span class="n">t</span><span class="o">--</span><span class="p">){</span>
+        <span class="kt">int</span> <span class="n">p</span><span class="p">,</span> <span class="n">d</span><span class="p">;</span>
+        <span class="n">cin</span> <span class="o">&gt;&gt;</span> <span class="n">p</span> <span class="o">&gt;&gt;</span> <span class="n">d</span><span class="p">;</span>
+
+        <span class="n">adjlist</span><span class="p">.</span><span class="n">assign</span><span class="p">(</span><span class="n">p</span><span class="p">,</span> <span class="n">vector</span><span class="o">&lt;</span> <span class="kt">int</span> <span class="o">&gt;</span><span class="p">());</span>
+        <span class="n">distancia</span><span class="p">.</span><span class="n">assign</span><span class="p">(</span><span class="n">p</span><span class="p">,</span> <span class="n">INF</span><span class="p">);</span>
+
+        <span class="k">for</span><span class="p">(</span><span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">d</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">){</span>
+            <span class="kt">int</span> <span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">;</span>
+            <span class="n">cin</span> <span class="o">&gt;&gt;</span> <span class="n">a</span> <span class="o">&gt;&gt;</span> <span class="n">b</span><span class="p">;</span>
+            <span class="n">adjlist</span><span class="p">[</span><span class="n">a</span><span class="p">].</span><span class="n">push_back</span><span class="p">(</span><span class="n">b</span><span class="p">);</span>
+            <span class="n">adjlist</span><span class="p">[</span><span class="n">b</span><span class="p">].</span><span class="n">push_back</span><span class="p">(</span><span class="n">a</span><span class="p">);</span>
+        <span class="p">}</span>
+
+        <span class="n">bfs</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span>
+
+        <span class="k">for</span><span class="p">(</span><span class="n">i</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">p</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">){</span>
+            <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="n">distancia</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">;</span>
+        <span class="p">}</span>
+
+        <span class="k">if</span><span class="p">(</span><span class="n">t</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">)</span>
+            <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">;</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</td></tr></table></div>
+</div>
+</div>
+<div class="section" id="informacion-adicional">
+<h2>Información adicional<a class="headerlink" href="#informacion-adicional" title="Enlazar permanentemente con este título">¶</a></h2>
+<p>Link del problema: <a class="reference external" href="https://onlinejudge.org/index.php?option=com_onlinejudge&amp;Itemid=8&amp;page=show_problem&amp;problem=1900">https://onlinejudge.org/index.php?option=com_onlinejudge&amp;Itemid=8&amp;page=show_problem&amp;problem=1900</a></p>
+<p>Autor de la solución: Gabriel Carmona</p>
+<div class="section" id="contacto-en-caso-de-dudas">
+<h3>Contacto en caso de dudas:<a class="headerlink" href="#contacto-en-caso-de-dudas" title="Enlazar permanentemente con este título">¶</a></h3>
+<p>Discord: MrYhatoh#8885</p>
+<p>Email: <a class="reference external" href="mailto:gabriel&#46;carmonat&#37;&#52;&#48;sansano&#46;usm&#46;cl">gabriel<span>&#46;</span>carmonat<span>&#64;</span>sansano<span>&#46;</span>usm<span>&#46;</span>cl</a></p>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        
+        &copy; Copyright 2020, Comunidad del taller avanzado
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>
