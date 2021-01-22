@@ -1,0 +1,396 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="es" >
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Where’s My Internet? &mdash; documentación de Yo Cmás - </title>
+  
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+
+  
+  
+  
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/language_data.js"></script>
+        <script src="../_static/translations.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Índice" href="../genindex.html" />
+    <link rel="search" title="Búsqueda" href="../search.html" />
+    <link rel="next" title="«Todos los caminos llevan a Roma»" href="roma.html" />
+    <link rel="prev" title="Graph Connectivity" href="graph_connectivity.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home" alt="Documentation Home"> Yo Cmás
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../edd/edd.html">Estructuras de Datos</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ordenamiento/ordenamiento.html">Algoritmos de Ordenamiento</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../busqueda/busqueda.html">Algoritmos de búsqueda</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="ejercicios.html">Ejercicios resueltos</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="graph_connectivity.html">Graph Connectivity</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Where’s My Internet?</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#problema">Problema</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#descripcion">Descripción</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#input">Input</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#output">Output</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#sample-input">Sample Input</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#sample-output">Sample Output</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#solucion">Solución</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#explicacion-de-la-solucion">Explicación de la solución</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#codigo">Código</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#informacion-adicional">Información adicional</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#contacto-en-caso-de-dudas">Contacto en caso de dudas:</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="roma.html">«Todos los caminos llevan a Roma»</a></li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Yo Cmás</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+          <li><a href="ejercicios.html">Ejercicios resueltos</a> &raquo;</li>
+        
+      <li>Where’s My Internet?</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/ejercicios/where.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="where-s-my-internet">
+<h1>Where’s My Internet?<a class="headerlink" href="#where-s-my-internet" title="Enlazar permanentemente con este título">¶</a></h1>
+<div class="section" id="problema">
+<h2>Problema<a class="headerlink" href="#problema" title="Enlazar permanentemente con este título">¶</a></h2>
+<div class="section" id="descripcion">
+<h3>Descripción<a class="headerlink" href="#descripcion" title="Enlazar permanentemente con este título">¶</a></h3>
+<p>A new town is being built far out in the country, and currently there are N</p>
+<p>houses. People have already started moving in. However, some of the houses aren’t connected to the internet yet, and naturally residents are outraged.</p>
+<p>The houses are numbered 1
+to N. House number 1</p>
+<p>has already been connected to the internet via a long network cable to a neighboring town. The plan is to provide internet to other houses by connecting pairs of houses with separate network cables. A house is connected to the internet if it has a network cable to another house that’s already connected to the internet.</p>
+<p>Given a list of which pairs of houses are already connected by a network cable, determine which houses are not yet connected to the internet.</p>
+</div>
+<div class="section" id="input">
+<h3>Input<a class="headerlink" href="#input" title="Enlazar permanentemente con este título">¶</a></h3>
+<p>The first line of input contains two integers 1 ≤ N,M ≤ 200000, where N is the number of houses and M is the number of network cables already deployed. Then follow M lines, each containing a pair of distinct house numbers 1 ≤ a,b ≤N meaning that house number a and house number b are already connected by a network cable. Each house pair is listed at most once in the input.</p>
+</div>
+<div class="section" id="output">
+<h3>Output<a class="headerlink" href="#output" title="Enlazar permanentemente con este título">¶</a></h3>
+<p>If all the houses are already connected to the internet, output one line containing the string Connected. Otherwise, output a list of house numbers in increasing order, one per line, representing the houses that are not yet connected to the internet.</p>
+</div>
+<div class="section" id="sample-input">
+<h3>Sample Input<a class="headerlink" href="#sample-input" title="Enlazar permanentemente con este título">¶</a></h3>
+<p>6 4
+1 2
+2 3
+3 4
+5 6</p>
+</div>
+<div class="section" id="sample-output">
+<h3>Sample Output<a class="headerlink" href="#sample-output" title="Enlazar permanentemente con este título">¶</a></h3>
+<p>5
+6</p>
+</div>
+</div>
+<div class="section" id="solucion">
+<h2>Solución<a class="headerlink" href="#solucion" title="Enlazar permanentemente con este título">¶</a></h2>
+<div class="section" id="explicacion-de-la-solucion">
+<h3>Explicación de la solución<a class="headerlink" href="#explicacion-de-la-solucion" title="Enlazar permanentemente con este título">¶</a></h3>
+<p>Este problema es tratar de ver cuales son las cosas que no hacen parte de la componente conexa en que se encuentra la casa número 1. Entonces lo que hay que realizar es un DFS a partir de 1, y luego hay que revisar que nodos no han sido visitados e imprimirlos en el orden correcto. En el caso que no se vaya a imprimir nada puesto que todos son visitados se imprime “Connected”.</p>
+</div>
+<div class="section" id="codigo">
+<h3>Código<a class="headerlink" href="#codigo" title="Enlazar permanentemente con este título">¶</a></h3>
+<div class="highlight-cpp notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="cp">#include</span><span class="cpf">&lt;bits/stdc++.h&gt;</span><span class="cp"></span>
+<span class="k">using</span> <span class="k">namespace</span> <span class="n">std</span><span class="p">;</span>
+
+<span class="cp">#define VISITADO true</span>
+<span class="cp">#define NO_VISITADO false</span>
+
+<span class="n">vector</span> <span class="o">&lt;</span> <span class="n">vector</span><span class="o">&lt;</span> <span class="kt">int</span> <span class="o">&gt;</span> <span class="o">&gt;</span> <span class="n">adjlist</span><span class="p">;</span>
+<span class="n">vector</span> <span class="o">&lt;</span> <span class="kt">bool</span> <span class="o">&gt;</span> <span class="n">visitados</span><span class="p">;</span>
+
+<span class="kt">void</span> <span class="nf">dfs</span><span class="p">(</span><span class="kt">int</span> <span class="n">nodoActual</span><span class="p">){</span>
+    <span class="n">visitados</span><span class="p">[</span><span class="n">nodoActual</span><span class="p">]</span> <span class="o">=</span> <span class="n">VISITADO</span><span class="p">;</span>
+
+    <span class="c1">//adjlist[nodoActual].size() cuantos vecinos tiene el nodo actual</span>
+    <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">adjlist</span><span class="p">[</span><span class="n">nodoActual</span><span class="p">].</span><span class="n">size</span><span class="p">();</span> <span class="n">i</span><span class="o">++</span><span class="p">){</span>
+        <span class="kt">int</span> <span class="n">vecino</span> <span class="o">=</span> <span class="n">adjlist</span><span class="p">[</span><span class="n">nodoActual</span><span class="p">][</span><span class="n">i</span><span class="p">];</span>
+        <span class="k">if</span><span class="p">(</span><span class="n">visitados</span><span class="p">[</span><span class="n">vecino</span><span class="p">]</span> <span class="o">==</span> <span class="n">NO_VISITADO</span><span class="p">){</span>
+            <span class="n">dfs</span><span class="p">(</span><span class="n">vecino</span><span class="p">);</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+
+<span class="p">}</span>
+
+<span class="kt">int</span> <span class="nf">main</span><span class="p">(){</span>
+  <span class="kt">int</span> <span class="n">n</span><span class="p">,</span> <span class="n">m</span><span class="p">,</span> <span class="n">i</span><span class="p">;</span>
+
+  <span class="n">cin</span> <span class="o">&gt;&gt;</span> <span class="n">n</span> <span class="o">&gt;&gt;</span> <span class="n">m</span><span class="p">;</span>
+  <span class="n">adjlist</span><span class="p">.</span><span class="n">assign</span><span class="p">(</span><span class="n">n</span><span class="p">,</span> <span class="n">vector</span><span class="o">&lt;</span> <span class="kt">int</span> <span class="o">&gt;</span><span class="p">());</span>
+  <span class="n">visitados</span><span class="p">.</span><span class="n">assign</span><span class="p">(</span><span class="n">n</span><span class="p">,</span> <span class="n">NO_VISITADO</span><span class="p">);</span>
+
+  <span class="k">for</span><span class="p">(</span><span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">m</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">){</span>
+    <span class="kt">int</span> <span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">;</span>
+    <span class="n">cin</span> <span class="o">&gt;&gt;</span> <span class="n">a</span> <span class="o">&gt;&gt;</span> <span class="n">b</span><span class="p">;</span>
+    <span class="n">adjlist</span><span class="p">[</span><span class="n">a</span> <span class="o">-</span> <span class="mi">1</span><span class="p">].</span><span class="n">push_back</span><span class="p">(</span><span class="n">b</span> <span class="o">-</span> <span class="mi">1</span><span class="p">);</span>
+    <span class="n">adjlist</span><span class="p">[</span><span class="n">b</span> <span class="o">-</span> <span class="mi">1</span><span class="p">].</span><span class="n">push_back</span><span class="p">(</span><span class="n">a</span> <span class="o">-</span> <span class="mi">1</span><span class="p">);</span>
+  <span class="p">}</span>
+
+  <span class="n">dfs</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span>
+
+  <span class="kt">int</span> <span class="n">connected</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
+  <span class="k">for</span><span class="p">(</span><span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">n</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">){</span>
+    <span class="k">if</span><span class="p">(</span><span class="n">visitados</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">==</span> <span class="n">NO_VISITADO</span><span class="p">){</span>
+      <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="n">i</span> <span class="o">+</span> <span class="mi">1</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">;</span>
+      <span class="n">connected</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+    <span class="p">}</span>
+  <span class="p">}</span>
+
+  <span class="k">if</span><span class="p">(</span><span class="n">connected</span><span class="p">)</span>
+    <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;Connected</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">;</span>
+  <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</td></tr></table></div>
+</div>
+</div>
+<div class="section" id="informacion-adicional">
+<h2>Información adicional<a class="headerlink" href="#informacion-adicional" title="Enlazar permanentemente con este título">¶</a></h2>
+<p>Link del problema: <a class="reference external" href="https://open.kattis.com/problems/wheresmyinternet">https://open.kattis.com/problems/wheresmyinternet</a></p>
+<p>Autor de la solución: Gabriel Carmona</p>
+<div class="section" id="contacto-en-caso-de-dudas">
+<h3>Contacto en caso de dudas:<a class="headerlink" href="#contacto-en-caso-de-dudas" title="Enlazar permanentemente con este título">¶</a></h3>
+<p>Discord: MrYhatoh#8885</p>
+<p>Email: <a class="reference external" href="mailto:gabriel&#46;carmonat&#37;&#52;&#48;sansano&#46;usm&#46;cl">gabriel<span>&#46;</span>carmonat<span>&#64;</span>sansano<span>&#46;</span>usm<span>&#46;</span>cl</a></p>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="roma.html" class="btn btn-neutral float-right" title="«Todos los caminos llevan a Roma»" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="graph_connectivity.html" class="btn btn-neutral float-left" title="Graph Connectivity" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        
+        &copy; Copyright 2020, Comunidad del taller avanzado
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>
